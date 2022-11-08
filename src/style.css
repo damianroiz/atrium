@@ -1,0 +1,397 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  max-width: 1900px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+:root {
+  --background-color: linear-gradient(47deg, rgb(0, 26, 255), rgb(113,196,255) 100%);;
+  --link-color: #61dafb;
+  --white: #fff;
+  --black-text: #282c34;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.App {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: var(--black-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--white);
+}
+
+.App-link {
+  color: var(--link-color);
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  font-size: calc(10px + 2vmin);
+}
+
+
+/*
+/////////////////////////////////////////
+//////////////////////////////////////////////////ABOUT
+//////////////////////////////////////////////
+*/
+
+
+/*
+//////////////////////////////////////////////////STAFF
+*/
+
+.staff {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  -webkit-box-shadow: 0.5px -4px 5px -2px rgba(50, 48, 48, 0.25);
+  -moz-box-shadow: 0.5px -4px 5px -2px rgba(47, 45, 45, 0.25);
+  box-shadow: 0.5px -4px 5px -2px rgba(45, 44, 44, 0.25);
+}
+
+.staff-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.staff-container {
+  padding: 10px;
+}
+.load {
+  position: relative;
+  bottom: 40px;
+  color: var(--white)
+}
+.info {
+  position: relative;
+  bottom: 40px;
+  color: var(--white);
+}
+
+.name {
+  position: relative;
+  bottom: 20px;
+  color: var(--white);
+}
+
+.cardcolor {
+  background-color: rgb(0, 93, 185);
+}
+
+
+/*
+//////////////////////////////////////////////////CAROUSEL
+*/
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-container {
+  width: 50%;
+  object-fit: cover;
+  align-items: center;
+  box-shadow: none;
+}
+
+.legend {
+  display: none;
+  box-shadow: none;
+}
+
+.title-carousel {
+  font-size: 35px;
+  font-weight: 900;
+}
+
+
+/*
+/////////////////////////////////////////
+//////////////////////////////////////////////////BLOG
+//////////////////////////////////////////////
+*/
+
+.blogcard-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-around;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin: 80px;
+}
+
+.blogcard {
+  display: flex;
+  gap: 20px;
+  width: 700px;
+  height: 168px;
+  font-size: 12px;
+}
+
+.blogcard>img {
+  max-height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: -6px 3px 3px rgba(0, 0, 0, 0.1);
+
+}
+
+.blogcard-info>.title {
+  color: var(--black-text);
+  font-size: 24px;
+  font-weight: 500;
+  padding-block: 5px;
+}
+
+.blogcard-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.blogcard-info>.date {
+  font-size: 12px;
+  letter-spacing: 1.01px;
+}
+
+.blogcard-info>.desc {
+  text-align: start;
+  padding-block: 15px;
+  font-size: 14px;
+}
+
+.blogcard-info>button {
+  display: inline-block;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  border: none;
+  width: 130px;
+  height: 60px;
+  margin: 0;
+  padding: 3px;
+  align-self: flex-end;
+}
+
+.blogcard-btn a {
+  margin: 0 auto;
+  color: var(--white);
+  font-size: 18px;
+  line-height: 20px;
+}
+
+/*
+/////////////////////////////////////////
+//////////////////////////////////////////////////APPOINTMENTS
+//////////////////////////////////////////////
+*/
+
+.reviewbox {
+  width: 700px;
+}
+
+.Appointment {
+  display: flex;
+  height: 100%;
+}
+
+/* 
+------------------------
+Left Container
+----------------------
+*/
+
+.left {
+  width: 50%;
+  background-color: rgb(0, 93, 185);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 7px;
+}
+
+.form {
+  column-count: 2;
+  padding-left: 30px;
+}
+
+.form input,
+select {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+  height: 58px !important;
+  padding-left: 0;
+  padding-right: 0;
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 16px;
+  border-radius: 0px;
+  box-shadow: none !important;
+  width: 90%;
+  align-items: center;
+}
+
+.form input,
+select:enabled {
+  color: red;
+}
+
+option {
+  color: black;
+}
+
+.form input::placeholder {
+  color: white;
+}
+
+.form input:focus {
+  outline: none;
+}
+.form select,
+option:focus {
+  outline: none;
+}
+
+/* 
+------------------------
+Right Container 
+----------------------
+*/
+
+.right {
+  width: 50%;
+}
+
+.container-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5rem;
+}
+.card-right {
+  margin-top: 20px;
+  background-color: rgba(128, 128, 128, 0.308);
+  width: 220px;
+}
+
+.card-right h3 {
+  font-size: 2.5rem;
+}
+.card-right p {
+  font-size: 1rem;
+  position: relative;
+  top: -10px;
+}
+
+.text-about {
+  writing-mode: vertical-lr;
+  position: relative;
+  left: 550px;
+  bottom: 350px;
+  letter-spacing: 6px;
+}
+
+.review_google {
+  width: 600px;
+  position: relative;
+  right: 30px;
+  border-radius: 20px;
+}
+
+.appoint-btn {
+  border: none;
+  width: 300px;
+  padding: 13px;
+  border-radius: 10px;
+  position: relative;
+  background: #32cd32;
+  border: 1px solid #32cd32;
+  color: white;
+  font-size: 19px;
+  top: 30px;
+  transition: all 0.5s ease;
+}
+
+.appoint-btn:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.date_form {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-around;
+}
+
+/*
+/////////////////////////////////////////
+//////////////////////////////////////////////////COVID MESSAGE
+//////////////////////////////////////////////
+*/
+
+.covid19-container {
+  padding: 80px;
+}
+
+.covid19-container h1 {
+  font-size: 40px;
+}
+
+.covid19-container p {
+  color: #222;
+  font-size: 18px;
+}

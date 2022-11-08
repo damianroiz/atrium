@@ -1,0 +1,33 @@
+.servicesitems {
+  display: flex;
+  justify-content: center;
+  width: 180px;
+  height: 100px;
+  background-color: #fff;
+  border-top: 4px solid #1f305e;
+  color: #1f305e;
+  font: 500 16px/10px "roboto", sans-serif;
+  border-radius: 0 0 5px 5px;
+  align-items: center;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: all 0.5s ease;
+  padding: 0 8px 0 8px;
+}
+
+.servicesitems:hover {
+  transform: scale(1.03);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.servicesitems-title {
+  line-height: 20px;
+}
+
+.active {
+  background-color: #1f305e;
+  border-top: 4px solid grey;
+  color: #fff;
+}

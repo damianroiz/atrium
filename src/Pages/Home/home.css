@@ -1,0 +1,208 @@
+/*
+////////////////////////////
+//////////////////////////////////////APPOINTMENT BANNER
+///////////////////////////
+*/
+
+.staffImage {
+  width: 900px;
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+.titleh2 {
+  font-size: 28px;
+  color: #333;
+  padding-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 5px;
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+.stackContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 1200px;
+}
+
+.image-about-home {
+  filter: opacity(0.4) drop-shadow(0 0 0 rgb(0, 93, 185));
+}
+
+/*
+////////////////////////////
+//////////////////////////////////////APPOINTMENT BANNER
+///////////////////////////
+*/
+
+.banner-container {
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: var(--blue-bg-color);
+}
+
+.text-banner {
+  width: 800px;
+  text-align: left;
+}
+
+
+.text-banner > h2 {
+  font-size: 35px;
+  letter-spacing: 2px;
+  font-weight: normal;
+  color: #fff;
+}
+.text-banner > p {
+  padding-top: 20px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.banner-container button {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+  .banner-container {
+    flex-direction: column;
+  }
+  
+.text-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 90%;
+}
+
+.text-banner h2, p {
+  text-align: center;
+}
+
+
+}
+
+/*
+////////////////////////////
+//////////////////////////////////////SLIDER HOME
+///////////////////////////
+*/
+
+.each-fade {
+  display: flex;
+  height: 400px;
+}
+
+.each-fade > div {
+  width: 100%;
+}
+
+.each-fade > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.each-fade p {
+  width: 25%;
+  font-size: 1em;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: #adceed;
+}
+
+/*
+////////////////////////////
+//////////////////////////////////////REVIEWS
+///////////////////////////
+*/
+
+.reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/*
+////////////////////////////
+//////////////////////////////////////CARDS HOME
+///////////////////////////
+*/
+
+
+.cardshome {
+  position: relative;
+  bottom: 30px;
+}
+
+.card1, .card2, .card3, .card4 {
+  background: 
+  linear-gradient(
+       217deg, rgba(2, 2, 2, 0.45), 
+       rgba(0, 0, 255, 0.25)
+     )
+}
+
+.card1 {
+  background-image: 
+    url('https://images.unsplash.com/photo-1637580690960-02f4673ba4c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80') #156CC3;
+    background-size: cover;
+    background-position: left;
+}
+
+.card2 {
+  background-image: 
+     url('https://images.pexels.com/photos/5473186/pexels-photo-5473186.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') #00478f;
+  background-size: cover;
+  background-position: right;
+}
+
+.card3 {
+  background-image:
+     url('https://images.pexels.com/photos/7772689/pexels-photo-7772689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') #156CC3;
+  background-size: cover;
+  background-position: right;
+}
+
+.card4 {
+  background-image:
+     url('https://images.pexels.com/photos/4269205/pexels-photo-4269205.jpeg') #00478f;
+  background-size: cover;
+  background-position: right;
+}
+
+.cardIcon {
+  filter: invert(100%);
+}
+
+.card1, .card2, .card3, .card4 {
+  box-shadow: 2px 5px 10px rgb(0 0 0 / 0.2);
+  transition: transform ease 300ms;
+}
+
+.card1:hover, .card2:hover, .card3:hover, .card4:hover {
+  transform: translate(0, -25px);
+}
