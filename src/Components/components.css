@@ -460,11 +460,10 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
 //////////////////////
 */
 
-.footer {
+footer {
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
-  height: 430px;
+  padding: 40px;
   background: linear-gradient(47deg, rgb(0, 26, 255), rgb(113, 196, 255) 100%);
   color: #fff;
 }
