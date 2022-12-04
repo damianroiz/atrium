@@ -1,3 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Ubuntu:wght@500&display=swap');
 
 :root {
@@ -452,9 +462,6 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
   top: 2px;
 }
 
-
-
-
 /*
 //////////////////////
 //////////////////////////FOOTER
@@ -462,136 +469,165 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
 */
 
 footer {
-  display: flex;
-  flex-direction: column;
-  padding: 40px;
-  background: linear-gradient(47deg, rgb(0, 26, 255), rgb(113, 196, 255) 100%);
   color: #fff;
+  font: var(--footer-font);
+}
+
+.fa-circle-chevron-up {
+  position: absolute;
+  right: 5vw;
+  font-size: 60px;
+  top: 7vh;
+}
+
+.footer-sections {
+  width: inherit;
+  padding: 30px;
+  background: var(--blue-bg-color);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(320px, 1fr));
+  justify-content: center;
+  align-items: start;
 }
 
 .footer-logo {
-  width: 300px;
+  width: 350px;
 }
 
-.footer-container {
-  display: flex;
-}
-
-.left {
-  width: 35%;
-  padding-left: 30px;
-}
-
-.mid {
-  width: 35%;
+.contact-info {
+  border: 2px solid red;
   display: flex;
   flex-direction: column;
+  gap: 28.33px;
 }
 
-.mid-list {
+.contact-info i {
+  font-size: 21px;
+}
+
+.contact-list li {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  gap: 15px;
   align-items: center;
-  margin: 0;
+  letter-spacing: 1.12px;
 }
 
-.mid-list a {
-  padding: 8px;
-  position: relative;
-  bottom: 15px;
-  color: #fff;
+.social-media {
+  display: flex;
+  place-content: center;
+  gap: 30px;
+  cursor: pointer;
 }
 
-.mid-title {
-  font-size: 25px;
-  text-align: center;
-  position: relative;
-  left: 15px;
-  bottom: 10px;
+.social-media i {
+  font-size: 28px;
 }
 
-.right {
-  width: 35%;
+/*
+//////////////////////////////
+///////////////////////////////LINKS
+/////////////////////////////
+*/
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 2px solid red;
+  padding-top: 40px;
 }
 
-.right-title {
-  font-size: 25px;
-  text-align: center;
-  position: relative;
-  bottom: 12px;
+.links li {
+  cursor: pointer;
 }
 
-.right li {
-  list-style: circle;
-  padding: 5px;
-  position: relative;
-  left: 130px;
-  bottom: 20px;
-  text-align: justify;
+.links > p,
+.hours-section > p {
+  /*   margin-block: 30px 50px; */
+  text-transform: uppercase;
+  font-size: 18px;
+  padding-bottom: 20px;
+  letter-spacing: 1.12px;
+}
+
+
+/*
+/////////////////////////////////////////////
+///////////////////////////// OPERATING HOURS
+/////////////////////////////////////////////
+*/
+
+.hours-section {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding-top: 40px;
+}
+
+.hours-section ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+
+}
+
+.hours-section ul li span {
+  padding-right: 20px;
+}
+
+.hours-section:after, .links:after {
+  content: "";
+  position: absolute;
+  top: 24%;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, .3);
+  border: 2px solid #000039;
+}
+
+
+footer li {
+  margin-bottom: 10px;
+}
+.footnote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 30px 10px;
+  background: #000039;
+  letter-spacing: 1.07px;
+  font-size: 14px;
 }
 
 .copyright {
-  background-color: rgb(20, 20, 65);
-  position: relative;
-  bottom: 10px;
+  margin-top: 10px;
 }
 
-.copy {
-  font-size: 14px;
-  font-weight: normal;
-  text-align: center;
-  position: relative;
-  color: #fff;
-  position: relative;
-}
+@media screen and (max-width: 480px) {
+  .footer-sections {
+    width: 100%;
+    grid-template-columns: minmax(320px, 1fr);
+    grid-template-rows: repeat(auto-fill, minmax(320px, 1fr));
+    row-gap: 20px;
+  }
+  .fa-circle-chevron-up {
+    top: 3vh;
+    right: 6vw;
+  }
+  
+  .contact-info {
+    margin-top: 20px;
+  }
+  .social-media {
+    justify-self: center;
+    margin: 30px;
+    align-items: space-around;
+  }
+  .links, .hours-section {
+    padding: 0;
+    justify-self: center;
+  }
+  .hours-section p {
+    align-self: center;
+  }
 
-.by {
-  color: rgb(42, 241, 42);
-}
-
-.icon-f {
-  color: white;
-  font-size: 20px;
-  margin-right: 10px;
-}
-
-.back-to {
-  font-size: 45px;
-  position: relative;
-  color: #fff;
-  height: 50px;
-  position: relative;
-  bottom: 10px;
-  right: 40px;
-  transition: all 0.5s ease;
-}
-
-.back-to:hover {
-  transform: scale(1.1);
-  transition: all 0.5s ease;
-}
-
-.footer-appo {
-  position: relative;
-  left: 450px;
-  bottom: 40px;
-}
-
-.phone {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.email {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.address {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

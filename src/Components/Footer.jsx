@@ -9,25 +9,59 @@ import { Link } from "wouter";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="contact-info">
-        <ul>        
-          <li>340 Midpark Way SE - Suite 140 Calgary, AB, T2X 1P1</li>
-          <li>admin@atriumphysiotherapy.com</li>
-          <li>+1(403)-255 4461</li>
-          <li>+1(403)-259 8776</li>
-        </ul>
-        <div className="social-media">
-        </div>
+<footer>
+  <i className="fa fa-circle-chevron-up" aria-hidden="true"></i>
+  <div className="footer-sections">
+    <div className="contact-info">
+      <img className="footer-logo" src="https://www.atriumphysiotherapy.com/images/atriumLogo.png" alt="Company Logo" />
+      <ul className="contact-list">
+        <li><i className="fa fa-map-marker-alt" aria-hidden="true"></i>
+          <p>340 Midpark Way SE - Suite 140 <br /> Calgary, AB, T2X 1P1</p>
+        </li>
+        <li><i className="fa fa-envelope" aria-hidden="true"></i>
+          admin@atriumphysiotherapy.com</li>
+        <li><i className="fa fa-phone-alt" aria-hidden="true"></i>+1(403)-255 4461</li>
+        <li><i className="fa fa-fax" aria-hidden="true"></i>+1(403)-259 8776</li>
+      </ul>
+      <div className="social-media">
+        <i className="fa-brands fa-facebook"></i>
+        <i className="fa-brands fa-instagram"></i>
+        <i className="fa-brands fa-linkedin"></i>
+        <i className="fa-brands fa-twitter"></i>
       </div>
+    </div>
 
-      <div>
-
-      </div>
-      <div>
-
-      </div>
-    </footer>
+    <div className="links">
+      <p>Links</p>
+      <ul>
+        <li>About</li>
+        <li>Services</li>
+        <li>Blog</li>
+        <li>Contact</li>
+        <li>Covid-19 Alert</li>
+      </ul>
+    </div>
+    <div className="hours-section">
+      <p>Operating Hours</p>
+      <ul>
+        <li>Monday:<span>8:00 am - 7:00 pm</span></li>
+        <li>Tuesday:<span>8:00 am - 5:00 pm</span></li>
+        <li>Tuesday:<span>8:00 am - 5:00 pm</span></li>
+        <li>Wednesday:<span>8:00 am - 7:00 pm</span></li>
+        <li>Thursday:<span>8:00 am - 3:00 pm</span></li>
+        <li>Friday:<span>8:00 am - 7:00 pm</span></li>
+        <li>Saturday:<span>Closed</span></li>
+        <li>Sunday:<span>Closed</span></li>
+      </ul>
+    </div>
+  </div>
+  <div className="footnote">
+    <div className="terms">
+      <a href="#">Terms and Conditions</a> | <a href="#">Privacy Policy</a>
+    </div>
+    <small className="copyright">Copyright ©2022 - All rights reserved.</small>
+  </div>
+</footer>
   )
 };
 
