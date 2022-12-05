@@ -475,9 +475,9 @@ footer {
 
 .fa-circle-chevron-up {
   position: absolute;
-  right: 5vw;
+  padding-top: 10px;
+  right: 2vw;
   font-size: 60px;
-  top: 7vh;
 }
 
 .footer-sections {
