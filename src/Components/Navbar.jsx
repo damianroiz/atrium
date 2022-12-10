@@ -1,4 +1,3 @@
-import { DownloadIcon } from "@chakra-ui/icons";
 import React, { useState } from "react";
 import { Link } from "wouter";
 

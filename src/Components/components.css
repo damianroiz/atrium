@@ -228,6 +228,7 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
 */
 
 .main-menu {
+  background-color: #fff;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -270,7 +271,6 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
     justify-content: flex-start;
     padding: 10px;
   }
-
   .burger-menu {
     height: 100%;
     max-width: 50px;
@@ -281,14 +281,12 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
     cursor: pointer;
     background-color: red;
   }
-
   .burger-bar {
     width: 10px;
     height: 10px;
     background-color: rgb(0, 183, 255);
     border-radius: 2px;
   }
-
   .menu {
     width: 50%;
     height: 100vh;
@@ -297,7 +295,6 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
     top: 10;
     z-index: 99;
   }
-
   .menu-items>a {
     display: none;
   }
@@ -348,35 +345,42 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
 }
 
 .covidBtn {
-  height: 30px;
-  width: 180px;
+  height: 35px;
+  width: 280px;
   min-width: 140px;
   max-width: 200px;
   border: 0;
   padding: 8px;
-  width: 280px;
   border-radius: 8px;
   background: #cd4c32;
   cursor: pointer;
-  box-shadow: -3px 3px 1px 0.8px rgba(0, 0, 0, 0.2),
-  3px -1px 5px 1px rgba(255, 255, 2555, 0.3);
+  box-shadow: -3px 3px 5px 0.8px rgba(0, 0, 0, 0.2),
+    3px -1px 5px 1px rgba(255, 255, 255, 0.3);
   transition: all 0.5s ease;
   align-self: center;
   margin-right: 20px;
 }
 
 .covidBtn a {
+  display: block;
   color: #fff;
+  width: inherit;
+  padding: 12px;
+  text-align: center;
 }
 
-.covidBtn a:hover {
+.covidBtn:hover a:hover {
   transform: scale(1.1);
   transition: all 0.5s ease;
+  color: #cd4c32;
 }
 
-.covidbtn:hover {
-  transform: scale(1.1);
+.covidBtn:hover {
+  transform: scale(1.2);
   transition: all 0.5s ease;
+  border: 3px solid #cd4c32;
+  background-color: #fff;
+  box-shadow: none;
 }
 
 
@@ -475,19 +479,25 @@ footer {
 
 .fa-circle-chevron-up {
   position: absolute;
-  padding-top: 10px;
-  right: 2vw;
+  padding-top: 20px;
+  right: 5%;
   font-size: 60px;
+  z-index: 99;
 }
 
 .footer-sections {
-  width: inherit;
   padding: 30px;
   background: var(--blue-bg-color);
   display: grid;
-  grid-template-columns: repeat(3, minmax(320px, 1fr));
+  grid: auto-flow / repeat(3, minmax(290px, 1fr));
+  justify-items: center;
   justify-content: center;
   align-items: start;
+  border: 3px solid green;
+}
+
+.footer-sections > div {
+  padding: 20px;
 }
 
 .footer-logo {
@@ -495,7 +505,6 @@ footer {
 }
 
 .contact-info {
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   gap: 28.33px;
@@ -510,6 +519,13 @@ footer {
   gap: 15px;
   align-items: center;
   letter-spacing: 1.12px;
+
+}
+
+.contact-list li p span {
+  display: block;
+  text-align: start;
+  padding-top: 3px;
 }
 
 .social-media {
@@ -533,8 +549,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border: 2px solid red;
-  padding-top: 40px;
+  width: auto;
 }
 
 .links li {
@@ -543,9 +558,8 @@ footer {
 
 .links > p,
 .hours-section > p {
-  /*   margin-block: 30px 50px; */
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 22px;
   padding-bottom: 20px;
   letter-spacing: 1.12px;
 }
@@ -558,22 +572,18 @@ footer {
 */
 
 .hours-section {
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
-  width: 400px;
-  padding-top: 40px;
 }
+
 
 .hours-section ul li {
   display: flex;
   justify-content: space-between;
-  padding: 0 40px;
-
-}
-
-.hours-section ul li span {
-  padding-right: 20px;
+  align-content: flex-end;
+  padding: 0 30px 0 40px;
+  gap: 40px;
+  min-width: 350px;
 }
 
 .hours-section:after, .links:after {
@@ -583,7 +593,6 @@ footer {
   box-shadow: -2px 2px 5px rgba(0, 0, 0, .3);
   border: 2px solid #000039;
 }
-
 
 footer li {
   margin-bottom: 10px;
@@ -602,21 +611,20 @@ footer li {
   margin-top: 10px;
 }
 
-@media screen and (max-width: 480px) {
+
+@media screen and (max-width: 960px) {
   .footer-sections {
     width: 100%;
     grid-template-columns: minmax(320px, 1fr);
     grid-template-rows: repeat(auto-fill, minmax(320px, 1fr));
     row-gap: 20px;
+    background-color: #fff;
   }
-  .fa-circle-chevron-up {
-    top: 3vh;
-    right: 6vw;
+
+  .contact-list li {
+    justify-content: center;
   }
-  
-  .contact-info {
-    margin-top: 20px;
-  }
+
   .social-media {
     justify-self: center;
     margin: 30px;

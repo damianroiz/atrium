@@ -12,11 +12,12 @@ const Footer = () => {
 <footer>
   <i className="fa fa-circle-chevron-up" aria-hidden="true"></i>
   <div className="footer-sections">
+
     <div className="contact-info">
       <img className="footer-logo" src="https://www.atriumphysiotherapy.com/images/atriumLogo.png" alt="Company Logo" />
       <ul className="contact-list">
         <li><i className="fa fa-map-marker-alt" aria-hidden="true"></i>
-          <p>340 Midpark Way SE - Suite 140 <br /> Calgary, AB, T2X 1P1</p>
+          <p>340 Midpark Way SE - Suite 140 <span>Calgary, AB, T2X 1P1</span></p>
         </li>
         <li><i className="fa fa-envelope" aria-hidden="true"></i>
           admin@atriumphysiotherapy.com</li>
@@ -24,10 +25,18 @@ const Footer = () => {
         <li><i className="fa fa-fax" aria-hidden="true"></i>+1(403)-259 8776</li>
       </ul>
       <div className="social-media">
+        <Link href="https://www.facebook.com/Atriumphysio/">
         <i className="fa-brands fa-facebook"></i>
+        </Link>
+        <Link href="https://www.facebook.com/Atriumphysio/">
         <i className="fa-brands fa-instagram"></i>
+        </Link>
+        <Link href="https://www.facebook.com/Atriumphysio/">
         <i className="fa-brands fa-linkedin"></i>
+        </Link>
+        <Link href="https://www.facebook.com/Atriumphysio/">
         <i className="fa-brands fa-twitter"></i>
+        </Link>
       </div>
     </div>
 
@@ -41,6 +50,7 @@ const Footer = () => {
         <li>Covid-19 Alert</li>
       </ul>
     </div>
+
     <div className="hours-section">
       <p>Operating Hours</p>
       <ul>
@@ -54,13 +64,16 @@ const Footer = () => {
         <li>Sunday:<span>Closed</span></li>
       </ul>
     </div>
+
   </div>
+
   <div className="footnote">
     <div className="terms">
       <a href="#">Terms and Conditions</a> | <a href="#">Privacy Policy</a>
     </div>
     <small className="copyright">Copyright ©2022 - All rights reserved.</small>
   </div>
+
 </footer>
   )
 };
