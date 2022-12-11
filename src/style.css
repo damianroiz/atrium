@@ -85,9 +85,6 @@ https://fonts.google.com/share?selection.family=Fira%20Sans:wght@500;600%7COxyge
   text-decoration-skip-ink: auto;
 } */
 
-a {
-  text-decoration: none;
-}
 
 /* Make images easier to work with */
 img,
@@ -171,8 +168,9 @@ p, span {
   font: 400 var(--fs-16)/1.26% var(--ff-body);
 }
 
-a, .a {
+a {
   font: var(--fs-14) var(--ff-link);
+  text-decoration: none;
 }
 
 section,

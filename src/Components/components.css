@@ -580,11 +580,25 @@ footer li {
   margin-top: 10px;
 }
 
-.terms .footnote-link {
-  font: var(--fs-14) var(--ff-link);
-  color: var(--c-white);
-  padding: 10px;
+.terms {
+  padding-block: 5px;
 }
+
+.footnote {
+  padding-block: 30px;
+}
+
+.terms .footnote-link {
+  font: var(--fs-14)/10px var(--ff-link);
+  color: var(--c-white);
+  padding: 0 10px 0 10px;
+  letter-spacing: 1.6px;
+  text-decoration: solid underline;
+  text-underline-offset: 3px;
+  text-decoration-skip-ink: auto;
+}
+
+
 @media screen and (max-width: 960px) {
   .footer-sections {
     width: 100%;
