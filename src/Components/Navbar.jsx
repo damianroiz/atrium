@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "wouter";
-import '../style.css'
 import "./components.css";
 
 export const Navbar =() => {

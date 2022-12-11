@@ -1,5 +1,5 @@
 
-
+@import '../style.css'
 
 
 a {
@@ -23,7 +23,7 @@ ul li {
 */
 
 .sectioninfo {
-  background: var(--blue-bg-color);
+  background: var(--c-bg-blue);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -60,7 +60,7 @@ ul li {
   justify-content: center;
   align-items: flex-start;
   gap: 30px;
-  color: #fff;
+  color: var(--c-white);
   cursor: pointer;
 }
 
@@ -74,7 +74,7 @@ ul li {
 
 .card-icon {
   font-size: 20px;
-  background: #141441;
+  background: var(--c-bg-btn-blue);
   width: 50px;
   height: 50px;
   align-self: center;
@@ -106,7 +106,7 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
 .contact-info-card div:nth-child(3):hover .card-icon,
 .contact-info-card div:last-child:hover .card-icon {
   background: none;
-  color: #fff;
+  color: var(--c-white);
   transform: scale(1.6);
   box-shadow: none;
 }
@@ -132,8 +132,8 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
   width: 300px;
   height: 45px;
   border-radius: 10px;
-  color: #fff;
-  background: #1DB954;
+  color: var(--c-white);
+  background: var(--c-bg-btn-green);
   letter-spacing: 1.01px;
   box-shadow: -3px 3px 1px 0.8px rgba(0, 0, 0, 0.2),
     3px -1px 5px 1px rgba(255, 255, 2555, 0.3);
@@ -152,10 +152,7 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
 .appointment-btn:hover {
   transform: scale(1.1);
   transition: all 0.5s ease;
-  background: #1DB954;
 }
-
-
 
 @media screen and (max-width:480px) {
   .sectioninfo {
@@ -216,7 +213,7 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
 */
 
 .main-menu {
-  background-color: #fff;
+  background-color: var(--c-white);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -239,17 +236,14 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
 }
 
 .menu-items a {
-  font: 16px/1.4px 'Poppins', sans-serif;
   text-decoration: none;
-  font-size: 16px;
-  color: #111;
   transition: all 0.5s ease;
 }
 
 .menu-items a:hover {
   transform: scale(1.1);
   transition: all 0.5s ease;
-  color: rgb(0, 26, 255);
+  color: var(--c-blue-hover);
 }
 
 @media screen and (max-width: 560px) {
@@ -351,7 +345,7 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
 
 .covidBtn a {
   display: block;
-  color: #fff;
+  color: var(--c-white);
   width: inherit;
   padding: 12px;
   text-align: center;
@@ -367,7 +361,7 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
   transform: scale(1.2);
   transition: all 0.5s ease;
   border: 3px solid #cd4c32;
-  background-color: #fff;
+  background-color: var(--c-white);
   box-shadow: none;
 }
 
@@ -383,7 +377,7 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
 */
 
 .About {
-  background: linear-gradient(47deg, rgb(0, 26, 255, 0.7), rgb(113, 196, 255, 0.7) 100%), url("../assets//images/home-background-mr-lee-f4RBYsY2hxA-unsplash.jpg");
+  background: var(--c-bg-blue), url("../assets//images/home-background-mr-lee-f4RBYsY2hxA-unsplash.jpg");
   background-position: 40% 20%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -399,13 +393,13 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
   z-index: 1;
   font-size: 55px;
   font-weight: 900;
-  color: white;
+  color: var(--c-white);;
 }
 
 .link-home {
   z-index: 1;
   font-size: 18px;
-  color: white;
+  color: var(--c-white);;
   text-decoration: underline;
 }
 
@@ -432,7 +426,7 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
 .container-icons {
   width: 50px;
   height: 50px;
-  background-color: white;
+  background-color: var(--c-white);;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -448,7 +442,7 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
 }
 
 .icon {
-  font-size: 25px;
+  font-size: 26px;
   color: rgb(0, 93, 185);
   position: relative;
   top: 2px;
@@ -461,8 +455,7 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
 */
 
 footer {
-  color: #fff;
-  font: var(--footer-font);
+  color: var(--c-white);;
 }
 
 .fa-circle-chevron-up {
@@ -474,7 +467,7 @@ footer {
 
 .footer-sections {
   padding: 30px;
-  background: var(--blue-bg-color);
+  background: var(--c-bg-blue);
   display: grid;
   grid: auto-flow / repeat(3, minmax(290px, 1fr));
   justify-items: center;
@@ -606,7 +599,7 @@ footer li {
     grid-template-columns: minmax(320px, 1fr);
     grid-template-rows: repeat(auto-fill, minmax(320px, 1fr));
     row-gap: 20px;
-    background-color: #fff;
+    background-color: var(--c-white);
   }
 
   .contact-list li {
