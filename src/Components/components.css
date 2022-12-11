@@ -580,7 +580,7 @@ footer li {
   margin-top: 10px;
 }
 
-.terms a {
+.terms .footnote-link {
   font: var(--fs-14) var(--ff-link);
   color: var(--c-white);
   padding: 10px;

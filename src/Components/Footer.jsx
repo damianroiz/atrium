@@ -68,13 +68,13 @@ const Footer = () => {
 
   <div className="footnote">
     <div className="terms">
-      <Link href="#">Terms and Conditions</Link> | <Link href="#">Privacy Policy</Link>
+      <Link className="footnote-link" href="#">Terms and Conditions</Link> | <Link className="footnote-link" href="#">Privacy Policy</Link>
     </div>
     <small className="copyright">Copyright ©2022 - All rights reserved.</small>
   </div>
-
 </footer>
   )
 };
 
 export default Footer;
+
