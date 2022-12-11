@@ -1,5 +1,6 @@
 import React from "react";
 import "./components.css";
+import '../style.css'
 import { ImLocation2 } from "react-icons/im";
 import { GrMail } from "react-icons/gr";
 import { BsFillTelephoneFill } from "react-icons/bs";
@@ -10,9 +11,8 @@ import { Link } from "wouter";
 const Footer = () => {
   return (
 <footer>
-  <i className="fa fa-circle-chevron-up" aria-hidden="true"></i>
   <div className="footer-sections">
-
+  <i className="fa fa-circle-chevron-up" aria-hidden="true"></i>
     <div className="contact-info">
       <img className="footer-logo" src="https://www.atriumphysiotherapy.com/images/atriumLogo.png" alt="Company Logo" />
       <ul className="contact-list">

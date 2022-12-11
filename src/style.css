@@ -4,26 +4,120 @@
   padding: 0;
 }
 
-html {
+ul:where([role="list"]),
+ul:where([role="list"]) {
+  list-style: none;
+}
+
+/*
+/////////////////////////////
+//////////////////////////////////////// Html and Body Root Defaults 
+/////////////////////////////
+*/
+
+html:focus-within {
   scroll-behavior: smooth;
   max-width: 100%;
 }
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-}
+/*
+/////////////////////////////
+//////////////////////////////////////// Typography
+/////////////////////////////
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,600;1,600&family=Fira+Sans:wght@500;600&family=Oxygen:wght@300&family=Poppins:ital,wght@0,300;0,400;1,300;1,400&family=Ubuntu:wght@400;500&display=swap');
+
+/*
+////////////////Link to font family:
+https://fonts.google.com/share?selection.family=Fira%20Sans:wght@500;600%7COxygen:wght@300%7CPoppins:ital,wght@0,300;0,400;1,300;1,400%7CUbuntu:wght@400;500
+*/
+
+/*
+///////////////////////// CSS rules to specify families
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Oxygen', sans-serif;
+    font-family: 'Crimson Text', serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+*/
 
 :root {
-  --background-color: linear-gradient(47deg, rgb(0, 26, 255), rgb(113,196,255) 100%);;
-  --link-color: #61dafb;
-  --white: #fff;
-  --black-text: #282c34;
+  --fs-10: 0.625rem;
+  --fs-12: 0.75rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-24: 1.5rem;
+  --fs-30: 1.875rem;
+  --fs-32: 2rem;
+
+  --ff-nav: 'Ubuntu', 'Helvetica', sans-serif;
+  --ff-heading: 'Crimson Text', 'Georgia', 'Cambria', serif;
+  --ff-subheading: 'Fira Sans', 'Droid Sans', 'Century', sans-serif;
+  --ff-text-body: 'Poppins', 'Roboto', 'Arial Narrow',sans-serif;
+  --ff-btn: 'Ubuntu', 'Helvetica Neue', sans-serif;
+  --ff-link: 'Oxygen', 'Arial', sans-serif;
+}
+
+@media (min-width: 35em) {
+  :root {
+    --fs-10: calc(var(--fs-10) * 1.06);
+    --fs-12: calc(var(--fs-12) * 1.06);
+    --fs-14: calc(var(--fs-14) * 1.09);
+    --fs-16: calc(var(--fs-16) * 1.10);
+    --fs-18: calc(var(--fs-18) * 1.11);
+    --fs-20: calc(var(--fs-20) * 1.13);
+    --fs-24: calc(var(--fs-24) * 1.14);
+    --fs-30: calc(var(--fs-30) * 1.16);
+    --fs-32: calc(var(--fs-32) * 1.18);
+  }
+}
+
+
+/* A elements that don't have a class get defaults underline*/
+a:not([class]) {
+  text-decoration-skip-ink: auto; /*underline to not cover font*/
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+textarea,
+select {
+  font: var(--ff-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/*
+/////////////////////////////
+//////////////////////////////////////// Color Variables
+/////////////////////////////
+*/
+
+:root {
+  --c-bg-blue: linear-gradient(47deg, rgb(0, 26, 255), rgb(113, 196, 255) 100%);
+  --c-white: #fff;
+  --c-black-heading: #262B2F;
+  --c-black-body: #1A2228;
+  --c-light-blue-text: rgb(113,196,255);
+  --c-bg-btn: #1DB954;
 }
 
 code {
@@ -36,10 +130,52 @@ code {
   font-family: "Roboto", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* //////////////////////
+  General styling
+  /////////////////////// */
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-400);
+  color: var(--c-black-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1-h6 {
+  letter-spacing: 1.3px;
+  color: var(--c-black-heading);
+}
+
+h1 {
+  font: 600 var(--fs-32)/1.35% var(--ff-heading);
+}
+
+h2 {
+  font: 500 var(--fs-30)/1.35% var(--ff-heading);
+}
+
+h3 {
+  font: 500 var(--fs-24)/1.25% var(--ff-heading);
+}
+
+h4 {
+  font: 500 var(--fs-20) var(--ff-heading);
+}
+
+p, span {
+  font: 400 var(--fs-16)/1.26% var(--ff-body);
+}
+
+a {
+  font: 300 var(--fs-16)/1.28% var(--ff-link);
+  color: var(--c-light-blue-text);
+}
+
+section,
+.section {
+  padding: min(10vh, 10em) 0;
 }
 
 .App-header {
