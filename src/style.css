@@ -18,6 +18,7 @@ ul:where([role="list"]) {
 html:focus-within {
   scroll-behavior: smooth;
   max-width: 100%;
+  font-size: 100%;
 }
 
 /*

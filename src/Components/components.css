@@ -1,19 +1,5 @@
 
-@import '../style.css'
-
-
-a {
-  text-decoration: none;
-}
-
-ul li {
-  list-style-type: none;
-}
-
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
+@import '../style.css';
 
 
 /*
@@ -91,7 +77,7 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
 
 .contact-info-card>div>p {
   position: absolute;
-  font-size: 12px;
+  font-size: var-;
   font-weight: 400;
   letter-spacing: 2px;
   height: 0;
@@ -183,6 +169,7 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
 
   .contact-info-card>div>p {
     text-align: center;
+
   }
 }
 
