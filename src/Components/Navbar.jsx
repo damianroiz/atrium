@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "wouter";
+import { Link } from 'wouter';
 import "./components.css";
 
 export const Navbar =() => {
@@ -29,24 +29,24 @@ export const Navbar =() => {
           <div className={burgerClass}></div>
         </div>
         <div className="menu-items">
-          <Link href="/">
-            <a>Home</a>
+          <Link href="/" className="menu-item">
+            Home
           </Link>
-          <Link href="/About">
-            <a>About</a>
+          <Link href="/About"className="menu-item">
+            About
           </Link>
-          <Link href="/Services">
-            <a>Services</a>
+          <Link href="/Services" className="menu-item">
+            Services
           </Link>
-          <Link href="/Blog">
-            <a>Blog</a>
+          <Link href="/Blog" className="menu-item">
+             Blog
           </Link>
-          <Link href="/Contact">
-            <a>Contact</a>
+          <Link href="/Contact" className="menu-item">
+            Contact
           </Link>
         <div className="covidBtn">
-          <Link href="/Covid19">
-            <a className="">Covid-19 Alert</a>
+          <Link href="/Covid19" className="menu-item">
+            Covid-19 Alert
           </Link>
         </div>
         </div>

@@ -68,7 +68,7 @@ const Footer = () => {
 
   <div className="footnote">
     <div className="terms">
-      <a href="#">Terms and Conditions</a> | <a href="#">Privacy Policy</a>
+      <Link href="#">Terms and Conditions</Link> | <Link href="#">Privacy Policy</Link>
     </div>
     <small className="copyright">Copyright ©2022 - All rights reserved.</small>
   </div>

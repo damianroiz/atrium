@@ -222,12 +222,13 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
   padding: 20px;
 }
 
-.menu-items a {
-  text-decoration: none;
+nav .menu-item {
+  font: 500 var(--fs-18)/1.25% var(--ff-nav);
+  color: var(--c-black-body);
   transition: all 0.5s ease;
 }
 
-.menu-items a:hover {
+nav .menu-item:hover {
   transform: scale(1.1);
   transition: all 0.5s ease;
   color: var(--c-blue-hover);
@@ -264,7 +265,7 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
     top: 10;
     z-index: 99;
   }
-  .menu-items>a {
+  .menu-item {
     display: none;
   }
 
@@ -579,7 +580,11 @@ footer li {
   margin-top: 10px;
 }
 
-
+.terms a {
+  font: var(--fs-14) var(--ff-link);
+  color: var(--c-white);
+  padding: 10px;
+}
 @media screen and (max-width: 960px) {
   .footer-sections {
     width: 100%;

@@ -81,9 +81,10 @@ https://fonts.google.com/share?selection.family=Fira%20Sans:wght@500;600%7COxyge
 
 
 /* A elements that don't have a class get defaults underline*/
-a:not([class]) {
-  text-decoration-skip-ink: auto; /*underline to not cover font*/
-}
+/* a:not([class]) {
+  text-underline-offset: 3px;
+  text-decoration-skip-ink: auto;
+} */
 
 a {
   text-decoration: none;
@@ -131,10 +132,7 @@ code {
     monospace;
 }
 
-.App {
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-}
+
 
 /* //////////////////////
   General styling
@@ -174,14 +172,18 @@ p, span {
   font: 400 var(--fs-16)/1.26% var(--ff-body);
 }
 
-a {
-  font: 400 var(--fs-18)/1.25% var(--ff-link);
-  color: var(--c-black-heading);
+a, .a {
+  font: var(--fs-14) var(--ff-link);
 }
 
 section,
 .section {
   padding: min(10vh, 10em) 0;
+}
+
+.App {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
 .App-header {
