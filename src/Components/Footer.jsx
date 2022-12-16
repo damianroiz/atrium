@@ -24,18 +24,18 @@ const Footer = () => {
         <li><i className="fa fa-fax" aria-hidden="true"></i>+1(403)-259 8776</li>
       </ul>
       <div className="social-media">
-        <Link href="https://www.facebook.com/Atriumphysio/">
+        <a href="https://www.facebook.com/Atriumphysio/" target="_blank" rel="noopener">
         <i className="fa-brands fa-facebook"></i>
-        </Link>
-        <Link href="https://www.facebook.com/Atriumphysio/">
+        </a>
+        <a href="https://www.facebook.com/Atriumphysio/" target="_blank" rel="noopener">
         <i className="fa-brands fa-instagram"></i>
-        </Link>
-        <Link href="https://www.facebook.com/Atriumphysio/">
+        </a>
+        <a href="https://www.facebook.com/Atriumphysio/" target="_blank" rel="noopener">
         <i className="fa-brands fa-linkedin"></i>
-        </Link>
-        <Link href="https://www.facebook.com/Atriumphysio/">
+        </a>
+        <a href="https://www.facebook.com/Atriumphysio/"target="_blank" rel="noopener">
         <i className="fa-brands fa-twitter"></i>
-        </Link>
+        </a>
       </div>
     </div>
 
