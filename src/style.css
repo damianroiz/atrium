@@ -118,16 +118,12 @@ select {
   --c-black-heading: #262B2F;
   --c-black-body: #1A2228;
   --c-light-blue-text: rgb(113,196,255);
-  --c-bg-btn-green: #1DB954;
+  --c-btn-green: #1DB954;
+  --c-btn-red: #CF1020; /*https://cssgradient.io/*/
   --c-bg-btn-blue: #191970;
   --c-blue-hover: rgb(0, 26, 255);
+  --c-bg-footnote: #000039;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 
 
 /* //////////////////////

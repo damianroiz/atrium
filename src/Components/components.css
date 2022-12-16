@@ -77,7 +77,6 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
 
 .contact-info-card>div>p {
   position: absolute;
-  font-size: var-;
   font-weight: 400;
   letter-spacing: 2px;
   height: 0;
@@ -113,27 +112,23 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
 }
 
 .appointment-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--fs-18);
   border: none;
   margin: 10px;
   width: 300px;
   height: 45px;
   border-radius: 10px;
   color: var(--c-white);
-  background: var(--c-bg-btn-green);
+  background: var(--c-btn-green);
   letter-spacing: 1.01px;
   box-shadow: -3px 3px 1px 0.8px rgba(0, 0, 0, 0.2),
     3px -1px 5px 1px rgba(255, 255, 2555, 0.3);
   cursor: pointer;
   transition: all 0.5s ease-in;
 }
-
-.appointment-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-}
-
 
 .appointment-btn:hover {
   transform: scale(1.1);
@@ -269,6 +264,8 @@ nav .menu-item:hover {
     display: none;
   }
 
+
+  /*--------------- pending ---------------------*/
   /*--------------- sliding menu ---------------------*/
 
   .hidden {
@@ -322,7 +319,7 @@ nav .menu-item:hover {
   border: 0;
   padding: 8px;
   border-radius: 8px;
-  background: #cd4c32;
+  background: var(--c-btn-red);
   cursor: pointer;
   box-shadow: -3px 3px 5px 0.8px rgba(0, 0, 0, 0.2),
     3px -1px 5px 1px rgba(255, 255, 255, 0.3);
@@ -342,13 +339,13 @@ nav .menu-item:hover {
 .covidBtn:hover a:hover {
   transform: scale(1.1);
   transition: all 0.5s ease;
-  color: #cd4c32;
+  color: var(--c-btn-red);
 }
 
 .covidBtn:hover {
   transform: scale(1.2);
   transition: all 0.5s ease;
-  border: 3px solid #cd4c32;
+  border: 3px solid var(--c-btn-red);
   background-color: var(--c-white);
   box-shadow: none;
 }
@@ -365,15 +362,15 @@ nav .menu-item:hover {
 */
 
 .About {
+  display: flex;
+  place-content: center;
+  flex-direction: column;
   background: var(--c-bg-blue), url("../assets//images/home-background-mr-lee-f4RBYsY2hxA-unsplash.jpg");
   background-position: 40% 20%;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 300px;
-  display: flex;
-  place-content: center;
-  flex-direction: column;
 }
 
 .about-title {
@@ -412,12 +409,12 @@ nav .menu-item:hover {
 }
 
 .container-icons {
-  width: 50px;
-  height: 50px;
-  background-color: var(--c-white);;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: var(--c-white);
   border-radius: 50%;
   margin-left: 10px;
   transition: all 0.5s ease;
@@ -528,7 +525,6 @@ footer {
   text-transform: uppercase;
   text-decoration: solid underline 2px;
   text-underline-offset: 0.45em;
-  font-size: 22px;
   padding-block: 20px;
   letter-spacing: 1.12px;
 }
@@ -555,14 +551,6 @@ footer {
   min-width: 350px;
 }
 
-.hours-section:after, .links:after {
-  content: "";
-  position: absolute;
-  top: 24%;
-  box-shadow: -2px 2px 5px rgba(0, 0, 0, .3);
-  border: 2px solid #000039;
-}
-
 footer li {
   margin-bottom: 10px;
 }
@@ -571,7 +559,7 @@ footer li {
   flex-direction: column;
   align-items: center;
   padding-block: 30px 10px;
-  background: #000039;
+  background: var(--c-bg-footnote);
   letter-spacing: 1.07px;
   font-size: 14px;
 }
