@@ -4,7 +4,7 @@ import { Navbar } from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import { ServicesItems } from "./ServicesItems";
 import SectionTitle from "../../Components/SectionTitle";
-import { servicesdata } from "../Services_info/services_data";
+import { servicesdata } from "../Services/services_data";
 import "./services.css";
 import { Services_Content } from "./Services_Content";
 

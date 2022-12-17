@@ -1,5 +1,4 @@
 import React from "react";
-import "./home.css";
 import "../../Components/components.css"
 
 export const BannerApoint = () => {

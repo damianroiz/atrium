@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../assets/atriumLogo.png";
-import "./components.css";
 import { Link } from "wouter";
 
 const SectionInfo = () => {

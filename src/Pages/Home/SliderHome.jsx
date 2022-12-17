@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Fade } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
-import './home.css'
+
 // import { Text } from '@chakra-ui/react'
 
 // const textImages = [

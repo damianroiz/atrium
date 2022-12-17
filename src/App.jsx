@@ -1,11 +1,10 @@
-import "./style.css";
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 import { Route } from "wouter";
 import Covid19 from "./Pages/Covid-19/Covid19";
 import Appointment from "./Pages/Appointment/Appointment";
-import Services from "./Pages/Services_info/Services";
+import Services from "./Pages/Services/Services";
 
 export default function App() {
   return (

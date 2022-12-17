@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from 'wouter';
-import "./components.css";
+// import "./components.css";
 
 export const Navbar =() => {
   //change burger classes

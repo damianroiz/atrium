@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "wouter";
-import "./components.css";
 
 const SectionTitle = ({ title }) => {
   return (
