@@ -3,7 +3,7 @@ import SectionInfo from "../../Components/SectionInfo";
 import { Navbar } from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import MapContact from "./MapContact";
-import SectionTitle from "../../Components/SectionTitle";
+import SectionTitle from "../../Components/PageHeader";
 
 const Contact = () => {
   return (

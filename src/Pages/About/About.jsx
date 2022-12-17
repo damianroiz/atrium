@@ -1,7 +1,7 @@
 import SectionInfo from "../../Components/SectionInfo";
 import { Navbar } from "../../Components/Navbar";
-import SectionTitle from "../../Components/SectionTitle";
-import CarouselImg from "./Carousel";
+import SectionTitle from "../../Components/PageHeader";
+import Office from "./Office";
 import Staff from "./Staff";
 import Footer from "../../Components/Footer";
 
@@ -11,8 +11,8 @@ const About = () => {
       <SectionInfo />
       <Navbar />
       <SectionTitle title="About" />
-      <CarouselImg />
       <Staff />
+      <Office />
       <Footer />
     </div>
   );

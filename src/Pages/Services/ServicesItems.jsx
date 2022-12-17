@@ -1,6 +1,3 @@
-import "./servicesitems.css";
-import "./services.css";
-
 export const ServicesItems = ({ item, setCurrent, current }) => {
   const handleClick = () => {
     setCurrent(item.id);
@@ -17,3 +14,5 @@ export const ServicesItems = ({ item, setCurrent, current }) => {
     </div>
   );
 };
+
+

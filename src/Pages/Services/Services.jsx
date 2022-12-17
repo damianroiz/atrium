@@ -3,9 +3,8 @@ import SectionInfo from "../../Components/SectionInfo";
 import { Navbar } from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import { ServicesItems } from "./ServicesItems";
-import SectionTitle from "../../Components/SectionTitle";
+import SectionTitle from "../../Components/PageHeader";
 import { servicesdata } from "../Services/services_data";
-import "./services.css";
 import { Services_Content } from "./Services_Content";
 
 const Services = () => {

@@ -6,7 +6,7 @@ import { SliderHome } from "./SliderHome";
 import { CardsHome } from "./CardsHome";
 import { AboutHome } from "./AboutHome";
 import { Reviews } from "./Reviews";
-import { BannerApoint } from "./BannerApoint";
+import { BannerApoint } from "./MissionBanner";
 import MapContact from "../Contact/MapContact";
 
 const Home = () => {

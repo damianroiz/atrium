@@ -1,7 +1,7 @@
 import React from "react";
 import SectionInfo from "../../Components/SectionInfo";
 import { Navbar } from "../../Components/Navbar";
-import SectionTitle from "../../Components/SectionTitle";
+import SectionTitle from "../../Components/PageHeader";
 import Footer from "../../Components/Footer";
 import "../../../src/style.css";
 
