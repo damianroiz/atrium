@@ -1,7 +1,6 @@
 
 @import '../style.css';
 
-
 /*
 //////////////////////
 //////////////////////////SECTION INFORMATION
@@ -385,11 +384,8 @@ nav .menu-item:hover {
 }
 
 .about-title {
-  margin: 0;
   z-index: 1;
-  font-size: 55px;
-  font-weight: 900;
-  color: var(--c-white);;
+  color: var(--c-white);
 }
 
 .link-home {

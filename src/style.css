@@ -55,8 +55,8 @@ https://fonts.google.com/share?selection.family=Fira%20Sans:wght@500;600%7COxyge
   --fs-24: 1.5rem;
   --fs-30: 1.875rem;
   --fs-32: 2rem;
-  --ff-48: 3rem;
-  --ff-64: 4rem;
+  --fs-48: 3rem;
+  --fs-64: 4rem;
 /*font families*/
   --ff-nav: 'Ubuntu', 'Helvetica', sans-serif;
   --ff-heading: 'Crimson Text', 'Georgia', 'Cambria', serif;
@@ -151,19 +151,19 @@ h1-h6 {
 }
 
 h1 {
-  font: 600 var(--fs-64)/1.35% var(--ff-heading);
+  font: 600 var(--fs-64)/50px var(--ff-heading);
 }
 
 h2 {
-  font: 500 var(--fs-48)/1.35% var(--ff-heading);
+  font: 500 var(--fs-48)/1.35% var(--ff-subheading);
 }
 
 h3 {
-  font: 500 var(--fs-24)/1.25% var(--ff-heading);
+  font: 500 var(--fs-24)/1.25% var(--ff-subheading);
 }
 
 h4 {
-  font: 500 var(--fs-20) var(--ff-heading);
+  font: 500 var(--fs-20) var(--ff-subheading);
 }
 
 p, span {
@@ -479,6 +479,11 @@ button {
   justify-content: center;
   gap: 10px;
 }
+
+.title-carousel {
+  margin-bottom: 30px;
+}
+
 .carousel-container {
   width: 780px;
   object-fit: cover;
@@ -493,10 +498,7 @@ button {
   }
 }
 
-.title-carousel {
-  margin-bottom: 30px;
-  font-size: 3rem;
-}
+
 
 
 /*
