@@ -34,7 +34,7 @@ export const CardsHome = () => {
       <Stack
         className="cardshome"
         height="100vh"
-        flexDirection="row"
+        flexDirection="column"
         justifyContent="center"
         alignItems="center"
         p={0}
