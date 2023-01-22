@@ -1,4 +1,4 @@
-import { Box, Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 import { benefitCards } from "./homeContent";
 
@@ -6,24 +6,24 @@ export const CardsHome = () => {
   return (
     <>
       <Stack
-        height="100vh"
-        flexDirection="row"
+        direction={['column', 'row']}
         justifyContent="center"
-        alignItems="center"
-        p={0}
+        flexWrap="wrap"
+        gap={15}
+        mt={50}
+        mb={70}
       >
-        {benefitCards.map(card => (
-          <Stack flexDirection="row" color="#fff">
-            <Stack padding={10}>
+        {benefitCards.map((card) => (
+          <Stack flexDirection="column" color="#fff">
+            <Stack p={15}>
               <Box
                 className={card.class}
-                w="230px"
-                h="400px"
-                pt={10}
-                pb={30}
+                w={230}
+                h={400}
+                pt={30}
                 bg={`center / cover no-repeat url(${card.coverImage})`}
               >
-              <Box display="flex" flexDirection="column" >
+                <Box display="flex" flexDirection="column">
                   <Text
                     display="flex"
                     alignItems="center"
@@ -32,17 +32,17 @@ export const CardsHome = () => {
                     zIndex={1}
                     m={5}
                     letterSpacing={2}
-                    fontSize="25px"
+                    fontSize={25}
                     fontFamily="Roboto"
-                    fontWeight="semibold"
-              >
+                    fontWeight={500}
+                  >
                     {card.title}
                   </Text>
                   <Text
                     zIndex={1}
                     m={0}
-                    padding={25}
-                    letterSpacing="2px"
+                    p={25}
+                    letterSpacing={2}
                     lineHeight={1.4}
                     fontFamily="Roboto"
                     fontWeight={500}
