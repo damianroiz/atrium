@@ -3,10 +3,7 @@ import SectionInfo from "../../Components/SectionInfo";
 import { Navbar } from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import { SliderHome } from "./SliderHome";
-import { CardsHome } from "./CardsHome";
-import { AboutHome } from "./AboutHome";
-import { Reviews } from "./Reviews";
-import { BannerApoint } from "./MissionBanner";
+import { HomeCards, AboutUs, MissionBanner, Reviews } from "./HomeSections";
 
 const Home = () => {
   return (
@@ -14,9 +11,9 @@ const Home = () => {
       <SectionInfo />
       <Navbar />
       <SliderHome />
-      <CardsHome />
-      <AboutHome />
-      <BannerApoint />
+      <HomeCards  />
+      <AboutUs />
+      <MissionBanner />
       <Reviews />
       <Footer />
     </div>

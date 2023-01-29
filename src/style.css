@@ -168,7 +168,7 @@ h4 {
 }
 
 p,
-span {
+span, .p, .span {
   font: 400 var(--fs-16)/1.26% var(--ff-body);
 }
 
