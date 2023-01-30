@@ -1,6 +1,6 @@
 import SectionInfo from "../../Components/SectionInfo";
 import { Navbar } from "../../Components/Navbar";
-import SectionTitle from "../../Components/PageHeader";
+import PageHeader from "../../Components/PageHeader";
 import Office from "./Office";
 import Staff from "./Staff";
 import Footer from "../../Components/Footer";
@@ -10,7 +10,7 @@ const About = () => {
     <div>
       <SectionInfo />
       <Navbar />
-      <SectionTitle title="About" />
+      <PageHeader />
       <Staff />
       <Office />
       <Footer />

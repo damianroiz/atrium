@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "wouter";
 
-const PageHeader = ({ title }) => {
+export default PageHeader = ({ title }) => {
   return (
     <section className="about-section">
       <h1 className="about-title">{title}</h1>
@@ -12,4 +12,3 @@ const PageHeader = ({ title }) => {
   );
 };
 
-export default PageHeader;
