@@ -45,7 +45,7 @@ export const Navbar =() => {
             Contact
           </Link>
         <div className="covidBtn">
-          <Link href="/Covid19" className="menu-item">
+          <Link href="/CovidAlert" className="menu-item">
             Covid-19 Alert
           </Link>
         </div>

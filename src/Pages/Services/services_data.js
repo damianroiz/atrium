@@ -28,7 +28,7 @@ export const servicesdata = [
     title: 'Graston Technique ®',
     image: 'https://atriumphysiotherapy.com/images/Graston.jpg',
     description:
-      'Graston technique is a form of instrument-assisted or augmented soft tissue mobilization (ASTM) that enables practitioners to improve scar tissue, fascial restrictions and range of motion. The theory behind this IASTM technique is that by using a tool to introduce microtrauma into an area of excessive scarring and/or soft tissue fibrosis, an inflammatory response will occur. In a 2017 Journal of Exercise Rehabilitation study, the authors describe that “Such inflammation restarts the healing process by removing the scar tissue and releasing adhesions, while also increasing blood and nutrient supply to the injured area and migration of fibroblasts.” (1b)',
+      'Graston technique is a form of instrument-assisted or augmented soft tissue mobilization (ASTM) that enables practitioners to improve scar tissue fascial restrictions and range of motion. The theory behind this IASTM technique is that by using a tool to introduce microtrauma into an area of excessive scarring and/or soft tissue fibrosis, an inflammatory response will occur. In a 2017 Journal of Exercise Rehabilitation study, the authors describe that “Such inflammation restarts the healing process by removing the scar tissue and releasing adhesions, while also increasing blood and nutrient supply to the injured area and migration of fibroblasts.” (1b)',
   },
 
   {

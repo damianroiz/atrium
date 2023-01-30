@@ -11,7 +11,7 @@ export default function App() {
       <Route path="/" component={Home} />
       <Route path="/About" component={About} />
       <Route path="/Services" component={Services} />
-      <Route path="/CovidAlert" component={CovidAlert} />
+      <Route path="/Covid19" component={CovidAlert} />
       <Route path="/Appointment" component={Appointment} />
     </div>
   );

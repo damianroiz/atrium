@@ -10,7 +10,7 @@ const Footer = () => {
   return (
 <footer>
   <div className="footer-sections">
-  <i className="fa fa-circle-chevron-up" aria-hidden="true"></i>
+  <i className="fa fa-circle-chevron-up" aria-hidden="true"><a href="/"></a></i>
     <div className="contact-info">
       <img className="footer-logo" src="https://www.atriumphysiotherapy.com/images/atriumLogo.png" alt="Company Logo" />
       <ul className="contact-list">
@@ -26,13 +26,13 @@ const Footer = () => {
         <a href="https://www.facebook.com/Atriumphysio/" target="_blank" rel="noopener">
         <i className="fa-brands fa-facebook"></i>
         </a>
-        <a href="https://www.facebook.com/Atriumphysio/" target="_blank" rel="noopener">
+        <a href="https://www.instagram.com/atriumphysiotherapy/" target="_blank" rel="noopener">
         <i className="fa-brands fa-instagram"></i>
         </a>
-        <a href="https://www.facebook.com/Atriumphysio/" target="_blank" rel="noopener">
+        <a href="https://www.linkedin.com/in/hala-basily-05872829/" target="_blank" rel="noopener">
         <i className="fa-brands fa-linkedin"></i>
         </a>
-        <a href="https://www.facebook.com/Atriumphysio/"target="_blank" rel="noopener">
+        <a href="https://twitter.com/"target="_blank" rel="noopener">
         <i className="fa-brands fa-twitter"></i>
         </a>
       </div>
@@ -41,11 +41,11 @@ const Footer = () => {
     <div className="links">
       <p>Links</p>
       <ul>
-        <li>About</li>
-        <li>Services</li>
-        <li>Blog</li>
-        <li>Contact</li>
-        <li>Covid-19 Alert</li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/Services">Services</a></li>
+        <li><a href="/blog">Blog</a>Blog</li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/covid19">Covid-19 Alert</a></li>
       </ul>
     </div>
 

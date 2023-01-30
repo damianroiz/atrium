@@ -16,9 +16,7 @@ const Services = () => {
       <Navbar />
       <SectionTitle title="Services" />
       <section className="services_section">
-        <h4 className="subtitle_services">SERVICES</h4>
-        <h2 className="title_services">Clinic Services</h2>
-        <p className="parrafo_services">
+        <p>
           Information pertaining to the high quality services offered by our
           clinic
         </p>
