@@ -15,21 +15,27 @@ All areas of the clinic (including but not limited to door handles, reception co
 
 Personal Protective Equipment (PPE): We provide our patients and staff PPE that has been recommended by the College of Physiotherapist of Alberta and also by Alberta's provincial health authority. Responsibilities: Our Clinic Director is passionate about the welfare and safety of both patients and staff. Patients are given the option of visiting the clinic in person or doing a virtual care / Telehealth to ensure their treatment needs are being met. We will monitor and abide by all recommendations from the College of Physiotherapist of Alberta as well as Federal and Provincial Agencies. We are in this together, and together we will get through this.`
 
-export default CovidArticle = () => {
+const paragraphSpacer = () =>
   covidText.split("\n").map((text, index) => {
+    return (
+      <Fragment key={index}>
+        {text}
+        <br />
+      </Fragment>
+    );
+  });
+
+export default CovidAlert = () => {
     return (
       <div>
         <SectionInfo />
         <Navbar />
-        <SectionTitle title="Covid-19" />
+        <SectionTitle/>
         <PageHeader />
         <h1>COVID-19 Measures</h1>
-        <Fragment key={index}>
-        {text}
-        < br />
-        </Fragment>
+        <p>{paragraphSpacer()}</p>
         <Footer />
       </div>
     );
-  });
-}
+  };
+
