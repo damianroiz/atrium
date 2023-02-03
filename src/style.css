@@ -498,7 +498,7 @@ button {
 
 /*
 ///////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////SERVICES
+/////////////////////////////////SERVICES
 //////////////////////////////////////
 */
 
@@ -594,7 +594,7 @@ button {
 
 /*
 /////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////BLOG
+/////////////////////////////////////////BLOG
 //////////////////////////////////////////////
 */
 
@@ -672,7 +672,7 @@ button {
 
 /*
 /////////////////////////////////////////
-//////////////////////////////////////////////////APPOINTMENTS
+/////////////////////////////////////APPOINTMENT
 //////////////////////////////////////////////
 */
 
@@ -680,80 +680,22 @@ button {
   width: 700px;
 }
 
-.Appointment {
+.Appointment-section {
   display: flex;
-  height: 100%;
 }
 
 /* 
-------------------------
-Left Container
-----------------------
+/////////////////////////////////////Right Container 
 */
 
-.left {
-  width: 50%;
-  background-color: rgb(0, 93, 185);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 7px;
+.review_google {
+  width: 600px;
+  position: relative;
+  right: 30px;
+  border-radius: 20px;
 }
 
-.form {
-  column-count: 2;
-  padding-left: 30px;
-}
-
-.form input,
-select {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: transparent !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
-  height: 58px !important;
-  padding-left: 0;
-  padding-right: 0;
-  background: transparent !important;
-  color: rgba(255, 255, 255, 0.9) !important;
-  font-size: 16px;
-  border-radius: 0px;
-  box-shadow: none !important;
-  width: 90%;
-  align-items: center;
-}
-
-.form input,
-select:enabled {
-  color: red;
-}
-
-option {
-  color: black;
-}
-
-.form input::placeholder {
-  color: white;
-}
-
-.form input:focus {
-  outline: none;
-}
-
-.form select,
-option:focus {
-  outline: none;
-}
-
-/* 
-------------------------
-Right Container 
-----------------------
-*/
-
-.right {
+.review-container {
   width: 50%;
 }
 
@@ -787,54 +729,68 @@ Right Container
   letter-spacing: 6px;
 }
 
-.review_google {
-  width: 600px;
-  position: relative;
-  right: 30px;
-  border-radius: 20px;
-}
 
-.appoint-btn {
-  border: none;
-  width: 300px;
-  padding: 13px;
-  border-radius: 10px;
-  position: relative;
-  background: #32cd32;
-  border: 1px solid #32cd32;
-  color: white;
-  font-size: 19px;
-  top: 30px;
-  transition: all 0.5s ease;
-}
-
-.appoint-btn:hover {
-  transform: scale(1.1);
-  transition: all 0.5s ease;
-  cursor: pointer;
-}
-
-.date_form {
+.calendar {
   display: flex !important;
   flex-direction: row !important;
   justify-content: space-around;
 }
 
-/*
-/////////////////////////////////////////
-//////////////////////////////////////////////////COVID MESSAGE
-//////////////////////////////////////////////
+
+
+
+/* 
+///////////////////////////////////Left Container
 */
 
-.covid19-container {
-  padding: 80px;
+.container-left {
+  width: 50%;
+  background-color: var(--c-bg-blue);
+  color: var(--c-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 7px;
+  column-count: 2;
+  padding-left: 30px;
 }
 
-.covid19-container h1 {
-  font-size: 40px;
+.container-left input,
+select {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 58px !important;
+  padding-left: 0;
+  padding-right: 0;
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 16px;
+  border-radius: 0px;
+  box-shadow: none !important;
+  width: 90%;
+  align-items: center;
 }
 
-.covid19-container p {
-  color: #222;
-  font-size: 18px;
+.appointment-form input,
+select:enabled {
+  color: red;
 }
+
+option {
+  color: black;
+}
+
+.appointment-form input::placeholder {
+  color: white;
+}
+
+.appointment-form input:focus {
+  outline: none;
+}
+
+.appointment-form select,
+option:focus {
+  outline: none;
+}
+
