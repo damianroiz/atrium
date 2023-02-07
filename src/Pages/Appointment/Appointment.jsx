@@ -4,7 +4,7 @@ import { Navbar } from "../../Components/Navbar";
 import SectionTitle from "../../Components/PageHeader";
 import Footer from "../../Components/Footer";
 
-export default Appointment = () => {
+const Appointment = () => {
   return (
     <div>
     <SectionInfo />
@@ -44,3 +44,5 @@ export default Appointment = () => {
     </div>
   );
 };
+
+export default Appointment;
