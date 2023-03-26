@@ -1,7 +1,8 @@
 import React from "react";
 import SectionInfo from "../../Components/SectionInfo";
 import { Navbar } from "../../Components/Navbar";
-import SectionTitle from "../../Components/PageHeader";
+import PageHeader from "../../Components/PageHeader";
+import AppointmentForm from "../../Components/AppointmentForm/AppointmentForm";
 import Footer from "../../Components/Footer";
 
 const Appointment = () => {
@@ -9,37 +10,15 @@ const Appointment = () => {
     <div>
     <SectionInfo />
     <Navbar />
-    <SectionTitle />
-    <section className="Appointment-section">
-      <div className="review-container">
-        <div className="elfsight-app-7c8824c3-96b9-4222-ab5c-f8f827c1feaa reviewbox review_google"></div>
-      </div>
-        <div class="container-left">
-          <h2>Appointments</h2>
-          <p>
-            If you have any questions before requesting an appointment, please feel free to contact our
-            staff.
-          </p>
-          <form className="appointment-form">
-            <input type="text" name="name" placeholder="Name" />
-            <input type="text" name="email" placeholder="Email" />
-            <select name="service" id="select" class="form-control" placeholder="Select your services">
-              <option>Physiotherapy</option>
-              <option>Acupuncture</option>
-              <option>Massage Therapy</option>
-            </select>
-            <input type="tel" name="phone" placeholder="Phone" />
-            <input type="text" name="message" placeholder="Message" />
-            <input
-              className="calendar"
-              type="date"
-              name="date"
-              placeholder="Date"
-            />
-          </form>
-          <button className="appoint-btn">Request Appointment</button>
+    <PageHeader title='Appointment Booking' />
+      <section className="appointment-section">
+        <div className="customer-review-box">
+          <div className="elfsight-app-7c8824c3-96b9-4222-ab5c-f8f827c1feaa reviewbox review_google"></div>
         </div>
-    </section>
+        <div className="appointment-form">
+          <AppointmentForm />
+        </div>
+      </section>
     <Footer />
     </div>
   );

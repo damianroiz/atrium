@@ -673,34 +673,18 @@ button {
   line-height: 20px;
 }
 
-/*
-/////////////////////////////////////////
-/////////////////////////////////////APPOINTMENT
-//////////////////////////////////////////////
-*/
-
-.reviewbox {
-  width: 700px;
-}
-
-.Appointment-section {
-  display: flex;
-}
 
 /* 
 /////////////////////////////////////Right Container 
 */
 
-.review_google {
+/* .review_google {
   width: 600px;
   position: relative;
   right: 30px;
   border-radius: 20px;
 }
 
-.review-container {
-  width: 50%;
-}
 
 .container-right {
   display: grid;
@@ -737,62 +721,28 @@ button {
   display: flex !important;
   flex-direction: row !important;
   justify-content: space-around;
-}
-
-
+} */
 
 
 /* 
-///////////////////////////////////Left Container
+////////////////////////////////////////////////////////////APPOINTMENT SECTION
+////////////////////////////////////////
 */
 
-.container-left {
-  width: 50%;
-  background-color: var(--c-bg-blue);
-  color: var(--c-white);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 7px;
-  column-count: 2;
-  padding-left: 30px;
+
+.appointment-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    border: 1px solid red;
+    padding: 40px 30px;
 }
 
-.container-left input,
-select {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 58px !important;
-  padding-left: 0;
-  padding-right: 0;
-  background: transparent !important;
-  color: rgba(255, 255, 255, 0.9) !important;
-  font-size: 16px;
-  border-radius: 0px;
-  box-shadow: none !important;
-  width: 90%;
-  align-items: center;
+.customer-review-box {
+  width: 700px;
 }
 
-.appointment-form input,
-select:enabled {
-  color: red;
-}
-
-option {
-  color: black;
-}
-
-.appointment-form input::placeholder {
-  color: white;
-}
-
-.appointment-form input:focus {
-  outline: none;
-}
-
-.appointment-form select,
-option:focus {
-  outline: none;
+.appointment-form > h3 {
+  padding-block: 20px;
 }
