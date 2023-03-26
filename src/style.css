@@ -168,12 +168,14 @@ h4 {
 }
 
 p,
-span, .p, .span {
+span,
+.p,
+.span {
   font: 400 var(--fs-16)/1.26% var(--ff-body);
 }
 
 a {
-  font: var(--fs-14) var(--ff-link);
+  font: var(--fs-16) var(--ff-link);
   text-decoration: none;
 }
 
@@ -265,6 +267,7 @@ button {
 */
 
 .banner-container {
+  margin: 60px 0 20px 0;
   width: 100%;
   padding: 50px;
   display: flex;
@@ -793,4 +796,3 @@ option {
 option:focus {
   outline: none;
 }
-
