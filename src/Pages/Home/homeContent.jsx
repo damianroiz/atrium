@@ -1,6 +1,7 @@
 export const benefitCards = [
   {
-    class: "card1",
+    id: "card1",
+    class:"card",
     coverImage:
       "https://images.unsplash.com/photo-1637580690960-02f4673ba4c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
     title: "Qualified Professionals",
@@ -8,7 +9,8 @@ export const benefitCards = [
       "Top-notch customer service and treatment approach that is evidence based and proven to be successful",
   },
   {
-    class: "card2",
+    id: "card2",
+    class:"card",
     coverImage:
       "https://images.pexels.com/photos/5473186/pexels-photo-5473186.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "Extensive Experience",
@@ -16,7 +18,8 @@ export const benefitCards = [
       "Over 20 years of combined experience, and extensive knowledge in many areas of physical and mental health",
   },
   {
-    class: "card3",
+    id: "card3",
+    class:"card",
     coverImage:
       "https://images.pexels.com/photos/7772689/pexels-photo-7772689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "Leading Technology",
@@ -24,7 +27,8 @@ export const benefitCards = [
       "Agile treatment techniques led by advanced technology to diagnose patient issues and concerns",
   },
   {
-    class: "card4",
+    id: "card4",
+    class:"card",
     coverImage:
       "https://images.pexels.com/photos/4269205/pexels-photo-4269205.jpeg",
     title: "Direct Billing",

@@ -1,8 +1,7 @@
 import React from "react";
-import { Image, Stack, Box, Text, VStack, HStack } from "@chakra-ui/react";
+import { Image, Stack, Box, Text, VStack } from "@chakra-ui/react";
 import { benefitCards, AboutUsContent } from "./HomeContent";
 import "../../style.css";
-import { red } from "@mui/material/colors";
 
 export const HomeCards = () => {
   return (
