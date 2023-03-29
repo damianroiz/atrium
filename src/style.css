@@ -379,6 +379,8 @@ button {
        217deg, rgba(2, 2, 2, 0.45), 
        rgba(0, 0, 255, .6)
      ); */
+  box-shadow: 2px 5px 10px rgb(0 0 0 / 0.2);
+  transition: transform ease 300ms;
   position: relative;
 }
 
@@ -397,23 +399,12 @@ button {
       rgba(0, 0, 255, .60))
 }
 
-
-.card1,
-.card2,
-.card3,
-.card4 {
-  box-shadow: 2px 5px 10px rgb(0 0 0 / 0.2);
-  transition: transform ease 300ms;
-}
-
 .card1:hover,
 .card2:hover,
 .card3:hover,
 .card4:hover {
   transform: translate(0, -25px);
 }
-
-
 
 /*
 //////////////////////////////////////////////////STAFF
