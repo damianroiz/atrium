@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Stack, Box, Text, VStack } from "@chakra-ui/react";
+import { Image, Stack, Box, Text, VStack, HStack } from "@chakra-ui/react";
 import { benefitCards, AboutUsContent } from "./HomeContent";
 import "../../style.css";
 
@@ -14,11 +14,11 @@ export const HomeCards = () => {
         mt={50}
         mb={70}
       >
-        {benefitCards.map((card) => (
-          <Stack flexDirection="column" color="#fff">
+        {BenefitCards.map((card) => (
+          <Stack key={card.id} flexDirection="column" color="#fff">
             <Stack p={15}>
               <Box
-                className={card.class}
+                className="card"
                 w={230}
                 h={400}
                 pt={30}
