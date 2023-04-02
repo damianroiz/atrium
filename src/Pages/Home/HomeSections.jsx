@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, Stack, Box, Text, VStack, HStack } from "@chakra-ui/react";
-import { benefitCards, AboutUsContent } from "./HomeContent";
+import { BenefitCards, AboutUsContent } from "./home_content";
 import "../../style.css";
 
 export const HomeCards = () => {
