@@ -2,6 +2,7 @@ import React from "react";
 import { Image, Stack, Box, Text, VStack, HStack } from "@chakra-ui/react";
 import { BenefitCards, AboutUsContent } from "./home_content";
 import "../../style.css";
+import staffImage from "../../../src/assets/images/staff-photo.jpg"
 
 export const HomeCards = () => {
   return (
@@ -69,7 +70,7 @@ export const AboutUs = () => {
             maxWidth={1200}
             width="100%"
             height="100%"
-            src={AboutUsContent.image} /* /Users/damiancoz/Sites/atrium/src/assets/images/staff-photo.jpg */
+            src={staffImage} /* /Users/damiancoz/Sites/atrium/src/assets/images/staff-photo.jpg */
             alt="staff image"
           />
         </Box>
