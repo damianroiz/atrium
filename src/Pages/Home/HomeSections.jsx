@@ -8,7 +8,6 @@ export const HomeCards = () => {
   return (
     <>
       <Stack
-        key={BenefitCards.id}
         direction={["column", "row"]}
         justifyContent="center"
         flexWrap="wrap"
@@ -17,7 +16,7 @@ export const HomeCards = () => {
         mb={70}
       >
         {BenefitCards.map((card) => (
-          <Stack  flexDirection="column" color="#fff">
+          <Stack key={card.id} flexDirection="column" color="#fff">
             <Stack p={15}>
               <Box
                 className="card"
