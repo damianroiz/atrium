@@ -1,13 +1,14 @@
 import React from "react";
-import { Image, Stack, Box, Text, VStack, HStack } from "@chakra-ui/react";
-import { benefitCards, AboutUsContent } from "./HomeContent";
+import { Image, Stack, Box, Text, VStack } from "@chakra-ui/react";
+import { BenefitCards } from "./home_content";
+import { AboutUsContent } from "./home_content";
 import "../../style.css";
-import { red } from "@mui/material/colors";
 
 export const HomeCards = () => {
   return (
     <>
       <Stack
+        key={BenefitCards.id}
         direction={["column", "row"]}
         justifyContent="center"
         flexWrap="wrap"
@@ -15,11 +16,10 @@ export const HomeCards = () => {
         mt={50}
         mb={70}
       >
-        {benefitCards.map((card) => (
+        {BenefitCards.map((card) => (
           <Stack  flexDirection="column" color="#fff">
             <Stack p={15}>
               <Box
-                key={card.id}
                 className="card"
                 w={230}
                 h={400}
