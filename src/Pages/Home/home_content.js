@@ -1,3 +1,5 @@
+
+
 export const BenefitCards = [
   {
     id: "card1",
@@ -34,7 +36,7 @@ export const BenefitCards = [
 ];
 
 export const AboutUsContent = {
-  image: "homepageStaffPhoto.jpg",
+  image: "./src/assets/images/staff-photo.jpg",
   title: "About Us",
   subtitle1:
     "We proudly provide quality, comprehensive Physiotherapy, Massage Therapy and Custom Crafted Orthotics.",

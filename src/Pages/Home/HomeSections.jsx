@@ -69,7 +69,7 @@ export const AboutUs = () => {
             maxWidth={1200}
             width="100%"
             height="100%"
-            src={`src/assets/images/${AboutUsContent.image}`}
+            src={AboutUsContent.image} /* /Users/damiancoz/Sites/atrium/src/assets/images/staff-photo.jpg */
             alt="staff image"
           />
         </Box>
