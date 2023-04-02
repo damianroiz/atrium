@@ -36,7 +36,7 @@ export const BenefitCards = [
 ];
 
 export const AboutUsContent = {
-  image: "./src/assets/images/staff-photo.jpg",
+  image: "../../../src/assets/images/staff-photo.jpg",
   title: "About Us",
   subtitle1:
     "We proudly provide quality, comprehensive Physiotherapy, Massage Therapy and Custom Crafted Orthotics.",
