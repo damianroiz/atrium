@@ -370,10 +370,7 @@ button {
 */
 
 
-.card1,
-.card2,
-.card3,
-.card4 {
+.card {
   /* background: 
   linear-gradient(
        217deg, rgba(2, 2, 2, 0.45), 
@@ -383,10 +380,7 @@ button {
 }
 
 
-.card1::after,
-.card2::after,
-.card3::after,
-.card4::after {
+.card::after {
   content: '';
   position: absolute;
   top: 0;
@@ -398,18 +392,12 @@ button {
 }
 
 
-.card1,
-.card2,
-.card3,
-.card4 {
+.card {
   box-shadow: 2px 5px 10px rgb(0 0 0 / 0.2);
   transition: transform ease 300ms;
 }
 
-.card1:hover,
-.card2:hover,
-.card3:hover,
-.card4:hover {
+.card:hover {
   transform: translate(0, -25px);
 }
 
@@ -731,18 +719,18 @@ button {
 
 
 .appointment-section {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 50px;
-    border: 1px solid red;
-    padding: 40px 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  border: 1px solid red;
+  padding: 40px 30px;
 }
 
 .customer-review-box {
   width: 700px;
 }
 
-.appointment-form > h3 {
+.appointment-form>h3 {
   padding-block: 20px;
 }

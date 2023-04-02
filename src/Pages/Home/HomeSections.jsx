@@ -16,10 +16,11 @@ export const HomeCards = () => {
         mb={70}
       >
         {benefitCards.map((card) => (
-          <Stack flexDirection="column" color="#fff">
+          <Stack  flexDirection="column" color="#fff">
             <Stack p={15}>
               <Box
-                className={card.class}
+                key={card.id}
+                className="card"
                 w={230}
                 h={400}
                 pt={30}
