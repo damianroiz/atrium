@@ -9,56 +9,7 @@ import marry from '../../assets/images/marry.jpg'
 import caleb from '../../assets/images/caleb.jpg'
 import enzo from '../../assets/images/enzoDog.jpg'
 
-const staffinfo = [
-  {
-    id: 1,
-    name: 'Carolyn Hackenberg',
-    info: 'Carolyn started her career in the business world, attending university in both Nova Scotia and in California where she',
-    image: carolynh,
-    load: 'OFFICE MANAGER',
-  },
-  {
-    id: 2,
-    name: 'Hala Basily',
-    info: 'Hala Basily has been practicing Physiotherapy for over 24 years. She earned her Bachelor degree in Physical',
-    image: hala,
-    load: 'PT CLINIC DIRECTOR',
-  },
-  {
-    id: 3,
-    name: 'Himani Goyal',
-    info: 'Himani’s journey with physiotherapy started at an early age of 15, when her grandmother’s spinal injury at',
-    image: himani,
-    load: 'PT',
-  },
-  {
-    id: 4,
-    name: 'Mariam Mamo',
-    info: 'Mariam Mamo is a registered message therapist. She graduated from MaKami College 3000 hours program in Calgary',
-    image: mariam,
-    load: 'RMT',
-  },
-  {
-    id: 5,
-    name: 'Marry Carroll',
-    info: 'Mary is medical office assistant, she was born and raised in the Philippines and came to Canada in 2009. She',
-    image: marry,
-    load: 'MOA',
-  },
-  {
-    id: 6,
-    name: 'Caleb Menjivar',
-    info: 'Caleb graduated from University of Calgary BSc Kinesiology program in 2021 and has since become a registered kinesiologist',
-    image: caleb,
-    load: 'KINESIOLOGIST',
-  },
-  {
-    id: 7,
-    name: 'Enzo',
-    image: enzo,
-    load: 'OFFICE DOG',
-  },
-]
+
 
 const Staff = () => {
   return (

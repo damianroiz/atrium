@@ -1,0 +1,50 @@
+export default [
+    {
+      id: 1,
+      name: 'Carolyn Hackenberg',
+      info: 'Carolyn started her career in the business world, attending university in both Nova Scotia and in California where she',
+      staffImg: carolynh,
+      load: 'OFFICE MANAGER',
+    },
+    {
+      id: 2,
+      name: 'Hala Basily',
+      info: 'Hala Basily has been practicing Physiotherapy for over 24 years. She earned her Bachelor degree in Physical',
+      staffImg: hala,
+      load: 'PT CLINIC DIRECTOR',
+    },
+    {
+      id: 3,
+      name: 'Himani Goyal',
+      info: 'Himani’s journey with physiotherapy started at an early age of 15, when her grandmother’s spinal injury at',
+      staffImg: himani,
+      load: 'PT',
+    },
+    {
+      id: 4,
+      name: 'Mariam Mamo',
+      info: 'Mariam Mamo is a registered message therapist. She graduated from MaKami College 3000 hours program in Calgary',
+      staffImg: mariam,
+      load: 'RMT',
+    },
+    {
+      id: 5,
+      name: 'Marry Carroll',
+      info: 'Mary is medical office assistant, she was born and raised in the Philippines and came to Canada in 2009. She',
+      staffImg: marry,
+      load: 'MOA',
+    },
+    {
+      id: 6,
+      name: 'Caleb Menjivar',
+      info: 'Caleb graduated from University of Calgary BSc Kinesiology program in 2021 and has since become a registered kinesiologist',
+      staffImg: caleb,
+      load: 'KINESIOLOGIST',
+    },
+    {
+      id: 7,
+      name: 'Enzo',
+      staffImg: enzo,
+      load: 'OFFICE DOG',
+    },
+  ]
