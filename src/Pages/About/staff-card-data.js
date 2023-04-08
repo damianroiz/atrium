@@ -10,14 +10,14 @@
 export default [
     {
       id: 1,
-      staffImg: 'carolynh.jpg',
+      staffImg: 'hala.jpg',
       name: 'Carolyn Hackenberg',
       position: 'OFFICE MANAGER',
       info: 'Carolyn started her career in the business world, attending university in both Nova Scotia and in California where she',
     },
     {
       id: 2,
-      staffImg: 'hala.jpg',
+      staffImg: 'https://atriumphysiotherapy.com/images/hala.jpg',
       name: 'Hala Basily',
       position: 'PT CLINIC DIRECTOR',
       info: 'Hala Basily has been practicing Physiotherapy for over 24 years. She earned her Bachelor degree in Physical',
