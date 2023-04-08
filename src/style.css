@@ -218,6 +218,13 @@ button {
   font-size: calc(10px + 2vmin);
 }
 
+:root {
+  --box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
+  0 1px 1px rgba(128, 128, 128, 0.155),
+  0 2.1px 2.1px rgba(128, 128, 128, 0.195),
+  0 4.4px 4.4px rgba(128, 128, 128, 0.241),
+  0 12px 12px rgba(128, 128, 128, 0.35)
+}
 
 /*
 /////////////////////////////////////////
@@ -404,58 +411,86 @@ button {
 }
 
 /*
-//////////////////////////////////////////////////STAFF
+//////////////////////////////////////
+//////////////////////////////////////////////////AB0UT PAGE
+//////////////////////////////////////
 */
 
-.staff {
-  height: 100%;
+/*
+////////////////////////OUR STAFF
+*/
+
+.cards-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding-bottom: 30px;
-  -webkit-box-shadow: 0.5px -4px 5px -2px rgba(50, 48, 48, 0.25);
-  -moz-box-shadow: 0.5px -4px 5px -2px rgba(47, 45, 45, 0.25);
-  box-shadow: 0.5px -4px 5px -2px rgba(45, 44, 44, 0.25);
+  gap: 10px;
+  margin-block: 10px;
 }
 
-.staff-box {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+.cards-section h2 {
+  display: block;
+  flex: 1 0 auto;
+  margin-bottom: 50px;
 }
 
-.staff-container {
-  padding: 10px;
+.cards-container {
+  max-width: 1200px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  gap: 50px;
+
+} 
+
+.staff-card {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: auto;
+  margin-top: auto;
+  box-shadow: var(--box-shadow);
 }
 
-.load {
-  position: relative;
-  bottom: 40px;
+.staff-card img {
+  display: block;
+  border: none;
+  border-radius: 12px 12px 0 0;
+  width: 480px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.staff-card-info{
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  height: 100%;
+  gap: 20px;
+  background-color: var(--c-bg-footnote);
   color: var(--c-white);
 }
 
-.info {
-  position: relative;
-  bottom: 40px;
-  color: var(--c-white);
+.staff-card-info > :first-child {
+  width: 100%;
+  font: var(--fs-18) var(--ff-subheading);
+  letter-spacing: 1.08px;
+  padding-block: 15px;
+  background-color: #F8F8FF25;
 }
 
-.name {
-  position: relative;
-  bottom: 20px;
-  color: var(--c-white);
+.staff-card-info > :last-child {
+  padding: 0 15px 25px 15px;
 }
 
-.cardcolor {
-  background-color: var(--c-bg-blue);
+.staff-card-info > :nth-child(2) {
+    font: var(--fs-16) var(--ff-text-body);
+    letter-spacing: 1.05px;
 }
-
 
 /*
-////////////////////////////////////////////////
-///////////////////////////////////////////////////OUR OFFICE
-////////////////////////////////////////////////
+////////////////////////OUR OFFICE
 */
 
 .office {
@@ -464,10 +499,11 @@ button {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  margin-bottom: 10px;
 }
 
 .title-carousel {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .carousel-container {
@@ -475,7 +511,6 @@ button {
   object-fit: cover;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 @media screen and (max-width: 680px) {
@@ -723,7 +758,6 @@ button {
   justify-content: center;
   flex-wrap: wrap;
   gap: 50px;
-  border: 1px solid red;
   padding: 40px 30px;
 }
 

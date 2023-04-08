@@ -125,12 +125,11 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
   box-shadow: -3px 3px 1px 0.8px rgba(0, 0, 0, 0.2),
     3px -1px 5px 1px rgba(255, 255, 2555, 0.3);
   cursor: pointer;
-  transition: all 0.5s ease-in;
+  transition: transform 0.5s ease-in;
 }
 
 .appointment-btn:hover {
   transform: scale(1.1);
-  transition: all 0.5s ease;
 }
 
 @media screen and (max-width:480px) {
@@ -458,11 +457,7 @@ form {
   align-items: center;
   color: var(--c-white);
   border-radius: 10px;
-  box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
-    0 1px 1px rgba(128, 128, 128, 0.155),
-    0 2.1px 2.1px rgba(128, 128, 128, 0.195),
-    0 4.4px 4.4px rgba(128, 128, 128, 0.241),
-    0 12px 12px rgba(128, 128, 128, 0.35)
+  box-shadow: var(--box-shadow);
 }
 
 form h3 {

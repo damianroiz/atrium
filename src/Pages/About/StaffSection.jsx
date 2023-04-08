@@ -16,6 +16,11 @@ export default function StaffSection() {
     );
   });
 
-  return <div>{staffcards}</div>;
+  return (
+    <section className="cards-section">
+      <h2>Our Staff</h2>
+      <div className="cards-container">{staffcards}</div>
+    </section>
+  )
 }
 

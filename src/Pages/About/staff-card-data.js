@@ -10,21 +10,21 @@
 export default [
     {
       id: 1,
-      staffImg: 'hala.jpg',
+      staffImg: 'carolynh.jpg',
       name: 'Carolyn Hackenberg',
-      position: 'OFFICE MANAGER',
+      position: 'Office Manager',
       info: 'Carolyn started her career in the business world, attending university in both Nova Scotia and in California where she',
     },
     {
       id: 2,
-      staffImg: 'https://atriumphysiotherapy.com/images/hala.jpg',
+      staffImg: 'hala.jpg',
       name: 'Hala Basily',
-      position: 'PT CLINIC DIRECTOR',
+      position: 'Clinic Director',
       info: 'Hala Basily has been practicing Physiotherapy for over 24 years. She earned her Bachelor degree in Physical',
     },
     {
       id: 3,
-      staffImg: 'hamani.jpg',
+      staffImg: 'himani.jpg',
       name: 'Himani Goyal',
       position: 'Physiotherapist',
       info: 'Himani’s journey with physiotherapy started at an early age of 15, when her grandmother’s spinal injury at',
@@ -52,9 +52,9 @@ export default [
     },
     {
       id: 7,
-      staffImg: 'enzoDog.jpg',
+      staffImg: 'enzo.jpg',
       name: 'Enzo',
-      position: 'The Office Pet',
+      position: 'The Best Office Pet',
       info: 'He loves welcoming patients in the waiting area',
     },
   ]
