@@ -66,7 +66,7 @@ https://fonts.google.com/share?selection.family=Fira%20Sans:wght@500;600%7COxyge
   --ff-link: 'Oxygen', 'Arial', sans-serif;
 }
 
-@media (max-width: 35em) {
+@media (max-width: 25em) {
   :root {
     /*minium font sizes*/
     --fs-10: calc(var(--fs-10) * 1.06);
