@@ -220,10 +220,10 @@ button {
 
 :root {
   --box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
-  0 1px 1px rgba(128, 128, 128, 0.155),
-  0 2.1px 2.1px rgba(128, 128, 128, 0.195),
-  0 4.4px 4.4px rgba(128, 128, 128, 0.241),
-  0 12px 12px rgba(128, 128, 128, 0.35)
+    0 1px 1px rgba(128, 128, 128, 0.155),
+    0 2.1px 2.1px rgba(128, 128, 128, 0.195),
+    0 4.4px 4.4px rgba(128, 128, 128, 0.241),
+    0 12px 12px rgba(128, 128, 128, 0.35)
 }
 
 /*
@@ -365,11 +365,11 @@ button {
 */
 
 .reviews {
-  display: flex;
-  justify-content: center;
+  margin: 0 auto;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 100px;
+  max-width: 650px;
 }
 
 /*
@@ -442,7 +442,7 @@ button {
   align-content: center;
   gap: 50px;
 
-} 
+}
 
 .staff-card {
   display: flex;
@@ -462,7 +462,7 @@ button {
   object-fit: cover;
 }
 
-.staff-card-info{
+.staff-card-info {
   display: flex;
   flex-direction: column;
   align-self: flex-end;
@@ -473,7 +473,7 @@ button {
   color: var(--c-white);
 }
 
-.staff-card-info > :first-child {
+.staff-card-info> :first-child {
   width: 100%;
   font: var(--fs-18) var(--ff-subheading);
   letter-spacing: 1.08px;
@@ -481,10 +481,10 @@ button {
   background-color: #F8F8FF25;
 }
 
-.staff-card-info > :last-child {
+.staff-card-info> :last-child {
   font: var(--fs-16) var(--ff-text-body);
   letter-spacing: 1.05px;
-  padding: 0 15px 25px 15px;    
+  padding: 0 15px 25px 15px;
 }
 
 
