@@ -8,7 +8,6 @@ export default function StaffCard(props) {
       <div className="staff-card-info">
         <span>{props.name}</span>
         <span>{props.position}</span>
-        <span>{props.info}</span>
       </div>
     </div>
   );

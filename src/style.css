@@ -466,7 +466,8 @@ button {
   display: flex;
   flex-direction: column;
   align-self: flex-end;
-  height: 100%;
+  height: inherit;
+  width: inherit;
   gap: 20px;
   background-color: var(--c-bg-footnote);
   color: var(--c-white);
@@ -481,13 +482,11 @@ button {
 }
 
 .staff-card-info > :last-child {
-  padding: 0 15px 25px 15px;
+  font: var(--fs-16) var(--ff-text-body);
+  letter-spacing: 1.05px;
+  padding: 0 15px 25px 15px;    
 }
 
-.staff-card-info > :nth-child(2) {
-    font: var(--fs-16) var(--ff-text-body);
-    letter-spacing: 1.05px;
-}
 
 /*
 ////////////////////////OUR OFFICE
