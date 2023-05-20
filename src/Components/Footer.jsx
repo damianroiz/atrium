@@ -1,9 +1,4 @@
 import React from "react";
-import { ImLocation2 } from "react-icons/im";
-import { GrMail } from "react-icons/gr";
-import { BsFillTelephoneFill } from "react-icons/bs";
-import { BsArrowUpCircleFill } from "react-icons/bs";
-import SocialIcons from "./SocialIcons";
 import { Link } from "wouter";
 
 const Footer = () => {
