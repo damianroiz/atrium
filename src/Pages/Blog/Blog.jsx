@@ -1,21 +1,19 @@
 import SectionInfo from "../../Components/SectionInfo";
 import { Navbar } from "../../Components/Navbar";
 import PageHeader from "../../Components/PageHeader";
-import StaffSection from "./StaffSection";
-import Office from "./Office";
+import BlogHome from "./client/BlogHome";
 import Footer from "../../Components/Footer";
 
-const About = () => {
+const Blog = () => {
   return (
     <div>
       <SectionInfo />
       <Navbar />
       <PageHeader title="Blog" />
-      <StaffSection />
-      <Office />
+      <BlogHome />
       <Footer />
     </div>
   );
 };
 
-export default About;
+export default Blog;

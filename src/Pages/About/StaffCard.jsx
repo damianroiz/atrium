@@ -1,7 +1,7 @@
 import React from "react";
 import "../../../src/style.css";
 
-export default function StaffCard({ img, name, position }) {
+export default function StaffCard({img, name, position}) {
   return (
     <div className="staff-card">
       <img src={`../images/${img}`} alt=""></img>
