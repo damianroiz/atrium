@@ -1,8 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-=======
-import "./components.css";
->>>>>>> d9ad6c81af047deb44f276fe922c6c568e5a16c7
 import { ImLocation2 } from "react-icons/im";
 import { GrMail } from "react-icons/gr";
 import { BsFillTelephoneFill } from "react-icons/bs";
