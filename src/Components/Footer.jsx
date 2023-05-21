@@ -72,10 +72,7 @@ const Footer = () => {
               <a href="/blog">Blog</a>
             </li>
             <li>
-              <a href="/contact">Contact</a>
-            </li>
-            <li>
-              <a href="/covid19">Covid-19 Alert</a>
+              <a href="">Covid-19 Alert</a>
             </li>
           </ul>
         </div>

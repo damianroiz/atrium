@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 
 const BlogMenu = () => {
   return (
-    <header className="blog-header">
       <nav className="blog-menu">
         <Link to="/login" className="blog-link">
           Login
@@ -11,7 +10,6 @@ const BlogMenu = () => {
           Register
         </Link>
       </nav>
-    </header>
   );
 };
 

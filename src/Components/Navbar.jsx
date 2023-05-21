@@ -40,11 +40,8 @@ export const Navbar = () => {
           <Link to="/Blog" className="menu-item">
             Blog
           </Link>
-          <Link to="/Contact" className="menu-item">
-            Contact
-          </Link>
           <div className="covidBtn">
-            <Link to="/CovidAlert" className="menu-item">
+            <Link to="" className="menu-item">
               Covid-19 Alert
             </Link>
           </div>
