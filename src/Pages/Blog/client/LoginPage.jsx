@@ -1,3 +1,5 @@
-export default function LoginPage() {
-  return <div>Login Page</div>;
-}
+const LoginPage = () => {
+  return <p className="loginpage">Login Page is not rendering</p>;
+};
+
+export default LoginPage;

@@ -597,12 +597,15 @@ button {
 //////////////////////////////////////////////
 */
 
+.loginpage {
+  color: black;
+}
+
 .blog-header {
   position: relative;
 }
 
 .blog-menu {
-  position: absolute;
   display: flex;
   gap: 20px;
   justify-content: flex-end;
@@ -613,7 +616,7 @@ button {
 
 .blog-link {
   font-size: var(--fs-18);
-  color: #fff;
+  color: var(--c-black-body);
 }
 
 main.blog-home {
