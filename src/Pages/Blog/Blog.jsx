@@ -1,18 +1,16 @@
-import SectionInfo from "../../Components/SectionInfo";
-import { Navbar } from "../../Components/Navbar";
-import PageHeader from "../../Components/PageHeader";
-import BlogHome from "./client/BlogHome";
-import Footer from "../../Components/Footer";
+import { Route, Routes } from "react-router-dom";
+import Layout from "../layout";
+import BlogIndex from "./client/BlogIndex";
+import LoginPage from "./client/LoginPage";
 
 const Blog = () => {
   return (
-    <div>
-      <SectionInfo />
-      <Navbar />
-      <PageHeader title="Blog" />
-      <BlogHome />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout/>}>
+        <Route path="" element={<BlogIndex/>} />
+        <Route path={"/login"} element={<LoginPage />} />
+      </Route>
+    </Routes>
   );
 };
 

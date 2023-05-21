@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Link } from 'wouter';
-// import "./components.css";
+import { Link } from "react-router-dom";
 
-export const Navbar =() => {
+export const Navbar = () => {
   //change burger classes
   const [burgerClass, setBurgerClass] = useState("burger-bar unclicked");
   const [menuClass, setMenuClass] = useState("menu hidden");
@@ -29,26 +28,26 @@ export const Navbar =() => {
           <div className={burgerClass}></div>
         </div>
         <div className="menu-items">
-          <Link href="/" className="menu-item">
+          <Link to="/" className="menu-item">
             Home
           </Link>
-          <Link href="/About"className="menu-item">
+          <Link to="/About" className="menu-item">
             About
           </Link>
-          <Link href="/Services" className="menu-item">
+          <Link to="/Services" className="menu-item">
             Services
           </Link>
-          <Link href="/Blog" className="menu-item">
-             Blog
+          <Link to="/Blog" className="menu-item">
+            Blog
           </Link>
-          <Link href="/Contact" className="menu-item">
+          <Link to="/Contact" className="menu-item">
             Contact
           </Link>
-        <div className="covidBtn">
-          <Link href="/CovidAlert" className="menu-item">
-            Covid-19 Alert
-          </Link>
-        </div>
+          <div className="covidBtn">
+            <Link to="/CovidAlert" className="menu-item">
+              Covid-19 Alert
+            </Link>
+          </div>
         </div>
         <div className={menuClass}></div>
       </nav>

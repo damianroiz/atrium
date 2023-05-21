@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../assets/atriumLogo.png";
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
 
 const SectionInfo = () => {
   return (
@@ -34,7 +34,7 @@ const SectionInfo = () => {
       </div>
     </div>
     <div className="appointment-btn-section">
-          <Link href="/Appointment">
+          <Link to="/Appointment">
             <a className="appointment-btn cta-btn">Book Your Appointment</a>
           </Link>
     </div>

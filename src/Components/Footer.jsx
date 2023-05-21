@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -113,11 +113,11 @@ const Footer = () => {
 
       <div className="footnote">
         <div className="terms">
-          <Link className="footnote-link" href="#">
+          <Link className="footnote-link" to="#">
             Terms and Conditions
           </Link>{" "}
           |{" "}
-          <Link className="footnote-link" href="#">
+          <Link className="footnote-link" to="#">
             Privacy Policy
           </Link>
         </div>
