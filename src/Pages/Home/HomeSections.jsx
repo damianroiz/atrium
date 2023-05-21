@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Stack, Box, Text, VStack, HStack } from "@chakra-ui/react";
+import { Image, Stack, Box, Text, VStack } from "@chakra-ui/react";
 import { BenefitCards, AboutUsContent } from "./home_content";
 import "../../style.css";
 import staffImage from "../../../src/assets/images/staff-photo.jpg"
