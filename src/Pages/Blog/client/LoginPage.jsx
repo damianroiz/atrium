@@ -1,5 +1,10 @@
-const LoginPage = () => {
-  return <p className="loginpage">Login Page is not rendering</p>;
-};
-
-export default LoginPage;
+export default function LoginPage() {
+  return (
+    <form className="register">
+    <h2>Login</h2>
+    <input type="text" placeholder="username" />
+    <input type="password" placeholder="password" />
+    <button>Login</button>
+  </form>
+  )
+}

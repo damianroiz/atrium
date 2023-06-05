@@ -597,10 +597,6 @@ button {
 //////////////////////////////////////////////
 */
 
-.loginpage {
-  color: black;
-}
-
 .blog-header {
   position: relative;
 }
@@ -673,78 +669,35 @@ div.post > .post-preview {
   font-size: calc(var(--fs-18) * 0.9);
 }
 
-/* .blogcard-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: space-around;
-  flex-wrap: wrap;
-  gap: 60px;
-  margin: 80px;
+form.login,
+form.register {
+  max-width: 400px;
+  margin: 40px auto;
+  gap: 10px;
 }
 
-.blogcard {
-  display: flex;
-  gap: 20px;
-  width: 700px;
-  height: 168px;
-  font-size: 12px;
+form.login input,
+form.register input {
+  display: block;
+  width: 100%;
+  padding: 5px 7px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
 }
 
-.blogcard>img {
-  max-height: 200px;
-  border-radius: 8px;
-  object-fit: cover;
-  box-shadow: -6px 3px 3px rgba(0, 0, 0, 0.1);
-
+form.login input:first-child,
+form.register input:first-child {
+  margin-bottom: 20px;
 }
 
-.blogcard-info>.title {
-  color: var(--c-black-body);
-  color: var(--c-black-body);
-  font-size: 24px;
-  font-weight: 500;
-  padding-block: 5px;
+form.login > h2,
+form.register > h2 {
+  display: block;
+  z-index: 1;
+  padding-block: 30px;
 }
 
-.blogcard-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
-  padding: 10px;
-}
-
-.blogcard-info>.date {
-  font-size: 12px;
-  letter-spacing: 1.01px;
-}
-
-.blogcard-info>.desc {
-  text-align: start;
-  padding-block: 15px;
-  font-size: 14px;
-}
-
-.blogcard-info>button {
-  display: inline-block;
-  background-color: var(--background-color);
-  border-radius: 8px;
-  border: none;
-  width: 130px;
-  height: 60px;
-  margin: 0;
-  padding: 3px;
-  align-self: flex-end;
-}
-
-.blogcard-btn a {
-  margin: 0 auto;
-  color: var(--c-white);
-  font-size: 18px;
-  line-height: 20px;
-}
- */
 
 /* 
 ////////////////////////////////////////////////////////////APPOINTMENT SECTION
