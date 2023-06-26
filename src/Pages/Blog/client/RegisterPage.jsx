@@ -17,7 +17,7 @@ export default function RegisterPage() {
     }
   }
   return (
-    <form className="register" onSubmit={register}>
+    <form className="blog register" onSubmit={register}>
       <h2>Register</h2>
       <input
         type="text"

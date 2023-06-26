@@ -36,6 +36,9 @@ const BlogMenu = () => {
       )}
       {!username && (
         <>
+          <Link to="/Blog/create" className="blog-link">
+            Create Post
+          </Link>
           <Link to="/Blog/login" className="blog-link">
             Login
           </Link>

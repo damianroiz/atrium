@@ -669,15 +669,13 @@ div.post > .post-preview {
   font-size: calc(var(--fs-18) * 0.9);
 }
 
-form.login,
-form.register {
-  max-width: 400px;
+form.blog {
+  width: 400px;
   margin: 40px auto;
   gap: 10px;
 }
 
-form.login input,
-form.register input {
+form.blog input {
   display: block;
   width: 100%;
   padding: 5px 7px;
@@ -686,18 +684,72 @@ form.register input {
   background-color: #fff;
 }
 
-form.login input:first-child,
-form.register input:first-child {
+form.blog input:first-child {
   margin-bottom: 20px;
 }
 
-form.login > h2,
-form.register > h2 {
+form.blog > h2 {
   display: block;
   z-index: 1;
   padding-block: 30px;
 }
 
+form.create-post {
+  background: none;
+  width: 800px;
+}
+
+.quill {
+  width: 100%;
+  gap: 0;
+}
+
+.ql-toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  border-radius: 8px 8px 0 0;
+}
+
+.ql-snow {
+  width: 100%;
+}
+
+.ql-formats {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border-radius: 8px solid;
+}
+
+.ql-formats > button {
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.ql-editor {
+  border-radius: 0 0 8px 8px;
+  color: var(--c-black-body);
+  width: inherit;
+  height: 400px;
+  text-align: left;
+}
+
+.ql-editor > p {
+  text-align: left;
+}
+
+.create-post button {
+  margin-top: 10px;
+  color: var(--c-white);
+  background-color: lightgray;
+  box-shadow: none;
+
+}
 
 /* 
 ////////////////////////////////////////////////////////////APPOINTMENT SECTION

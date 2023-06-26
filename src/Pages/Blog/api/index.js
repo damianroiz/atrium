@@ -1,5 +1,5 @@
-const express = require("express");
 const cors = require("cors");
+const express = require("express");
 const mongoose = require("mongoose");
 const User = require("./models/user");
 const bcrypt = require("bcryptjs");
@@ -9,17 +9,16 @@ const cookieParser = require("cookie-parser");
 
 const salt = bcrypt.genSaltSync(10);
 const secret = "asdfe45we45w345wegw345werjktjwertkj";
-
+import DB_PASS from "./apikey";
+import DB_USER from "./apikey";
 app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 app.options("*", cors());
 app.use(express.json());
 app.use(cookieParser());
 
 mongoose.connect(
-  "mongodb+srv://atrium:AZPUC9M0T3jGsfle@cluster1.m863amp.mongodb.net/?retryWrites=true&w=majority"
+  `{mongodb+srv://${DB_USER}:${DB_PASS}@cluster1.m863amp.mongodb.net/?retryWrites=true&w=majority}`
 );
-
-//AZPUC9M0T3jGsfle
 
 // app.get('/test', (req, res) => {
 //   res.json('todo esta bien loco')
@@ -68,6 +67,8 @@ app.post("/logout", (req, res) => {
   res.cookie("token", "").json("ok");
 });
 
-app.listen(4000);
+app.listen(4000, () => {
+  console.log("Server is running on port 4000");
+});
 
 //
