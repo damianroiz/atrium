@@ -1,25 +1,37 @@
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
-import { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Navigate, useParams } from "react-router-dom";
 import Editor from "./editor";
 
-export default function CreatePost() {
+export default function EditPost() {
+  const { id } = useParams;
   const [title, setTitle] = useState("");
   const [summary, setSummary] = useState("");
   const [content, setContent] = useState("");
   const [files, setFiles] = useState("");
   const [redirect, setRedirect] = useState(false);
 
-  async function createNewPost(ev) {
+  useEffect(() => {
+    fetch("http://localhost:4000/post/" + id).then((response) => {
+      response.json().then((postInfo) => {
+        setTitle(postInfo.title);
+        setContent(postInfo.content);
+        setSummary(postInfo.summary);
+      });
+    });
+  }, []);
+
+  async function updatePost(ev) {
+    ev.preventDefault();
     const data = new FormData();
     data.set("title", title);
     data.set("summary", summary);
     data.set("content", content);
-    data.set("file", files[0]);
-    ev.preventDefault();
+    data.set("id", id);
+    if (files?.[0]) {
+      data.set("file", files?.[0]);
+    }
     const response = await fetch("http://localhost:4000/post", {
-      method: "POST",
+      method: "PUT",
       body: data,
       credentials: "include",
     });
@@ -29,11 +41,11 @@ export default function CreatePost() {
   }
 
   if (redirect) {
-    return <Navigate to={"/Blog"} />;
+    return <Navigate to={"/Blog/post/" + id} />;
   }
 
   return (
-    <form className="blog create-post" onSubmit={createNewPost}>
+    <form className="blog create-post" onSubmit={updatePost}>
       <input
         type="title"
         placeholder={"title"}
@@ -47,8 +59,8 @@ export default function CreatePost() {
         onChange={(ev) => setSummary(ev.target.value)}
       />
       <input type="file" onChange={(ev) => setFiles(ev.target.files)} />
-      <Editor value={content} onChange={setContent} />
-      <button>Create Post</button>
+      <Editor onChange={setContent} value={content} />
+      <button>Update post</button>
     </form>
   );
 }

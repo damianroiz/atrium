@@ -28,6 +28,7 @@ const BlogMenu = () => {
     <nav className="blog-menu">
       {username && (
         <>
+          <span>Hello, {username}</span>
           <Link to="/Blog/create" className="blog-link">
             Create new post
           </Link>
