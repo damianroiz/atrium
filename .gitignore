@@ -24,4 +24,4 @@ apikey.js
 *.sln
 *.sw?
 *.git
-
+.env

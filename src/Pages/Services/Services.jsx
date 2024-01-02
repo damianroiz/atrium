@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import SectionInfo from "../../Components/SectionInfo";
 import { Navbar } from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
-import { ServicesItems } from "./ServicesItems";
 import SectionTitle from "../../Components/PageHeader";
-import { servicesdata } from "../Services/services_data";
-import { Services_Content } from "./Services_Content";
+import { ServiceData } from "../Services/services_data";
 
-const Services = () => {
+export default function Services() {
   const [current, setCurrent] = useState(1);
 
   return (
@@ -23,31 +21,75 @@ const Services = () => {
       </section>
 
       <div className={"GridContainer"}>
-        {servicesdata.map((item) => (
-          <ServicesItems
-            key={item.id}
-            item={item}
+        {ServiceData.map((service) => (
+          <ServiceCard
+            key={service.id}
+            service={service}
             current={current}
             setCurrent={setCurrent}
           />
         ))}
       </div>
 
-      <div>
-        <div>
-          {current &&
-            servicesdata.map(
-              (item) =>
-                item.id === current && (
-                  <Services_Content key={item.id} {...item} />
-                )
-            )}
-        </div>
-      </div>
+      {current &&
+        ServiceData.map(
+          (service) =>
+            service.id === current && (
+              <ServiceContent service={service} key={service.id} />
+            )
+        )}
 
       <Footer />
     </>
   );
+}
+
+const ServiceCard = ({ service, current, setCurrent }) => {
+  const handleClick = () => {
+    setCurrent(service.id);
+  };
+
+  return (
+    <div
+      onClick={handleClick}
+      className={
+        service.id === current ? "servicesitems active" : "servicesitems"
+      }
+    >
+      <div>
+        <span className="servicesitems-title">{service.title}</span>
+      </div>
+    </div>
+  );
 };
 
-export default Services;
+const ServiceContent = ({ service }) => {
+  return (
+    <article className="service-container">
+      <h1>{service.title}</h1>
+      <div>
+        <img
+          style={{ height: "300px" }}
+          src={service.image}
+          alt="service-img"
+        />
+        {Array.isArray(service.description) ? (
+          service.description.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))
+        ) : (
+          <p>{service.description}</p>
+        )}
+        {service.hasOwnProperty("list") ? (
+          <ul>
+            {service.list.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        ) : (
+          ""
+        )}
+      </div>
+    </article>
+  );
+};
