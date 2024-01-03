@@ -14,30 +14,26 @@ export default function Services() {
       <Navbar />
       <SectionTitle title="Services" />
       <section className="services_section">
-        <p>
-          Information pertaining to the high quality services offered by our
-          clinic
-        </p>
+        <p>Take a look at our services</p>
+        <div className={"service-cards"}>
+          {ServiceData.map((service) => (
+            <ServiceCard
+              key={service.id}
+              service={service}
+              current={current}
+              setCurrent={setCurrent}
+            />
+          ))}
+        </div>
+
+        {current &&
+          ServiceData.map(
+            (service) =>
+              service.id === current && (
+                <ServiceContent service={service} key={service.id} />
+              )
+          )}
       </section>
-
-      <div className={"GridContainer"}>
-        {ServiceData.map((service) => (
-          <ServiceCard
-            key={service.id}
-            service={service}
-            current={current}
-            setCurrent={setCurrent}
-          />
-        ))}
-      </div>
-
-      {current &&
-        ServiceData.map(
-          (service) =>
-            service.id === current && (
-              <ServiceContent service={service} key={service.id} />
-            )
-        )}
 
       <Footer />
     </>
@@ -52,13 +48,9 @@ const ServiceCard = ({ service, current, setCurrent }) => {
   return (
     <div
       onClick={handleClick}
-      className={
-        service.id === current ? "servicesitems active" : "servicesitems"
-      }
+      className={`service-card ${service.id === current ? "active" : ""}`}
     >
-      <div>
-        <span className="servicesitems-title">{service.title}</span>
-      </div>
+      <span className="service-card-title">{service.title}</span>
     </div>
   );
 };
@@ -66,13 +58,14 @@ const ServiceCard = ({ service, current, setCurrent }) => {
 const ServiceContent = ({ service }) => {
   return (
     <article className="service-container">
-      <h1>{service.title}</h1>
+      <h2>{service.title}</h2>
       <div>
         <img
           style={{ height: "300px" }}
           src={service.image}
           alt="service-img"
         />
+        <div className="service-body">
         {Array.isArray(service.description) ? (
           service.description.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
@@ -89,6 +82,7 @@ const ServiceContent = ({ service }) => {
         ) : (
           ""
         )}
+        </div>
       </div>
     </article>
   );

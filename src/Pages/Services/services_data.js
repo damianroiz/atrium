@@ -26,7 +26,7 @@ export const ServiceData = [
   },
   {
     id: 2,
-    title: "What is Functional Dry Needling/Intramuscular Stimulation (IMS)?",
+    title: "Functional Dry Needling/Intramuscular Stimulation (IMS)",
     image: "https://atriumphysiotherapy.com/images/ims1.jpg",
     description: [
       [
