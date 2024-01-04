@@ -579,7 +579,7 @@ button {
     }
     & p,
     ul {
-      font: 400 var(--fs-16) / 1.48 var(--ff-text-body);
+      font: 400 var(--fs-16) / 1.88 var(--ff-text-body);
       text-align: left;
       text-wrap: pretty;
       margin-bottom: 10px;

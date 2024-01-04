@@ -70,15 +70,15 @@ export const ServiceData = [
   },
   {
     id: 6,
-    title: "Low Intensity Laser Therapy",
-    image: "https://atriumphysiotherapy.com/images/clinical_laser.jpg",
+    title: "Laser Therapy",
+    image: "https://atriumphysiotherapy.com/wp-content/uploads/2023/11/pasted-image-1.png",
     description:
       "Laser Therapy uses red and infrared light for the relief of pain, to accelerate healing and decrease inflammation. When the light source is placed against the skin, the photons penetrate several centimeters and get absorbed by the mitochondria, the energy producing part of a cell. This energy fuels many positive physiological responses resulting in the restoration of normal cell morphology and function. Laser Therapy has been successfully used to treat a broad range of medical conditions, including musculoskeletal problems, arthritis, sports injuries, post-surgical wounds, diabetic ulcers and dermatological conditions.",
   },
   {
     id: 7,
     title: "K-Tape",
-    image: "https://atriumphysiotherapy.com/images/Ktape.jpeg",
+    image: "https://atriumphysiotherapy.com/wp-content/uploads/2023/11/pasted-image-2.png",
     description: [
       [
         "KT Tape® is applied along muscles, ligaments, and tendons (soft tissue) to provide a lightweight, external support that helps you remain active while recovering from injuries.",
@@ -101,7 +101,7 @@ export const ServiceData = [
   {
     id: 9,
     title: "Cupping Therapy",
-    image: "https://atriumphysiotherapy.com/images/cupping.jpeg",
+    image: "https://atriumphysiotherapy.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-at-17-43-05-Fwd-Website-Contents-jw763444@gmail.com-Gmail.png",
     description:
       "Hot cupping is an ancient form of alternative medicine in which a therapist puts special cups on your skin for a few minutes to create suction. People get it for many purposes, including to help with pain, inflammation, blood flow, relaxation and well-being, and as a type of deep-tissue massage.",
   },
@@ -124,14 +124,14 @@ export const ServiceData = [
   {
     id: 11,
     title: "Custom Crafted Orthotics",
-    image: "https://atriumphysiotherapy.com/images/orthotics.jpg",
+    image: "https://atriumphysiotherapy.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-at-17-43-26-Fwd-Website-Contents-jw763444@gmail.com-Gmail.png",
     description:
       "An orthotic is a supportive device which is placed inside footwear, to change the mechanical function of the foot. It works dynamically during weight-bearing activities like walking, running and standing. Ideally, it should provide full, custom and corrected arch contact so that the foot works in a biomechanically correct way. At Atrium Physiotherapy we offer Custom Crafted Orthotics, calibrated to flex for your weight and foot type.",
   },
   {
     id: 12,
     title: "MVA (Motor Vehicle Accident)",
-    image: "https://atriumphysiotherapy.com/images/whiplash.jpg",
+    image: "https://atriumphysiotherapy.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-at-17-43-32-Fwd-Website-Contents-jw763444@gmail.com-Gmail.png",
     description:
       "A personal injury from auto accident trauma is common, but sometimes severe. An injury caused by Motor Vehicle Accident may result in lost work time, and cause difficulties in dealing with day-to-day responsibilities. After you've been injured in a crash, it's vital to get physiotherapy as quickly as possible. Many times, the effects of an auto injury are delayed or subtle. Seek medical advice as quickly as possible to ensure you are adequately treated and protected for the future.",
   },
@@ -185,7 +185,7 @@ export const ServiceData = [
     id: 16,
     title: "Vestibular Rehabilitations",
     image:
-      "https://tarabrown.ca/wp-content/uploads/2013/10/Active-Release-Techniques.jpg",
+      "https://atriumphysiotherapy.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-at-17-43-38-Fwd-Website-Contents-jw763444@gmail.com-Gmail.png",
     description: [
       [
         "Benign Paroxysmal Positional Vertigo (BPPV), an inner ear problem, is the most common cause of vertigo. We can normally correct the condition in 1-3 treatments.",
@@ -201,7 +201,7 @@ export const ServiceData = [
     id: 17,
     title: "Pelvic Floor Physiotherapy",
     image:
-      "https://www.activesolutionshealth.ca/wp-content/uploads/2020/07/pelvis-floor-physio.jpg",
+      "https://atriumphysiotherapy.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-at-17-43-44-Fwd-Website-Contents-jw763444@gmail.com-Gmail.png",
     description: [
       [
         "Pelvic floor physiotherapy help women rehabilitate their pelvic floor muscles. These muscles can be weakened by childbirth, surgery, heavy lifting, being overweight, constipation or menopause. The pelvic floor muscles support the womb (uterus), bladder and bowel (colon), forming a 'sling' from the pubic bone at the front to the tailbone at the back. If the muscles are weak, this can affect bladder and bowel control, resulting in incontinence (leakage) or prolapse.",
