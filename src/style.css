@@ -154,11 +154,11 @@ h1 {
 }
 
 h2 {
-  font: 500 var(--fs-48) / 1.35% var(--ff-subheading);
+  font: 500 var(--fs-48) / 1.35 var(--ff-subheading);
 }
 
 h3 {
-  font: 500 var(--fs-24) / 1.25% var(--ff-subheading);
+  font: 500 var(--fs-24) / 1.25 var(--ff-subheading);
 }
 
 h4 {
@@ -169,7 +169,7 @@ p,
 span,
 .p,
 .span {
-  font: 400 var(--fs-16) / 1.26% var(--ff-body);
+  font: 400 var(--fs-16) / 1.26 var(--ff-body);
 }
 
 a {
@@ -516,12 +516,12 @@ button {
 
 .service-cards {
   display: grid;
-  align-self: center;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-auto-flow: row;
   gap: 23px;
-  margin: 20px;
-  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
   max-width: 1200px;
 }
 
@@ -563,18 +563,26 @@ button {
 
 .service-container {
   margin-top: 2.8rem;
-  max-width: 1200px;
+  & h2 {
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+  }
   & > div {
-    display: flex;
-    align-content: baseline;
+    display: inline-block;
+    place-content: center;
+    max-width: 1200px;
     padding: 10px;
-    text-wrap: pretty;
+    & img {
+      margin: 0 30px 22px 0;
+      float: left;
+      max-width: 550px;
+    }
     & p,
     ul {
-      font: 400 var(--fs-16) / 1.46 var(--ff-text-body);
+      font: 400 var(--fs-16) / 1.48 var(--ff-text-body);
       text-align: left;
-      margin: 0 0 15px 20px;
       text-wrap: pretty;
+      margin-bottom: 10px;
     }
     & ul {
       list-style: square inside;
@@ -582,17 +590,30 @@ button {
   }
 }
 
-@media ((min-width: 580px) and (max-width: 1200px)) {
-  .GridContainer {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 20px;
+@media ((min-width: 350px) and (max-width: 1200px)) {
+  .service-cards {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    width: 100%;
+  }
+  .service-body {
+    width: 100%;
+    & p,
+    ul {
+      padding: 20px;
+    }
+    & img {
+      margin: 0;
+      float: none;
+      
+     
+    }
   }
 }
 
-@media ((min-width: 350px) and (max-width: 580px)) {
-  .GridContainer {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 20px;
+@media ((min-width: 350px) and (max-width: 550px)) {
+  .service-body > img {
+    display: block;
+    width: 100%;
   }
 }
 

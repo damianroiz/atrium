@@ -59,31 +59,29 @@ const ServiceContent = ({ service }) => {
   return (
     <article className="service-container">
       <h2>{service.title}</h2>
-      <div>
-        <img
-          style={{ height: "300px" }}
-          src={service.image}
-          alt="service-img"
-        />
         <div className="service-body">
-        {Array.isArray(service.description) ? (
-          service.description.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))
-        ) : (
-          <p>{service.description}</p>
-        )}
-        {service.hasOwnProperty("list") ? (
-          <ul>
-            {service.list.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        ) : (
-          ""
-        )}
+          <img
+            style={{ height: "300px" }}
+            src={service.image}
+            alt="service-img"
+          />
+          {Array.isArray(service.description) ? (
+            service.description.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))
+          ) : (
+            <p>{service.description}</p>
+          )}
+          {service.hasOwnProperty("list") ? (
+            <ul>
+              {service.list.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          ) : (
+            ""
+          )}
         </div>
-      </div>
     </article>
   );
 };
