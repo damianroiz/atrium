@@ -1,10 +1,5 @@
 import React from "react";
-import { ImLocation2 } from "react-icons/im";
-import { GrMail } from "react-icons/gr";
-import { BsFillTelephoneFill } from "react-icons/bs";
-import { BsArrowUpCircleFill } from "react-icons/bs";
-import SocialIcons from "./SocialIcons";
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -77,10 +72,7 @@ const Footer = () => {
               <a href="/blog">Blog</a>
             </li>
             <li>
-              <a href="/contact">Contact</a>
-            </li>
-            <li>
-              <a href="/covid19">Covid-19 Alert</a>
+              <a href="">Covid-19 Alert</a>
             </li>
           </ul>
         </div>
@@ -118,11 +110,11 @@ const Footer = () => {
 
       <div className="footnote">
         <div className="terms">
-          <Link className="footnote-link" href="#">
+          <Link className="footnote-link" to="#">
             Terms and Conditions
           </Link>{" "}
           |{" "}
-          <Link className="footnote-link" href="#">
+          <Link className="footnote-link" to="#">
             Privacy Policy
           </Link>
         </div>

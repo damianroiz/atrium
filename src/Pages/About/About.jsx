@@ -10,7 +10,7 @@ const About = () => {
     <div>
       <SectionInfo />
       <Navbar />
-      <PageHeader title="About" />
+      <PageHeader title="Blog" />
       <StaffSection />
       <Office />
       <Footer />

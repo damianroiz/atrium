@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
 
-const PageHeader = ({ title }) => {
+const PageHeader = ({ title, path, link }) => {
   return (
     <section className="about-section">
       <h1 className="about-title">{title}</h1>
-      <Link href="/" className="link-home">
-        {"Home >"}
+      <Link to={path} className="link-home">
+        {link}
       </Link>
     </section>
   );

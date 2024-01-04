@@ -11,7 +11,7 @@ const Home = () => {
       <SectionInfo />
       <Navbar />
       <SliderHome />
-      <HomeCards  />
+      <HomeCards />
       <AboutUs />
       <MissionBanner />
       <Reviews />
