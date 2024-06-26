@@ -1,14 +1,16 @@
+import styles from "./Navbar.module.css";
+
 export default function Navbar() {
   return (
-    <div>
-      <nav className="main-menu">
+    <div className={styles.mainMenuContainer}>
+      <nav className={styles.mainMenu}>
         <input type="checkbox" name="" id="" />
-        <div className="hamburger-lines">
-          <span className="line"></span>
-          <span className="line"></span>
-          <span className="line"></span>
+        <div className={styles.hamburgerLines}>
+          <span className={styles.line}></span>
+          <span className={styles.line}></span>
+          <span className={styles.line}></span>
         </div>
-        <ul className="menu-items">
+        <ul className={styles.menuItems}>
           <li>
             <a href="/">Home</a>
           </li>
@@ -32,4 +34,3 @@ export default function Navbar() {
     </div>
   );
 }
-

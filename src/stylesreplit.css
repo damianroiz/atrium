@@ -1,0 +1,562 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,600;1,600&family=Fira+Sans:wght@500;600&family=Oxygen:wght@300&family=Poppins:ital,wght@0,300;0,400;1,300;1,400&family=Ubuntu:wght@400;500&display=swap");
+
+
+/*
+/////////////////////////////// HTML AND ROOT DEFAULTS ////////////////////
+*/
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*
+  //////////////////////////////// FONT SIZES //////////////////////////////////
+  */
+  --fs-10: 0.625rem;
+  --fs-12: 0.75rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-24: 1.5rem;
+  --fs-30: 1.875rem;
+  --fs-32: 2rem;
+  --fs-48: 3rem;
+  --fs-64: 4rem;
+
+  @media (width < 400px) {
+    :root {
+      --fs-10: calc(var(--fs-10) * 1.06);
+      --fs-12: calc(var(--fs-12) * 1.06);
+      --fs-14: calc(var(--fs-14) * 1.09);
+      --fs-16: calc(var(--fs-16) * 1.1);
+      --fs-18: calc(var(--fs-18) * 1.11);
+      --fs-20: calc(var(--fs-20) * 1.13);
+      --fs-24: calc(var(--fs-24) * 1.14);
+      --fs-30: calc(var(--fs-30) * 1.16);
+      --fs-32: calc(var(--fs-32) * 1.18);
+      --fs-48: calc(var(--fs-48) * 1.2);
+      --fs-64: calc(var(--fs-64) * 1.3);
+    }
+  }
+  
+  /*
+  //////////////////////////// FONT FAMILIES///////////////////////////////////
+  https://fonts.google.com/share?selection.family=Fira%20Sans:wght@500;600%7COxygen:wght@300%7CPoppins:ital,wght@0,300;0,400;1,300;1,400%7CUbuntu:wght@400;500
+  */
+  --ff-nav: "Ubuntu", "Helvetica", sans-serif;
+  --ff-heading: "Crimson Text", "Georgia", "Cambria", serif;
+  --ff-subheading: "Fira Sans", "Droid Sans", "Century", sans-serif;
+  --ff-text-body: "Poppins", "Roboto", "Arial Narrow", sans-serif;
+  --ff-btn: "Ubuntu", "Helvetica Neue", sans-serif;
+  --ff-link: "Oxygen", "Arial", sans-serif;
+  /*///////////  ////////////// ANIMATION  
+  */
+  --timing: 400ms;
+  --ease: cubic-bezier(0.865, 0.14, 0.095, 0.87);
+  /*
+  ///////////////////////////////// COLOUR PALLETTE  //////////////////////////
+  */
+  --c-gradient-blue-bg: linear-gradient(47deg, rgb(0, 26, 255), rgb(113, 196, 255) 100%);
+  --c-white: #f8f8ff;
+  --c-black-heading: #262b2f;
+  --c-black-body: #1a2228;
+  --c-light-blue-text: rgb(113, 196, 255);
+  --c-btn-green: #1db954;
+  --c-btn-red: #cf1020;
+  --c-light-grey: #eee;
+  --c-med-grey: #666;
+  --c-dark-grey: #444;
+  /*https://cssgradient.io/*/
+  --c-highlight-color: #2980b9;
+  --c-bg-btn-blue: #191970;
+  --c-blue-hover: rgb(0, 93, 185);
+  --c-bg-footnote: #000039;
+  /*
+  //////////////////////////////////////////// BOX SHADOW ///////////////////// 
+  */
+  --box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
+    0 1px 1px rgba(128, 128, 128, 0.155),
+    0 2.1px 2.1px rgba(128, 128, 128, 0.195),
+    0 4.4px 4.4px rgba(128, 128, 128, 0.241),
+    0 12px 12px rgba(128, 128, 128, 0.35);
+}
+
+/*
+//////////////////////////////////////// MINIMUM FOTN SIZES/////////////////////
+*/
+
+
+
+@media (prefers-reduced-motion: reduce) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  font-size: 100%;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-400);
+  color: var(--c-black-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+
+/* ////////////////////////////////////
+  //////////////////////////////////////GENERAL STYLING /////////////////////////
+  //////////////////////////////////// 
+*/
+
+/*
+///////////////////////////////////////////// TYPOGRAPHY ////////////////////////
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 1.3px;
+  color: var(--c-black-heading);
+}
+
+h1 {
+  font: 600 var(--fs-64) / 50px var(--ff-heading);
+}
+
+h2 {
+  font: 500 var(--fs-48) / 1.35px var(--ff-subheading);
+}
+
+h3 {
+  font: 500 var(--fs-24) / 1.25px var(--ff-subheading);
+}
+
+h4 {
+  font: 500 var(--fs-20) var(--ff-subheading);
+}
+
+p,
+span,
+.p,
+.span {
+  font: 400 var(--fs-16) / 1.26px var(--ff-body);
+}
+
+a {
+  font: var(--fs-16) var(--ff-link);
+  text-decoration: none;
+}
+
+/* A elements that don't have a class get defaults underline*/
+a:not([class]) {
+  text-underline-offset: 3px;
+  text-decoration-skip-ink: auto;
+}
+
+section,
+.section {
+  padding: min(10vh, 10em) 0;
+}
+
+/* Make images easier to work with */
+/* img,
+picture {
+  max-width: 100%;
+  display: block;
+} */
+
+/* Inherit fonts for forms elements */
+input,
+textarea,
+select {
+  font: var(--ff-body);
+}
+
+
+ul {
+  list-style: none;
+}
+
+.App {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.App-header {
+  background-color: var(--c-black-body);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--c-white);
+}
+
+.App-link {
+  color: var(--link-color);
+}
+
+
+button {
+  font-size: calc(10px + 2vmin);
+}
+
+
+/*
+/////////////////////////////////////////
+//////////////////////////////////////////////////ABOUT
+//////////////////////////////////////////////
+*/
+
+.staffImage {
+  width: 900px;
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+
+.text {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 5px;
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+.stackContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 1200px;
+}
+
+.image-about-home {
+  filter: opacity(0.4) drop-shadow(0 0 0 rgb(0, 93, 185));
+}
+
+/*
+//////////////////////////////////////APPOINTMENT BANNER
+*/
+
+.banner-container {
+  margin: 60px 0 20px 0;
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: var(--c-bg-blue);
+}
+
+.text-banner {
+  width: 800px;
+  text-align: left;
+}
+
+.text-banner > h2 {
+  font-size: 35px;
+  letter-spacing: 2px;
+  font-weight: normal;
+  color: #fff;
+}
+
+.text-banner > p {
+  padding-top: 20px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.banner-container button {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+  .banner-container {
+    flex-direction: column;
+  }
+
+  .text-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 90vw;
+  }
+
+  .text-banner h2,
+  p {
+    text-align: center;
+  }
+}
+
+
+
+/*
+///////////////////////////////////////////////////////REVIEWS
+*/
+
+.reviews {
+  margin: 0 auto;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  max-width: 650px;
+}
+
+/*
+/////////////////////////////////////////////////////CARDS HOME
+*/
+
+.card {
+  /* background: 
+  linear-gradient(
+       217deg, rgba(2, 2, 2, 0.45), 
+       rgba(0, 0, 255, .6)
+     ); */
+  box-shadow: 2px 5px 10px rgb(0 0 0 / 0.2);
+  transition: transform ease 300ms;
+  position: relative;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    217deg,
+    rgba(2, 2, 2, 0.55),
+    rgba(0, 0, 255, 0.6)
+  );
+}
+
+.card {
+  box-shadow: 2px 5px 10px rgb(0 0 0 / 0.2);
+  transition: transform ease 300ms;
+}
+
+.card:hover {
+  transform: translate(0, -25px);
+}
+
+
+
+/*
+///////////////////////////////////////
+/////////////////////////////////SERVICES
+//////////////////////////////////////
+*/
+
+.services_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.GridContainer {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-auto-flow: row;
+  gap: 20px;
+  margin: 20px;
+  max-width: 1500px;
+}
+
+@media ((min-width: 580px) and (max-width: 1200px)) {
+  .GridContainer {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media ((min-width: 350px) and (max-width: 580px)) {
+  .GridContainer {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+  }
+}
+
+.title_services {
+  font-size: 40px;
+  font-weight: 500;
+  color: #3a3a38;
+  /*blackberry*/
+  margin: 10px;
+}
+
+.subtitle_services {
+  letter-spacing: 7px;
+  font-size: 18px;
+  color: gray;
+  margin: 10px;
+}
+
+.parrafo_services {
+  color: gray;
+  font-size: 18px;
+  margin: 10px;
+}
+
+.servicesitems {
+  display: flex;
+  justify-content: center;
+  width: 180px;
+  height: 100px;
+  background-color: #fff;
+  border-top: 4px solid #1f305e;
+  color: #1f305e;
+  font:
+    500 16px/10px "roboto",
+    sans-serif;
+  border-radius: 0 0 5px 5px;
+  align-items: center;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: all 0.5s ease;
+  padding: 0 8px 0 8px;
+}
+
+.servicesitems:hover {
+  transform: scale(1.03);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.servicesitems-title {
+  line-height: 20px;
+}
+
+.active {
+  background-color: #1f305e;
+  border-top: 4px solid grey;
+  color: #fff;
+}
+
+/*
+/////////////////////////////////////////
+/////////////////////////////////////////BLOG
+//////////////////////////////////////////////
+*/
+
+.blogcard-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-around;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin: 80px;
+}
+
+.blogcard {
+  display: flex;
+  gap: 20px;
+  width: 700px;
+  height: 168px;
+  font-size: 12px;
+}
+
+.blogcard > img {
+  max-height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: -6px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.blogcard-info > .title {
+  color: var(--c-black-body);
+  color: var(--c-black-body);
+  font-size: 24px;
+  font-weight: 500;
+  padding-block: 5px;
+}
+
+.blogcard-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.blogcard-info > .date {
+  font-size: 12px;
+  letter-spacing: 1.01px;
+}
+
+.blogcard-info > .desc {
+  text-align: start;
+  padding-block: 15px;
+  font-size: 14px;
+}
+
+.blogcard-info > button {
+  display: inline-block;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  border: none;
+  width: 130px;
+  height: 60px;
+  margin: 0;
+  padding: 3px;
+  align-self: flex-end;
+}
+
+.blogcard-btn a {
+  margin: 0 auto;
+  color: var(--c-white);
+  font-size: 18px;
+  line-height: 20px;
+}
+
+
+/* 
+/////////////////////////////////////
+////////////////////////////////////////APPOINTMENT SECTION
+////////////////////////////////////////
+*/
+
+.appointment-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 40px 30px;
+}
+
+.customer-review-box {
+  width: 700px;
+}
+
+.appointment-form > h3 {
+  padding-block: 20px;
+}
