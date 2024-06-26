@@ -8,7 +8,7 @@ const SectionInfo = () => {
     <div id="inicio" className="sectioninfo">
       <div className="logo-container">
         <a href="/">
-          <img className="logo" src={logo} alt="logo" />
+          {/* <img className="logo" src={logo} alt="logo" /> */} 
         </a>
     </div>
 

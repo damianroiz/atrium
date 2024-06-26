@@ -1,16 +1,16 @@
 import React from "react";
 import SectionInfo from "../../Components/SectionInfo";
-import { Navbar } from "../../Components/Navbar";
+import Navbar from "../../Components/Navbar";
+import Carousel from "./Carousel";
 import Footer from "../../Components/Footer";
-import { SliderHome } from "./SliderHome";
 import { HomeCards, AboutUs, MissionBanner, Reviews } from "./HomeSections";
 
-const Home = () => {
+export default function Home() {
   return (
     <div>
       <SectionInfo />
       <Navbar />
-      <SliderHome />
+      <Carousel />
       <HomeCards />
       <AboutUs />
       <MissionBanner />
@@ -20,4 +20,3 @@ const Home = () => {
   );
 };
 
-export default Home;

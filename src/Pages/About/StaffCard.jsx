@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../src/style.css";
+import "../../../src/styles.css";
 
 export default function StaffCard({img, name, position}) {
   return (

@@ -1,11 +1,11 @@
 import SectionInfo from "../../Components/SectionInfo";
-import { Navbar } from "../../Components/Navbar";
+import Navbar from "../../Components/Navbar";
 import PageHeader from "../../Components/PageHeader";
 import StaffSection from "./StaffSection";
 import Office from "./Office";
 import Footer from "../../Components/Footer";
 
-const About = () => {
+export default function About() {
   return (
     <div>
       <SectionInfo />
@@ -18,4 +18,3 @@ const About = () => {
   );
 };
 
-export default About;

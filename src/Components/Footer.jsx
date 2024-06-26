@@ -7,11 +7,11 @@ const Footer = () => {
       <div className="footer-sections"> 
       <a href="#root" className="back-to-top"><i className="fa fa-circle-chevron-up" aria-hidden="true"></i></a>
         <div className="contact-info">
-          <img
+          {/* <img
             className="footer-logo"
             src="https://www.atriumphysiotherapy.com/images/atriumLogo.png"
             alt="Company Logo"
-          />
+          /> */}
           <ul className="contact-list">
             <li>
               <i className="fa fa-map-marker-alt" aria-hidden="true"></i>

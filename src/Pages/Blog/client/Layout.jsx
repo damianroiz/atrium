@@ -1,5 +1,5 @@
 import SectionInfo from "../../../Components/SectionInfo";
-import { Navbar } from "../../../Components/Navbar";
+import Navbar from "../../../Components/Navbar";
 import BlogMenu from "./BlogMenu";
 import PageHeader from "../../../Components/PageHeader";
 import { Outlet } from "react-router-dom";

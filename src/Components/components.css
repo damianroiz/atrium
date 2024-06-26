@@ -1,8 +1,11 @@
-@import '../style.css';
+/*
+* Global
+*/
+@import "../styles.css";
 
 /*
 //////////////////////
-//////////////////////////SECTION INFORMATION
+///////////////////////////// MAIN HEADER //////////////////////////////////////
 //////////////////////
 */
 
@@ -14,13 +17,12 @@
   gap: 20px;
   flex-wrap: wrap;
   height: auto;
-  border: 1px solid green;
 }
 
-/* //////////////// LOGO //////////////////////*/
+/* ////////////////////////////////// LOGO ///////////////////////////////////*/
 
 .logo {
-  width: 400px;
+  width: 180px;
   right: 0;
   padding: 30px;
   justify-self: start;
@@ -28,8 +30,7 @@
   padding-left: 30px;
 }
 
-
-/* /////////////// CONTACT INFORMATION //////////////////////*/
+/* /////////////// CONTACT BUTTONS  //////////////////////////////////////*/
 
 .contact-info-container {
   display: flex;
@@ -48,7 +49,7 @@
   cursor: pointer;
 }
 
-.contact-info-card>div {
+.contact-info-card > div {
   display: flex;
   align-content: center;
   justify-content: center;
@@ -73,7 +74,7 @@
 It's not possible to transition on display:hidden so to elminate this <p></p> I set the height to 0 and the hide the overflow on position absolute, to make it show again I only need to modify height property on hover
 */
 
-.contact-info-card>div>p {
+.contact-info-card > div > p {
   position: absolute;
   font-weight: 400;
   letter-spacing: 2px;
@@ -94,101 +95,22 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
   box-shadow: none;
 }
 
-.contact-info-card div:first-child:hover>p,
-.contact-info-card div:nth-child(2):hover>p,
-.contact-info-card div:nth-child(3):hover>p,
-.contact-info-card div:last-child:hover>p {
+.contact-info-card div:first-child:hover > p,
+.contact-info-card div:nth-child(2):hover > p,
+.contact-info-card div:nth-child(3):hover > p,
+.contact-info-card div:last-child:hover > p {
   height: 50%;
   position: relative;
 }
 
-/* /////////////// CONTACT INFORMATION //////////////////////*/
-
-.appointment-btn-section {
-  display: flex;
-  align-items: center;
-}
-
-.appointment-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font: 500 small-caps var(--fs-20) var(--ff-btn);
-  letter-spacing: 1.05px;
-  border: none;
-  margin: 10px;
-  width: 300px;
-  height: 45px;
-  border-radius: 10px;
-  color: var(--c-white);
-  background: var(--c-btn-green);
-  box-shadow: -3px 3px 1px 0.8px rgba(0, 0, 0, 0.2),
-    3px -1px 5px 1px rgba(255, 255, 2555, 0.3);
-  cursor: pointer;
-  transition: transform 0.5s ease-in;
-}
-
-.appointment-btn:hover {
-  transform: scale(1.1);
-}
-
-@media screen and (max-width:480px) {
-  .sectioninfo {
-    flex-direction: column;
-    padding: 20px;
-    place-content: center;
-    align-items: center;
-  }
-
-  .contact-info-container {
-    flex-direction: column;
-    width: 100%;
-    gap: 20px;
-  }
-
-  .contact-info-card {
-    flex-direction: column;
-    width: auto;
-    max-width: 300px;
-
-  }
-
-  .contact-info-card>div {
-    justify-content: center;
-    flex-direction: column;
-    align-self: center;
-  }
-
-  .contact-info-card>div>p {
-    text-align: center;
-
-  }
-}
-
-@media screen and (max-width: 840px) {
-  .sectioninfo {
-    flex-direction: column;
-    padding: 20px;
-    place-content: center;
-    align-items: center;
-  }
-
-  .appointment-btn {
-    margin-bottom: 30px;
-    justify-self: center;
-  }
-}
-
-@media screen and (max-width: 1120px) {
-  .appointment-btn {
-    margin-bottom: 40px;
-  }
-}
-
 /*
 //////////////////////
-//////////////////////////NAV BAR
+////////////////////////////// HOME PAGE ///////////////////////////////////////
 //////////////////////
+*/
+
+/*
+//////////////////////////NAV BAR /////////////////////////////////////////////
 */
 
 .main-menu {
@@ -201,6 +123,63 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.67);
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.67);
   -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.67);
+  input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    cursor: pointer;
+    appearance: none;
+    &:checked {
+      ~ .hamburger-lines > .line:first-child {
+        transform: rotate(45deg);
+      }
+      ~ .hamburger-lines > .line:nth-child(2) {
+        transform: scaleY(0);
+      }
+      ~ .hamburger-lines > .line:last-child {
+        transform: rotate(-45deg);
+      }
+      ~ .menu-items {
+        transform: translateX(0);
+      }
+    }
+  }
+  .hamburger-lines {
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .line {
+      display: block;
+      height: 4px;
+      width: 100%;
+      border-radius: 10px;
+      background: var(--c-bg-btn-blue);
+      &:first-child {
+        transform-origin: top left;
+        transition: transform var(--timing) ease-in-out;
+      }
+      &:nth-child(2) {
+        transition: transform 200ms ease-in-out;
+      }
+      &:last-child {
+        transform-origin: bottom left;
+        transition: transform var(--timing) ease-in-out;
+      }
+    }
+    @media screen and (width > 580px) {
+      display: none;
+    }
+  }
 }
 
 .menu-items {
@@ -210,155 +189,343 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  gap: 40px;
+  gap: 1.9em;
   padding: 20px;
-}
-
-nav .menu-item {
-  font: 500 var(--fs-18)/1.25% var(--ff-nav);
-  color: var(--c-black-body);
-  transition: all 0.5s ease;
-}
-
-nav .menu-item:hover {
-  transform: scale(1.1);
-  transition: all 0.5s ease;
-  color: var(--c-blue-hover);
-}
-
-@media screen and (max-width: 560px) {
-  .main-menu {
+  transition: transform 0.5s ease-in-out;
+  a {
+    font: 500 var(--fs-18) / 1.25 var(--ff-nav);
+    color: var(--c-black-body);
+    transition: font-size 200ms ease;
+    &:hover {
+      font-size: 1.5em;
+      color: var(--c-blue-hover);
+    }
+  }
+  @media screen and (width < 580px) {
     width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    padding: 10px;
-  }
-
-  .burger-menu {
-    height: 100%;
-    max-width: 50px;
-    display: flex;
+    padding-top: 70vh;
+    transform: translate(150%);
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    cursor: pointer;
-    background-color: red;
+    transtion: transform var(--timing) ease-in-out;
+    a {
+      color: var(--c-white);
+    }
   }
-
-  .burger-bar {
-    width: 10px;
-    height: 10px;
-    background-color: rgb(0, 183, 255);
-    border-radius: 2px;
-  }
-
-  .menu {
-    width: 50%;
-    height: 100vh;
-    background-color: rgb(154, 181, 240);
-    position: absolute;
-    top: 10;
-    z-index: 99;
-  }
-
-  .menu-item {
-    display: none;
-  }
-
-
-  /*--------------- pending ---------------------*/
-  /*--------------- sliding menu ---------------------*/
-
-  .hidden {
-    display: none;
-  }
-
-  .visible {
-    display: inherit;
-  }
-
-  /*------------- animations --------------*/
-  /* clicked */
-  .burger-bar.clicked:nth-child(1) {
-    transform: rotate(45deg) translate(0.75em 1.25em);
-    transition: ease-out 0.5s;
-  }
-
-  .burger-bar.clicked:nth-child(2) {
-    transform: scale(0.1);
-    transition: ease-out 0.5s;
-  }
-
-  .burger-bar.clicked:nth-child(3) {
-    transform: rotate(135deg) translate(-.5em 1em);
-    transition: ease-out 0.5s;
-  }
-
-  /*------------------ unclicked ---------------*/
-
-  .burger-bar.unclicked {
-    transform: rotate(0) translate(0);
-    transition: cubic-bezier(0.17, 0.885, 0.32, 1.275) 0.5s;
-  }
-
 }
 
-/* /////////////// COVID ALERT //////////////////////*/
+/*
+//////////////////////////HOME CAROUSEL 
+*/
 
-.covidBtn {
+.home-carousel-container {
+  position: relative;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 500px;
+}
+.show {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.hide {
+  display: none;
+  width: 100%;
+  height: 500px;
+}
+img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.dots-container {
+  position: absolute;
+  bottom: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
+  gap: 5px;
+  width: 100%;
 }
 
-.covidBtn {
-  height: 35px;
-  width: 280px;
-  min-width: 140px;
-  max-width: 200px;
-  border: 0;
-  padding: 8px;
-  border-radius: 8px;
-  background: var(--c-btn-red);
+.dot {
+  background: var(--c-dark-grey);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  transition: 0.5s;
   cursor: pointer;
-  box-shadow: -3px 3px 5px 0.8px rgba(0, 0, 0, 0.2),
-    3px -1px 5px 1px rgba(255, 255, 255, 0.3);
-  transition: all 0.5s ease;
-  align-self: center;
-  margin-right: 20px;
 }
 
-.covidBtn a {
-  display: block;
+.dot:hover,
+active {
+  background-color: var(--c-blue-hover);
+}
+
+.previous-btn,
+.next-btn {
+  position: absolute;
+  top: 28%;
+  height: auto;
+  width: 16px;
+  margin: 10px;
+  background: rgba(0, 0, 0, 0.3);
   color: var(--c-white);
+  font-size: var(--fs-20);
+  transition: 0.6s ease;
+  border-radius: 50%;
+  box-shadow: var(--box-shadow);
+  &:hover,
+  &:focus {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.next-btn {
+  right: 0;
+}
+
+/*////////////////FADE ANIMATION /////////////*/
+
+@keyframes fade {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*
+//////////////////////////////////////
+////////////////////////////////////////AB0UT PAGE COMPONENTS
+//////////////////////////////////////
+*/
+
+/*
+//////////////////////// STAFF CARDS //////////
+*/
+
+.cards-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-block: 10px;
+}
+
+.cards-section h2 {
+  display: block;
+  flex: 1 0 auto;
+  margin-bottom: 50px;
+}
+
+.cards-container {
+  max-width: 1200px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  gap: 50px;
+}
+
+.staff-card {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: auto;
+  margin-top: auto;
+  box-shadow: var(--box-shadow);
+}
+
+.staff-card img {
+  display: block;
+  border: none;
+  border-radius: 12px 12px 0 0;
+  width: 480px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.staff-card-info {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  height: inherit;
   width: inherit;
-  padding: 12px;
-  text-align: center;
+  gap: 20px;
+  background-color: var(--c-bg-footnote);
+  color: var(--c-white);
 }
 
-.covidBtn:hover a:hover {
-  transform: scale(1.1);
-  transition: all 0.5s ease;
-  color: var(--c-btn-red);
+.staff-card-info > :first-child {
+  width: 100%;
+  font: var(--fs-18) var(--ff-subheading);
+  letter-spacing: 1.08px;
+  padding-block: 15px;
+  background-color: #f8f8ff25;
 }
 
-.covidBtn:hover {
-  transform: scale(1.2);
-  transition: all 0.5s ease;
-  border: 3px solid var(--c-btn-red);
-  background-color: var(--c-white);
-  box-shadow: none;
+.staff-card-info > :last-child {
+  font: var(--fs-16) var(--ff-text-body);
+  letter-spacing: 1.05px;
+  padding: 0 15px 25px 15px;
 }
 
+/*
+////////////////////////OUR OFFICE
+*/
 
-/* .img-info-icon-na {
-  filter: opacity(0.6) drop-shadow(0 0 0 rgb(0, 0, 196));
-} */
+.office {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.title-carousel {
+  margin-bottom: 50px;
+}
+
+.carousel-container {
+  width: 780px;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 680px) {
+  .carousel-container {
+    width: 100%;
+  }
+}
 
 /*
 //////////////////////
-//////////////////////////SECTION TITLE
+//////////////////////////////////////// FAQs PAGE ///////////////////////////////////////
+//////////////////////
+*/
+
+/*
+https://codepen.io/alvarotrigo/pen/wvrzPWL
+*/
+
+/*////////////////////////// ACCORDION  ////////////*/
+.accordion {
+  font-family: "Open sans", sans-serif;
+  background: var(--c-light-grey);
+  padding: 30px;
+  box-shadow: 0 1px 8px rgba(#000, 0.25);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50vh);
+  width: 75%;
+  box-shadow: 0 1px 8px rgba(#000, 0.25);
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+
+  /*//////////////RADIO INPUTS/////////////////////////*/
+  input[name="panel"] {
+    display: none;
+    &:checked + label {
+      color: var(--c-hightlight-color);
+      ~ .answer {
+        max-height: fit-content;
+        height: -moz-max-content;
+        text-wrap: pretty;
+        line-height: 2em;
+      }
+      &:after {
+        content: "-";
+        line-height: 0.8em;
+      }
+    }
+  }
+
+  /*/////////////////////LABELS ////////////////////////*/
+  .label {
+    position: relative;
+    display: block;
+    padding: 1em;
+    background: linear-gradient(
+      to bottom,
+      rgba(254, 254, 254, 1) 0%,
+      rgba(209, 209, 209, 1) 50%,
+      rgba(219, 219, 219, 1) 55%,
+      rgba(226, 226, 226, 1) 100%
+    );
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid rgba(#0000, 0.15);
+    font-size: 1.5em;
+    text-shadow: 0 1px 0 rgba(#fff, 0.75);
+    color: var(--med-grey);
+    cursor: pointer;
+    transition: all var(--timing) var(--ease);
+    &::after {
+      content: "+";
+      position: absolute;
+      right: 1em;
+      width: 1em;
+      height: 1em;
+      line-height: 0.98em;
+      color: var(--c-light-grey);
+      text-align: center;
+      border-radius: 50%;
+      background: var(--c-bg-btn-blue);
+      box-shadow: inset 0 1px 6px rgba(#000, 0.5), 0 1px 0 #fff;
+      text-shadow: 0 1px 0 rgba(#000, 0.75);
+    }
+    &:hover {
+      color: var(--c-highlight-color);
+    }
+  }
+
+  .answer {
+    overflow: hidden;
+    max-height: 0em;
+    position: relative;
+    padding: 0 1.5em;
+    box-shadow: inset 4px 0 0 0 var(--c-hightlight-color),
+      inset 0 3px 6px rgba(#000, 0.75);
+    background: var(--c-dark-grey);
+    background: linear-gradient(
+      to bottom,
+      rgba(68, 68, 68, 1) 0%,
+      rgba(34, 34, 34, 1) 100%
+    );
+    color: var(--c-light-grey);
+    transition: all var(--timing) var(--ease);
+    &:not(:last-of-type) {
+      box-shadow: inset 0 -2px 2px rgba(#000, 0.25),
+        inset 4px 0 0 0 var(--c-hightlight-color),
+        inset 0 3px 6px rgba(#000, 0.75);
+    }
+    p {
+      font-size: 0.825em;
+      line-height: 1.7em;
+      padding-block: 1.5em;
+      margin: 0;
+      text-align: left;
+    }
+  }
+}
+
+/*
+//////////////////////
+////////////////////////////////////SECTION TITLE//////////////////////////////
 //////////////////////
 */
 
@@ -395,12 +562,11 @@ nav .menu-item:hover {
   z-index: 1;
   font-size: 18px;
   color: var(--c-white);
-  ;
   text-decoration: underline;
 }
 
 /*
-//////////////////////////SOCIAL ICONS 
+//////////////////////////SOCIAL ICONS ////////////////////////////////////////
 */
 
 .socialicons {
@@ -464,7 +630,7 @@ form h3 {
   padding-block: 20px;
 }
 
-.contact-form div > input[type='text'] {
+.contact-form div > input[type="text"] {
   background: none;
   border: none;
   outline: none;
@@ -524,10 +690,9 @@ button {
   font: var(--fs-16) var(--ff-text-body);
 }
 
-
 /*
 //////////////////////
-//////////////////////////FOOTER
+///////////////////////////////////////////FOOTER///////////////////////////////
 //////////////////////
 */
 
@@ -560,12 +725,12 @@ footer a {
   align-items: start;
 }
 
-.footer-sections>div {
+.footer-sections > div {
   padding: 20px;
 }
 
 .footer-logo {
-  width: 350px;
+  width: 50px;
 }
 
 .contact-info {
@@ -583,7 +748,6 @@ footer a {
   gap: 18px;
   align-items: center;
   letter-spacing: 1.12px;
-
 }
 
 .contact-list li p span {
@@ -604,7 +768,7 @@ footer a {
 }
 
 /*
-///////////////////////////////LINKS
+///////////////////////////////LINKS///////////////////////////////////////////
 */
 
 .links {
@@ -618,8 +782,8 @@ footer a {
   cursor: pointer;
 }
 
-.links>p,
-.hours-section>p {
+.links > p,
+.hours-section > p {
   text-transform: uppercase;
   text-decoration: solid underline 2px;
   text-underline-offset: 0.45em;
@@ -627,16 +791,14 @@ footer a {
   letter-spacing: 1.12px;
 }
 
-
 /*
-///////////////////////////// OPERATING HOURS
+///////////////////////////// OPERATING HOURS//////////////////////////////////
 */
 
 .hours-section {
   display: flex;
   flex-direction: column;
 }
-
 
 .hours-section ul li {
   display: flex;
@@ -652,7 +814,7 @@ footer li {
 }
 
 /*
-///////////////////////////// FOOTNOTE
+///////////////////////////// FOOTNOTE/////////////////////////////////////////
 */
 
 .footnote {
@@ -678,7 +840,7 @@ footer li {
 }
 
 .terms .footnote-link {
-  font: var(--fs-14)/10px var(--ff-link);
+  font: var(--fs-14) / 10px var(--ff-link);
   color: var(--c-white);
   padding: 0 10px 0 10px;
   letter-spacing: 1.6px;
@@ -687,8 +849,7 @@ footer li {
   text-decoration-skip-ink: auto;
 }
 
-
-@media screen and (max-width: 960px) {
+@media screen and (width <= 960px) {
   .footer-sections {
     width: 100%;
     grid-template-columns: minmax(320px, 1fr);
@@ -716,5 +877,4 @@ footer li {
   .hours-section p {
     align-self: center;
   }
-
 }

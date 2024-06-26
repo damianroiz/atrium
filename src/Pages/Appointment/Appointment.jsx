@@ -1,11 +1,11 @@
 import React from "react";
 import SectionInfo from "../../Components/SectionInfo";
-import { Navbar } from "../../Components/Navbar";
+import Navbar from "../../Components/Navbar";
 import PageHeader from "../../Components/PageHeader";
 import AppointmentForm from "../../Components/AppointmentForm/AppointmentForm";
 import Footer from "../../Components/Footer";
 
-const Appointment = () => {
+export default function Appointment() {
   return (
     <div>
     <SectionInfo />
@@ -23,5 +23,3 @@ const Appointment = () => {
     </div>
   );
 };
-
-export default Appointment;

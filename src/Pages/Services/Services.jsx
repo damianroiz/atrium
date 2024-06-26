@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SectionInfo from "../../Components/SectionInfo";
-import { Navbar } from "../../Components/Navbar";
+import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import SectionTitle from "../../Components/PageHeader";
 import { ServiceData } from "../Services/services_data";
