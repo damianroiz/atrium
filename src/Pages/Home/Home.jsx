@@ -3,7 +3,7 @@ import SectionInfo from "../../Components/SectionInfo";
 import Navbar from "../../Components/Navbar";
 import Carousel from "./Carousel";
 import Footer from "../../Components/Footer";
-import { HomeCards, AboutUs, MissionBanner, Reviews } from "./HomeSections";
+import { HomeCards, AboutUs, MissionBanner } from "./HomeSections";
 
 export default function Home() {
   return (
@@ -14,7 +14,6 @@ export default function Home() {
       <HomeCards />
       <AboutUs />
       <MissionBanner />
-      <Reviews />
       <Footer />
     </div>
   );

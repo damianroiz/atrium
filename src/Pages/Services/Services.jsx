@@ -35,7 +35,6 @@ export default function Services() {
           )}
       </section>
 
-      <Footer />
     </>
   );
 }

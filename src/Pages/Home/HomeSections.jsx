@@ -2,6 +2,7 @@ import React from "react";
 import { BenefitCards, AboutUsContent } from "./home_content";
 import "../../styles.css";
 import staffImage from "../../../src/assets/images/staff-photo.jpg";
+import AppointmentBtn from "../../ui/AppointmentBtn";
 
 export const HomeCards = () => {
   return (
@@ -130,16 +131,16 @@ export const MissionBanner = () => {
         </p>
       </div>
       <div>
-        <button className="appointment-btn">Book Your Appoinment</button>
+        <AppointmentBtn />
       </div>
     </div>
   );
 };
 
-export const Reviews = () => {
-  return (
-    <div className="reviews">
-      <div className="elfsight-app-7c8824c3-96b9-4222-ab5c-f8f827c1feaa reviewbox review_google"></div>
-    </div>
-  );
-};
+// export const Reviews = () => {
+//   return (
+//     <div className="reviews">
+//       <div className="elfsight-app-7c8824c3-96b9-4222-ab5c-f8f827c1feaa reviewbox review_google"></div>
+//     </div>
+//   );
+// };
