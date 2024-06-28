@@ -504,48 +504,6 @@ https://codepen.io/alvarotrigo/pen/wvrzPWL
   }
 }
 
-/*
-//////////////////////////SOCIAL ICONS ////////////////////////////////////////
-*/
-
-.socialicons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  right: 70px;
-  top: 20px;
-}
-
-.icons-redes {
-  display: flex;
-  flex-direction: row;
-}
-
-.container-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  background-color: var(--c-white);
-  border-radius: 50%;
-  margin-left: 10px;
-  transition: all 0.5s ease;
-  text-align: center;
-}
-
-.container-icons:hover {
-  transform: scale(1.1);
-  transition: all 0.5s ease;
-}
-
-.icon {
-  font-size: 26px;
-  color: rgb(0, 93, 185);
-  position: relative;
-  top: 2px;
-}
 
 /*
 //////////////////////

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../ui/Logo";
+import SocialIcons from "./SocialIcons";
 
 const Footer = () => {
   return (
@@ -28,7 +29,7 @@ const Footer = () => {
               <i className="fa fa-fax" aria-hidden="true"></i>+1(403)-259 8776
             </li>
           </ul>
-          <div className="social-media">
+          {/* <div className="social-media">
             <a
               href="https://www.facebook.com/Atriumphysio/"
               target="_blank"
@@ -53,7 +54,8 @@ const Footer = () => {
             <a href="https://twitter.com/" target="_blank" rel="noopener">
               <i className="fa-brands fa-twitter"></i>
             </a>
-          </div>
+          </div> */}
+          <SocialIcons />
         </div>
 
         <div className="links">

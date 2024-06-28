@@ -1,11 +1,14 @@
 .section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: 40% 5% / cover no-repeat fixed url('../assets//images/home-background-mr-lee-f4RBYsY2hxA-unsplash.jpg'), var(--c-bg-blue);
-    height: 370px;
-    background-blend-mode: overlay;
-    h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: 40% 5% / cover no-repeat fixed
+      url('../assets//images/home-background-mr-lee-f4RBYsY2hxA-unsplash.jpg'),
+    var(--c-bg-blue);
+  background-blend-mode: overlay;
+  height: 370px;
+  margin-bottom: 4.65rem;
+  h1 {
     color: var(--c-white);
   }
 }
