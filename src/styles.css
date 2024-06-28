@@ -166,10 +166,7 @@ select {
     text-decoration-skip-ink: auto;
   }
   
-  section,
-  .section {
-    padding: min(10vh, 10em) 0;
-  }
+ 
   
   /* Make images easier to work with */
   img,
@@ -216,43 +213,6 @@ select {
   }
   
 
-/*
-/////////////////////////////////////////
-//////////////////////////////////////////////////ABOUT
-//////////////////////////////////////////////
-*/
-
-/* .staffImage {
-  width: 900px;
-}
-
-.subtitle {
-  font-weight: 600;
-  font-size: 28px;
-  letter-spacing: 2px;
-}
-
-.titleh2 {
-  font-size: 28px;
-  color: #333;
-  padding-bottom: 30px;
-  letter-spacing: 2px;
-}
-
-.stackContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 1200px;
-}
-
-.image-about-home {
-  filter: opacity(0.4) drop-shadow(0 0 0 rgb(0, 93, 185));
-} */
-
-/*
-//////////////////////////////////////APPOINTMENT BANNER
-*/
 
 .banner-container {
   margin: 60px 0 20px 0;

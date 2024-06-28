@@ -1,4 +1,4 @@
-import SectionInfo from "../../../Components/SectionInfo";
+import Header from "../../../Components/Header";
 import Navbar from "../../../Components/Navbar";
 import BlogMenu from "./BlogMenu";
 import PageHeader from "../../../Components/PageHeader";
@@ -8,7 +8,7 @@ import Footer from "../../../Components/Footer";
 export default function Layout() {
   return (
     <main>
-      <SectionInfo />
+      <Header />
       <Navbar />
       <PageHeader title={'Blog'} path={'/'} link={'Home'} />
       <BlogMenu />

@@ -29,7 +29,7 @@
   --fs-48: 3rem;
   --fs-64: 4rem;
 
-  @media (width < 400px) {
+  @media screen and (width < 400px) {
     :root {
       --fs-10: calc(var(--fs-10) * 1.06);
       --fs-12: calc(var(--fs-12) * 1.06);
@@ -151,9 +151,7 @@ h4 {
 }
 
 p,
-span,
-.p,
-.span {
+span {
   font: 400 var(--fs-16) / 1.26px var(--ff-body);
 }
 
@@ -168,10 +166,7 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-section,
-.section {
-  padding: min(10vh, 10em) 0;
-}
+
 
 /* Make images easier to work with */
 /* img,
@@ -192,10 +187,6 @@ ul {
   list-style: none;
 }
 
-.App {
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-}
 
 .App-header {
   background-color: var(--c-black-body);
@@ -539,24 +530,4 @@ button {
 }
 
 
-/* 
-/////////////////////////////////////
-////////////////////////////////////////APPOINTMENT SECTION
-////////////////////////////////////////
-*/
 
-.appointment-section {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 50px;
-  padding: 40px 30px;
-}
-
-.customer-review-box {
-  width: 700px;
-}
-
-.appointment-form > h3 {
-  padding-block: 20px;
-}

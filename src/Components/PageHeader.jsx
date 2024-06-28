@@ -1,13 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import styles from './PageHeader.module.css';
 
 const PageHeader = ({ title, path, link }) => {
   return (
-    <section className="about-section">
-      <h1 className="about-title">{title}</h1>
-      <Link to={path} className="link-home">
-        {link}
-      </Link>
+    <section className={styles.section}>
+      <h1>{title}</h1>
     </section>
   );
 };

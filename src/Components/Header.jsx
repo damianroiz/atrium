@@ -4,7 +4,7 @@ import Logo from '../ui/Logo';
 import { Link } from 'react-router-dom';
 import AppointmentBtn from '../ui/AppointmentBtn';
 
-const StyledSectionInfo = styled.div`
+const StyledHeader = styled.div`
   background: var(--c-bg-blue);
   display: flex;
   justify-content: space-around;
@@ -12,11 +12,11 @@ const StyledSectionInfo = styled.div`
   padding: 1.5rem;
   gap: 1rem;
   flex-wrap: wrap;
-`
+`;
 
-const SectionInfo = () => {
+const Header = () => {
   return (
-    <StyledSectionInfo id="inicio">
+    <StyledHeader id="inicio">
       <div className="logo-container">
         <a href="/">
           <Logo />
@@ -50,8 +50,8 @@ const SectionInfo = () => {
       <div>
         <AppointmentBtn />
       </div>
-    </StyledSectionInfo>
+    </StyledHeader>
   );
 };
 
-export default SectionInfo;
+export default Header;

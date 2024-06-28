@@ -1,6 +1,6 @@
 import React from "react";
 import { BenefitCards, AboutUsContent } from "./home_content";
-import "../../styles.css";
+import "../../styles-replit.css";
 import staffImage from "../../../src/assets/images/staff-photo.jpg";
 import AppointmentBtn from "../../ui/AppointmentBtn";
 

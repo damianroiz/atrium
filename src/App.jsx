@@ -1,20 +1,26 @@
-import Home from "./Pages/Home/Home";
-import About from "./Pages/About/About";
-import { Route, Routes } from "react-router-dom";
-import Appointment from "./Pages/Appointment/Appointment";
-import Services from "./Pages/Services/Services";
-import Blog from "./Pages/Blog/Blog";
+import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom';
+import AppLayout from './Components/AppLayout';
+import Home from './Pages/Home/Home';
+import About from './Pages/About/About';
+import Services from './Pages/Services/Services';
+import Blog from './Pages/Blog/Blog';
+import Faqs from './Components/Faqs';
+import Appointment from './Pages/Appointment/Appointment';
 
 export default function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Services" element={<Services />} />
-        <Route path="/Blog/*" element={<Blog />} />
-        <Route path="/Appointment" element={<Appointment />} />
+        <Route element={<AppLayout />}>
+          <Route index element={<Navigate replace to="home" />} />
+          <Route path="home" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="services" element={<Services />} />
+          <Route path="blog/*" element={<Blog />} />
+          <Route path="faqs" element={<Faqs />} />
+          <Route path="appointment" element={<Appointment />} />
+        </Route>
       </Routes>
-    </div>
+    </BrowserRouter>
   );
 }
