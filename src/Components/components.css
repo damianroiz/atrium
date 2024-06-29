@@ -352,35 +352,6 @@ active {
   padding: 0 15px 25px 15px;
 }
 
-/*
-////////////////////////OUR OFFICE
-*/
-
-.office {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.title-carousel {
-  margin-bottom: 50px;
-}
-
-.carousel-container {
-  width: 780px;
-  object-fit: cover;
-  display: flex;
-  flex-direction: column;
-}
-
-@media screen and (max-width: 680px) {
-  .carousel-container {
-    width: 100%;
-  }
-}
 
 /*
 //////////////////////

@@ -1,21 +1,18 @@
-import { useState, useEffect } from "react";
-import styles from "./HomeCarousel.module.css";
+import { useState, useEffect } from 'react';
+import styles from './HomeCarousel.module.css';
 
 const photos = [
   {
-    id: 0,
-    title: "Physiotherapy photo one",
-    url: "https://atriumphysiotherapy.com/wp-content/uploads/2023/11/f-physiotherapy.jpg",
+    title: 'Physiotherapy photo one',
+    url: 'https://atriumphysiotherapy.com/wp-content/uploads/2023/11/f-physiotherapy.jpg',
   },
   {
-    id: 1,
-    title: "physiotherapy photo two",
-    url: "https://atriumphysiotherapy.com/wp-content/uploads/2023/11/Untitled-3.jpg",
+    title: 'physiotherapy photo two',
+    url: 'https://atriumphysiotherapy.com/wp-content/uploads/2023/11/Untitled-3.jpg',
   },
   {
-    id: 2,
-    title: "physiotherapy photo three",
-    url: "https://atriumphysiotherapy.com/wp-content/uploads/2023/11/Exercises-1.jpg",
+    title: 'physiotherapy photo three',
+    url: 'https://atriumphysiotherapy.com/wp-content/uploads/2023/11/Exercises-1.jpg',
   },
 ];
 
@@ -55,12 +52,10 @@ export default function HomeCarousel() {
 function Photos({ currentIndex }) {
   return (
     <>
-      {photos.map((photo) => (
+      {photos.map((photo, id) => (
         <div
-          className={
-            photos[currentIndex].id === photo.id ? styles.show : styles.hide
-          }
-          key={photo.id}
+          className={photos[currentIndex].id === id ? styles.show : styles.hide}
+          key={id}
         >
           <img src={photo.url} alt={photo.title} />
         </div>
@@ -80,11 +75,11 @@ function CarouselButton({ children, className, onClick }) {
 function Dots({ currentIndex, setCurrentIndex }) {
   return (
     <div className={styles.dotsContainer}>
-      {photos.map((photo) => (
+      {photos.map((photo, id) => (
         <span
-          key={photo.id}
+          key={id}
           className={
-            photos[currentIndex].id === photo.id ? `${styles.dot} active` : styles.dot
+            photos[currentIndex].id === id ? `${styles.dot} active` : styles.dot
           }
           onClick={() => setCurrentIndex(photos.indexOf(photo))}
         ></span>

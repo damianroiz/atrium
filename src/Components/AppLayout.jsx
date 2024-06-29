@@ -11,12 +11,21 @@ const StyledBaseLayout = styled.div`
   justify-content: space-between;
 `;
 
+const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 function AppLayout() {
   return (
     <StyledBaseLayout>
       <Header />
       <Navbar />
-      <Outlet />
+      <Main>
+        <Outlet />
+      </Main>
       <Footer />
     </StyledBaseLayout>
   );

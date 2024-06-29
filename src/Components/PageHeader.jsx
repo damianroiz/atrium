@@ -3,7 +3,7 @@ import styles from './PageHeader.module.css';
 
 const PageHeader = ({ title, path, link }) => {
   return (
-    <section className={styles.section}>
+    <section className={styles.pageHeader}>
       <h1>{title}</h1>
     </section>
   );
