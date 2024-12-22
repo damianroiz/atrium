@@ -2,7 +2,7 @@ import React from "react";
 import { BenefitCards, AboutUsContent } from "./home_content";
 import "../../styles.css";
 import staffImage from "../../../src/assets/images/staff-photo.jpg";
-import AppointmentBtn from "../../ui/AppointmentBtn";
+import AppointmentBtn from "../../Components/AppointmentBtn";
 
 export const HomeCards = () => {
   return (

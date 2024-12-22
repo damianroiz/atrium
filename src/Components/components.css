@@ -1,7 +1,7 @@
 /*
 * Global
 */
-@import "../styles.css";
+@import '../styles.css';
 
 /*
 //////////////////////
@@ -9,80 +9,9 @@
 //////////////////////
 */
 
-
-
 /* /////////////// CONTACT BUTTONS  //////////////////////////////////////*/
 
-.contact-info-container {
-  display: flex;
-  padding: 20px;
-  width: inherit;
-  align-items: center;
-}
 
-.contact-info-card {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 30px;
-  color: var(--c-white);
-  cursor: pointer;
-}
-
-.contact-info-card > div {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.card-icon {
-  font-size: 20px;
-  background: var(--c-bg-btn-blue);
-  width: 50px;
-  height: 50px;
-  align-self: center;
-  line-height: 50px !important;
-  border-radius: 50%;
-  box-shadow: -3px 3px 1px 0.8px rgba(0, 0, 0, 0.2),
-    3px -1px 5px 1px rgba(255, 255, 2555, 0.3);
-  transition: all 1s linear;
-}
-
-/*
-It's not possible to transition on display:hidden so to elminate this <p></p> I set the height to 0 and the hide the overflow on position absolute, to make it show again I only need to modify height property on hover
-*/
-
-.contact-info-card > div > p {
-  position: absolute;
-  font-weight: 400;
-  letter-spacing: 2px;
-  height: 0;
-  bottom: 0;
-  overflow: hidden;
-  text-align: start;
-  transition: height 0.7s, position 0s, ease-in-out;
-}
-
-.contact-info-card div:first-child:hover .card-icon,
-.contact-info-card div:nth-child(2):hover .card-icon,
-.contact-info-card div:nth-child(3):hover .card-icon,
-.contact-info-card div:last-child:hover .card-icon {
-  background: none;
-  color: var(--c-white);
-  transform: scale(1.6);
-  box-shadow: none;
-}
-
-.contact-info-card div:first-child:hover > p,
-.contact-info-card div:nth-child(2):hover > p,
-.contact-info-card div:nth-child(3):hover > p,
-.contact-info-card div:last-child:hover > p {
-  height: 50%;
-  position: relative;
-}
 
 /*
 //////////////////////
@@ -104,7 +33,7 @@ It's not possible to transition on display:hidden so to elminate this <p></p> I 
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.67);
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.67);
   -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.67);
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     position: absolute;
     display: block;
     height: 32px;
@@ -352,7 +281,6 @@ active {
   padding: 0 15px 25px 15px;
 }
 
-
 /*
 //////////////////////
 //////////////////////////////////////// FAQs PAGE ///////////////////////////////////////
@@ -365,7 +293,7 @@ https://codepen.io/alvarotrigo/pen/wvrzPWL
 
 /*////////////////////////// ACCORDION  ////////////*/
 .accordion {
-  font-family: "Open sans", sans-serif;
+  font-family: 'Open sans', sans-serif;
   background: var(--c-light-grey);
   padding: 30px;
   box-shadow: 0 1px 8px rgba(#000, 0.25);
@@ -376,7 +304,7 @@ https://codepen.io/alvarotrigo/pen/wvrzPWL
   width: 75%;
   box-shadow: 0 1px 8px rgba(#000, 0.25);
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     right: 0;
@@ -390,7 +318,7 @@ https://codepen.io/alvarotrigo/pen/wvrzPWL
   }
 
   /*//////////////RADIO INPUTS/////////////////////////*/
-  input[name="panel"] {
+  input[name='panel'] {
     display: none;
     &:checked + label {
       color: var(--c-hightlight-color);
@@ -401,7 +329,7 @@ https://codepen.io/alvarotrigo/pen/wvrzPWL
         line-height: 2em;
       }
       &:after {
-        content: "-";
+        content: '-';
         line-height: 0.8em;
       }
     }
@@ -427,7 +355,7 @@ https://codepen.io/alvarotrigo/pen/wvrzPWL
     cursor: pointer;
     transition: all var(--timing) var(--ease);
     &::after {
-      content: "+";
+      content: '+';
       position: absolute;
       right: 1em;
       width: 1em;
@@ -475,7 +403,6 @@ https://codepen.io/alvarotrigo/pen/wvrzPWL
   }
 }
 
-
 /*
 //////////////////////
 //////////////////////////APPOINTMENT FORM
@@ -498,7 +425,7 @@ form h3 {
   padding-block: 20px;
 }
 
-.contact-form div > input[type="text"] {
+.contact-form div > input[type='text'] {
   background: none;
   border: none;
   outline: none;

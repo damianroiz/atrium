@@ -1,13 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Logo from "../ui/Logo";
-import SocialIcons from "./SocialIcons";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Logo from './Logo';
+import SocialIcons from './SocialIcons';
 
 const Footer = () => {
   return (
     <footer>
-      <div className="footer-sections"> 
-      <a href="#root" className="back-to-top"><i className="fa fa-circle-chevron-up" aria-hidden="true"></i></a>
+      <div className="footer-sections">
+        <a href="#root" className="back-to-top">
+          <i className="fa fa-circle-chevron-up" aria-hidden="true"></i>
+        </a>
         <div className="contact-info">
           <Logo />
           <ul className="contact-list">
@@ -111,8 +113,8 @@ const Footer = () => {
         <div className="terms">
           <Link className="footnote-link" to="#">
             Terms and Conditions
-          </Link>{" "}
-          |{" "}
+          </Link>{' '}
+          |{' '}
           <Link className="footnote-link" to="#">
             Privacy Policy
           </Link>

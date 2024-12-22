@@ -3,9 +3,8 @@ import styled from 'styled-components';
 /* ////////////////////////////////// LOGO ///////////////////////////////////*/
 
 const StyledLogo = styled.img`
-  width: 440px;
+  width: 400px;
   height: auto;
-  padding: 30px;
 `;
 
 export default function Logo() {
