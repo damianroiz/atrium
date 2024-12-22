@@ -1,10 +1,7 @@
 import React from "react";
-import { ImLocation2 } from "react-icons/im";
-import { GrMail } from "react-icons/gr";
-import { BsFillTelephoneFill } from "react-icons/bs";
-import { BsArrowUpCircleFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
+import Logo from "../ui/Logo";
 import SocialIcons from "./SocialIcons";
-import { Link } from "wouter";
 
 const Footer = () => {
   return (
@@ -12,11 +9,7 @@ const Footer = () => {
       <div className="footer-sections"> 
       <a href="#root" className="back-to-top"><i className="fa fa-circle-chevron-up" aria-hidden="true"></i></a>
         <div className="contact-info">
-          <img
-            className="footer-logo"
-            src="https://www.atriumphysiotherapy.com/images/atriumLogo.png"
-            alt="Company Logo"
-          />
+          <Logo />
           <ul className="contact-list">
             <li>
               <i className="fa fa-map-marker-alt" aria-hidden="true"></i>
@@ -36,7 +29,7 @@ const Footer = () => {
               <i className="fa fa-fax" aria-hidden="true"></i>+1(403)-259 8776
             </li>
           </ul>
-          <div className="social-media">
+          {/* <div className="social-media">
             <a
               href="https://www.facebook.com/Atriumphysio/"
               target="_blank"
@@ -61,7 +54,8 @@ const Footer = () => {
             <a href="https://twitter.com/" target="_blank" rel="noopener">
               <i className="fa-brands fa-twitter"></i>
             </a>
-          </div>
+          </div> */}
+          <SocialIcons />
         </div>
 
         <div className="links">
@@ -77,10 +71,7 @@ const Footer = () => {
               <a href="/blog">Blog</a>
             </li>
             <li>
-              <a href="/contact">Contact</a>
-            </li>
-            <li>
-              <a href="/covid19">Covid-19 Alert</a>
+              <a href="">Covid-19 Alert</a>
             </li>
           </ul>
         </div>
@@ -118,11 +109,11 @@ const Footer = () => {
 
       <div className="footnote">
         <div className="terms">
-          <Link className="footnote-link" href="#">
+          <Link className="footnote-link" to="#">
             Terms and Conditions
           </Link>{" "}
           |{" "}
-          <Link className="footnote-link" href="#">
+          <Link className="footnote-link" to="#">
             Privacy Policy
           </Link>
         </div>

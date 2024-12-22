@@ -1,57 +1,37 @@
-import React, { useState } from "react";
-import { Link } from 'wouter';
-// import "./components.css";
+import { NavLink } from 'react-router-dom';
+import styles from './Navbar.module.css';
 
-export const Navbar =() => {
-  //change burger classes
-  const [burgerClass, setBurgerClass] = useState("burger-bar unclicked");
-  const [menuClass, setMenuClass] = useState("menu hidden");
-  const [isMenuClicked, setIsMenuCLicked] = useState(false);
-
-  // toggle burger menu change
-  const updateMenu = () => {
-    if (isMenuClicked) {
-      setBurgerClass("burger-bar clicked");
-      setMenuClass("menu visible");
-    } else {
-      setBurgerClass("burger-bar unclicked");
-      setMenuClass("menu hidden");
-    }
-    setIsMenuClicked(!isMenuClicked);
-  };
-
+export default function Navbar() {
   return (
-    <div>
-      <nav className="main-menu">
-        <div className="burger-menu" onClick={updateMenu}>
-          <div className={burgerClass}></div>
-          <div className={burgerClass}></div>
-          <div className={burgerClass}></div>
+    <div className={styles.mainMenuContainer}>
+      <nav className={styles.mainMenu}>
+        <input type="checkbox" name="" id="" />
+        <div className={styles.hamburgerLines}>
+          <span className={styles.line}></span>
+          <span className={styles.line}></span>
+          <span className={styles.line}></span>
         </div>
-        <div className="menu-items">
-          <Link href="/" className="menu-item">
-            Home
-          </Link>
-          <Link href="/About"className="menu-item">
-            About
-          </Link>
-          <Link href="/Services" className="menu-item">
-            Services
-          </Link>
-          <Link href="/Blog" className="menu-item">
-             Blog
-          </Link>
-          <Link href="/Contact" className="menu-item">
-            Contact
-          </Link>
-        <div className="covidBtn">
-          <Link href="/CovidAlert" className="menu-item">
-            Covid-19 Alert
-          </Link>
-        </div>
-        </div>
-        <div className={menuClass}></div>
+        <ul className={styles.menuItems}>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="about">About</NavLink>
+          </li>
+          <li>
+            <NavLink to="services">Services</NavLink>
+          </li>
+          <li>
+            <NavLink to="blog">Blog</NavLink>
+          </li>
+          <li>
+            <NavLink to="Appointment">Appointment</NavLink>
+          </li>
+          <li>
+            <NavLink to="faqs">FAQs</NavLink>
+          </li>
+        </ul>
       </nav>
     </div>
   );
-};
+}

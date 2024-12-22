@@ -1,21 +1,17 @@
-import SectionInfo from "../../Components/SectionInfo";
-import { Navbar } from "../../Components/Navbar";
+import Header from "../../Components/Header";
+import Navbar from "../../Components/Navbar";
 import PageHeader from "../../Components/PageHeader";
 import StaffSection from "./StaffSection";
-import Office from "./Office";
+import OfficeCarousel from "../../Components/OfficeCarousel";
 import Footer from "../../Components/Footer";
 
-const About = () => {
+export default function About() {
   return (
-    <div>
-      <SectionInfo />
-      <Navbar />
-      <PageHeader title="About" />
-      <StaffSection />
-      <Office />
-      <Footer />
-    </div>
+    <>
+    <PageHeader title="About" />
+    <StaffSection />
+    <OfficeCarousel />
+    </>
   );
 };
 
-export default About;

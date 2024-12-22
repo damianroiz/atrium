@@ -1,13 +1,13 @@
 import React from "react";
-import { Image, Stack, Box, Text, VStack, HStack } from "@chakra-ui/react";
 import { BenefitCards, AboutUsContent } from "./home_content";
-import "../../style.css";
-import staffImage from "../../../src/assets/images/staff-photo.jpg"
+import "../../styles.css";
+import staffImage from "../../../src/assets/images/staff-photo.jpg";
+import AppointmentBtn from "../../ui/AppointmentBtn";
 
 export const HomeCards = () => {
   return (
     <>
-      <Stack
+      <div
         direction={["column", "row"]}
         justifyContent="center"
         flexWrap="wrap"
@@ -16,17 +16,17 @@ export const HomeCards = () => {
         mb={70}
       >
         {BenefitCards.map((card) => (
-          <Stack key={card.id} flexDirection="column" color="#fff">
-            <Stack p={15}>
-              <Box
+          <div key={card.id} flexDirection="column" color="#fff">
+            <div p={15}>
+              <div
                 className="card"
                 w={230}
                 h={400}
                 pt={30}
                 bg={`center / cover no-repeat url(${card.coverImage})`}
               >
-                <Box display="flex" flexDirection="column">
-                  <Text
+                <div display="flex" flexDirection="column">
+                  <p
                     display="flex"
                     alignItems="center"
                     justifyContent="center"
@@ -39,8 +39,8 @@ export const HomeCards = () => {
                     fontWeight={500}
                   >
                     {card.title}
-                  </Text>
-                  <Text
+                  </p>
+                  <p
                     zIndex={1}
                     m={0}
                     p={25}
@@ -50,13 +50,13 @@ export const HomeCards = () => {
                     fontWeight={500}
                   >
                     {card.description}
-                  </Text>
-                </Box>
-              </Box>
-            </Stack>
-          </Stack>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         ))}
-      </Stack>
+      </div>
     </>
   );
 };
@@ -64,26 +64,28 @@ export const HomeCards = () => {
 export const AboutUs = () => {
   return (
     <>
-      <VStack>
-        <Box>
-          <Image
+      <div>
+        <div>
+          <img
             maxWidth={1200}
             width="100%"
             height="100%"
-            src={staffImage} /* /Users/damiancoz/Sites/atrium/src/assets/images/staff-photo.jpg */
+            src={
+              staffImage
+            } /* /Users/damiancoz/Sites/atrium/src/assets/images/staff-photo.jpg */
             alt="staff image"
           />
-        </Box>
-        <VStack maxWidth={1200} borderColor="red" borderWidth="10px">
-          <Text
+        </div>
+        <div maxWidth={1200} borderColor="red" borderWidth="10px">
+          <p
             p={30}
-            fontFamily="Crimson Text, Georgia, Cambria, serif"
+            fontFamily="Crimson text, Georgia, Cambria, serif"
             fontSize="4em"
             color="#262B2F"
           >
             {AboutUsContent.title}
-          </Text>
-          <VStack
+          </p>
+          <div
             maxW="1020px"
             fontSize="1.5rem"
             fontFamily="Fira Sans, Droid Sans, Century, sans-serif"
@@ -93,10 +95,10 @@ export const AboutUs = () => {
             spacing={20}
             lineHeight={1.3}
           >
-            <Text>{AboutUsContent.subtitle1}</Text>
-            <Text>{AboutUsContent.subtitle2}</Text>
-          </VStack>
-          <VStack
+            <p>{AboutUsContent.subtitle1}</p>
+            <p>{AboutUsContent.subtitle2}</p>
+          </div>
+          <div
             paddingBlock="40"
             color="#1A2228"
             fontSize="1.25rem"
@@ -105,14 +107,14 @@ export const AboutUs = () => {
             fontFamily="Poppins, Roboto, Arial Narrow, sans-serif"
             spacing={20}
           >
-            <Text>{AboutUsContent.paragraph1}</Text>
-            <Text>{AboutUsContent.paragraph2}</Text>
-            <Text width="inherit">{AboutUsContent.paragraph3}</Text>
-            <Text>{AboutUsContent.paragraph4}</Text>
-            <Text>{AboutUsContent.paragraph5}</Text>
-          </VStack>
-        </VStack>
-      </VStack>
+            <p>{AboutUsContent.paragraph1}</p>
+            <p>{AboutUsContent.paragraph2}</p>
+            <p width="inherit">{AboutUsContent.paragraph3}</p>
+            <p>{AboutUsContent.paragraph4}</p>
+            <p>{AboutUsContent.paragraph5}</p>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
@@ -129,16 +131,16 @@ export const MissionBanner = () => {
         </p>
       </div>
       <div>
-        <button className="appointment-btn">Book Your Appoinment</button>
+        <AppointmentBtn />
       </div>
     </div>
   );
 };
 
-export const Reviews = () => {
-  return (
-    <div className="reviews">
-      <div className="elfsight-app-7c8824c3-96b9-4222-ab5c-f8f827c1feaa reviewbox review_google"></div>
-    </div>
-  );
-};
+// export const Reviews = () => {
+//   return (
+//     <div className="reviews">
+//       <div className="elfsight-app-7c8824c3-96b9-4222-ab5c-f8f827c1feaa reviewbox review_google"></div>
+//     </div>
+//   );
+// };

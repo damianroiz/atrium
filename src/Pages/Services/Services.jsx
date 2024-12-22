@@ -1,53 +1,80 @@
-import React, { useState } from "react";
-import SectionInfo from "../../Components/SectionInfo";
-import { Navbar } from "../../Components/Navbar";
-import Footer from "../../Components/Footer";
-import { ServicesItems } from "./ServicesItems";
-import SectionTitle from "../../Components/PageHeader";
-import { servicesdata } from "../Services/services_data";
-import { Services_Content } from "./Services_Content";
+import React, { useState } from 'react';
+import SectionTitle from '../../Components/PageHeader';
+import { ServiceData } from '../Services/services_data';
 
-const Services = () => {
+export default function Services() {
   const [current, setCurrent] = useState(1);
 
   return (
     <>
-      <SectionInfo />
-      <Navbar />
       <SectionTitle title="Services" />
       <section className="services_section">
-        <p>
-          Information pertaining to the high quality services offered by our
-          clinic
-        </p>
-      </section>
-
-      <div className={"GridContainer"}>
-        {servicesdata.map((item) => (
-          <ServicesItems
-            key={item.id}
-            item={item}
-            current={current}
-            setCurrent={setCurrent}
-          />
-        ))}
-      </div>
-
-      <div>
-        <div>
-          {current &&
-            servicesdata.map(
-              (item) =>
-                item.id === current && (
-                  <Services_Content key={item.id} {...item} />
-                )
-            )}
+        <p>Take a look at our services</p>
+        <div className={'service-cards'}>
+          {ServiceData.map((service) => (
+            <ServiceCard
+              key={service.id}
+              service={service}
+              current={current}
+              setCurrent={setCurrent}
+            />
+          ))}
         </div>
-      </div>
 
-      <Footer />
+        {current &&
+          ServiceData.map(
+            (service) =>
+              service.id === current && (
+                <ServiceContent service={service} key={service.id} />
+              )
+          )}
+      </section>
     </>
+  );
+}
+
+const ServiceCard = ({ service, current, setCurrent }) => {
+  const handleClick = () => {
+    setCurrent(service.id);
+  };
+
+  return (
+    <div
+      onClick={handleClick}
+      className={`service-card ${service.id === current ? 'active' : ''}`}
+    >
+      <span className="service-card-title">{service.title}</span>
+    </div>
   );
 };
 
-export default Services;
+const ServiceContent = ({ service }) => {
+  return (
+    <article className="service-container">
+      <h2>{service.title}</h2>
+      <div className="service-body">
+        <img
+          style={{ height: '300px' }}
+          src={service.image}
+          alt="service-img"
+        />
+        {Array.isArray(service.description) ? (
+          service.description.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))
+        ) : (
+          <p>{service.description}</p>
+        )}
+        {service.hasOwnProperty('list') ? (
+          <ul>
+            {service.list.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        ) : (
+          ''
+        )}
+      </div>
+    </article>
+  );
+};

@@ -1,13 +1,10 @@
-import React from "react";
-import { Link } from "wouter";
+import React from 'react';
+import styles from './PageHeader.module.css';
 
-const PageHeader = ({ title }) => {
+const PageHeader = ({ title, path, link }) => {
   return (
-    <section className="about-section">
-      <h1 className="about-title">{title}</h1>
-      <Link href="/" className="link-home">
-        {"Home >"}
-      </Link>
+    <section className={styles.pageHeader}>
+      <h1>{title}</h1>
     </section>
   );
 };

@@ -1,23 +1,14 @@
-import React from "react";
-import SectionInfo from "../../Components/SectionInfo";
-import { Navbar } from "../../Components/Navbar";
-import Footer from "../../Components/Footer";
-import { SliderHome } from "./SliderHome";
-import { HomeCards, AboutUs, MissionBanner, Reviews } from "./HomeSections";
+import React from 'react';
+import Carousel from './Carousel';
+import { HomeCards, AboutUs, MissionBanner } from './HomeSections';
 
-const Home = () => {
+export default function Home() {
   return (
     <div>
-      <SectionInfo />
-      <Navbar />
-      <SliderHome />
-      <HomeCards  />
+      <Carousel />
+      <HomeCards />
       <AboutUs />
       <MissionBanner />
-      <Reviews />
-      <Footer />
     </div>
   );
-};
-
-export default Home;
+}

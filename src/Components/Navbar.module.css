@@ -1,0 +1,99 @@
+.mainMenuContainer {
+  z-index: 100;
+}
+
+.mainMenu {
+  background-color: var(--c-white);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.67);
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.67);
+  input[type='checkbox'] {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 17px;
+    right: 20px;
+    cursor: pointer;
+    appearance: none;
+    &:checked {
+      ~ .hamburgerLines > .line:first-child {
+        transform: rotate(45deg);
+      }
+      ~ .hamburgerLines > .line:nth-child(2) {
+        transform: scaleY(0);
+      }
+      ~ .hamburgerLines > .line:last-child {
+        transform: rotate(-45deg);
+      }
+      ~ .menuItems {
+        transform: translateX(0);
+      }
+    }
+  }
+  .hamburgerLines {
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .line {
+      display: block;
+      height: 4px;
+      width: 100%;
+      border-radius: 10px;
+      background: var(--c-bg-btn-blue);
+      &:first-child {
+        transform-origin: top left;
+        transition: transform var(--timing) ease-in-out;
+      }
+      &:nth-child(2) {
+        transition: transform 200ms ease-in-out;
+      }
+      &:last-child {
+        transform-origin: bottom left;
+        transition: transform var(--timing) ease-in-out;
+      }
+    }
+    @media screen and (width > 580px) {
+      display: none;
+    }
+  }
+}
+
+.menuItems {
+  left: 50%;
+  display: flex;
+  max-width: 900px;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  gap: 1.9em;
+  padding: 20px;
+  transition: transform 0.5s ease-in-out;
+  a {
+    font: 500 var(--fs-18) / 1.25 var(--ff-nav);
+    color: var(--c-black-body);
+    transition: font-size 200ms ease;
+    &:hover {
+      font-size: 1.5em;
+      color: var(--c-blue-hover);
+    }
+  }
+  @media screen and (width < 580px) {
+    width: 100%;
+    padding-top: 70vh;
+    transform: translate(150%);
+    flex-direction: column;
+    transtion: transform var(--timing) ease-in-out;
+  }
+}
