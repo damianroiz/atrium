@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import styles from './Faqs.module.css';
+import styles from './FaqsMenu.module.css';
 
-export default function Faqs() {
+export default function FaqsMenu() {
   return (
     <div className={styles.accordion}>
       <AccordionItem

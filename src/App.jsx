@@ -4,7 +4,7 @@ import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import Services from './Pages/Services/Services';
 import Blog from './Pages/Blog/Blog';
-import Faqs from './Components/Faqs';
+import Faqs from './Pages/Faqs/Faqs';
 import Appointment from './Pages/Appointment/Appointment';
 
 export default function App() {

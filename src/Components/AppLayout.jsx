@@ -12,9 +12,8 @@ const StyledBaseLayout = styled.div`
 `;
 
 const Main = styled.main`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: minmax(90rem , 1fr);
   align-items: center;
 `;
 

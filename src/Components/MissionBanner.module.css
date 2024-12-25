@@ -1,0 +1,41 @@
+.banner__container {
+  margin-block: 4rem;
+  padding-block: 2.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: var(--c-bg-blue);
+}
+
+.text {
+  width: 800px;
+  text-align: left;
+  h3,
+  p {
+    color: var(--c-white);
+  }
+  p {
+    margin-top: 0.5rem;
+  }
+}
+
+.button {
+  align-self: flex-end;
+}
+
+@media screen and (max-width: 1200px) {
+  .banner-container {
+    flex-direction: column;
+  }
+
+  .text-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}

@@ -1,0 +1,44 @@
+.home__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1400px;
+  margin: 0 auto;
+  place-content: center;
+  img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  ul {
+    padding: 1.8rem;
+    width: 90%;
+  }
+
+  ul li {
+    display: flex;
+    align-items: flex-start;
+    text-wrap: wrap;
+    gap: 0.2em;
+    font: var(--fs-16) var(--ff-text-body);
+  }
+
+  ul li:not(:last-child) {
+    padding-block: 0.6rem;
+  }
+
+  ul li p {
+    display: inline-block;
+    flex-grow: 1;
+    flex-basis: 1;
+  }
+
+  ul li .checkmark {
+    margin-inline-end: 0.5rem;
+    color: var(--c-btn-green);
+    font-size: 2rem;
+    width: 30px;
+    height: 30px;
+  }
+}

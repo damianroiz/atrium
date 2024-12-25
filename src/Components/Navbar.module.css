@@ -1,5 +1,5 @@
 .mainMenuContainer {
-  z-index: 100;
+  z-index: 1;
 }
 
 .mainMenu {
@@ -37,7 +37,7 @@
       }
     }
   }
-  .hamburgerLines {
+  /* .hamburgerLines {
     height: 26px;
     width: 32px;
     position: absolute;
@@ -67,7 +67,7 @@
     @media screen and (width > 580px) {
       display: none;
     }
-  }
+  } */
 }
 
 .menuItems {

@@ -1,17 +1,5 @@
-/*
-* Global
-*/
+
 @import '../styles.css';
-
-/*
-//////////////////////
-///////////////////////////// MAIN HEADER //////////////////////////////////////
-//////////////////////
-*/
-
-/* /////////////// CONTACT BUTTONS  //////////////////////////////////////*/
-
-
 
 /*
 //////////////////////
@@ -205,11 +193,6 @@ active {
   }
 }
 
-/*
-//////////////////////////////////////
-////////////////////////////////////////AB0UT PAGE COMPONENTS
-//////////////////////////////////////
-*/
 
 /*
 //////////////////////// STAFF CARDS //////////
@@ -281,11 +264,6 @@ active {
   padding: 0 15px 25px 15px;
 }
 
-/*
-//////////////////////
-//////////////////////////////////////// FAQs PAGE ///////////////////////////////////////
-//////////////////////
-*/
 
 /*
 https://codepen.io/alvarotrigo/pen/wvrzPWL
@@ -460,26 +438,6 @@ form div {
   width: calc(100% - 100px);
 }
 
-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-  margin: 30px 0 20px 0;
-  font: 500 small-caps var(--fs-20) var(--ff-btn);
-  letter-spacing: 1.05px;
-  border: none;
-  width: 250px;
-  padding: 8px 20px;
-  border-radius: 10px;
-  color: var(--c-white);
-  background: var(--c-btn-green);
-  box-shadow: -3px 3px 1px 0.8px rgba(0, 0, 0, 0.2),
-    3px -1px 5px 1px rgba(255, 255, 2555, 0.3);
-  cursor: pointer;
-  transition: all 0.5s ease-in;
-  overflow: hidden;
-}
 
 .contact-form p {
   font: var(--fs-16) var(--ff-text-body);
@@ -599,8 +557,8 @@ footer a {
   display: flex;
   justify-content: space-between;
   align-content: flex-end;
-  padding: 0 30px 0 40px;
-  gap: 40px;
+  /* padding: 0 30px 0 40px; */
+  /* gap: 40px; */
   min-width: 350px;
 }
 

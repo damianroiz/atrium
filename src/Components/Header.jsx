@@ -9,8 +9,8 @@ const StyledHeader = styled.section`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-block: 2.5rem;
-  gap: 1rem;
+  padding: 3.5rem 2rem;
+  gap: 4rem;
   flex-wrap: wrap;
 `;
 
