@@ -4,7 +4,7 @@ import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
 function HomeSection() {
   return (
     <section className={styles.home__section}>
-      <img src={'./public/staff.jpg'} alt="Staff Photo" />
+      <img src={'/staff.jpg'} alt="Staff Photo" />
       <ul>
         <li>
           <span className={styles.checkmark}>

@@ -3,12 +3,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 1400px;
-  margin: 0 auto;
+  max-width: 1400px;
+  margin: 0 auto 2rem auto;
   place-content: center;
   img {
-    max-width: 90%;
-    height: auto;
+    aspect-ratio: 16 / 9;
+    width: 100vw;
+    max-height: 500px;
+    object-fit: cover;
   }
 
   ul {
@@ -40,5 +42,21 @@
     font-size: 2rem;
     width: 30px;
     height: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .home__section {
+    max-width: 100%;
+    margin-bottom: 2rem;
+    align-items: flex-start;
+    img {
+      object-fit: cover;
+      max-width: 100%;
+    }
+    ul {
+      text-wrap: balance;
+      max-width: 100dvw;
+    }
   }
 }

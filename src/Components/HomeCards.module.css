@@ -17,18 +17,19 @@
   box-shadow: var(--box-shadow);
   transition: transform 500ms ease;
   &:first-child {
-    background: var(--image-gradient), center / cover no-repeat url('./card1.jpg');
+    background: var(--image-gradient),
+      center / cover no-repeat url('/card1.jpg');
   }
   &:nth-child(2) {
     background: var(--image-gradient),
-      center / cover no-repeat url('./card2.jpeg');
+      center / cover no-repeat url('/card2.jpeg');
   }
   &:nth-child(3) {
     background: var(--image-gradient),
-      center / cover no-repeat url('./card3.jpeg');
+      center / cover no-repeat url('/card3.jpeg');
   }
   &:last-child {
-    background: var(--image-gradient), center / 150% no-repeat url('./card4.jpg');
+    background: var(--image-gradient), center / 150% no-repeat url('/card4.jpg');
   }
   h3 {
     display: inline-block;
@@ -40,6 +41,7 @@
   }
 }
 
-.card:hover {
+.card:hover,
+.card:focus-visible {
   transform: translate(0, -25px);
 }

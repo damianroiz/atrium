@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const StyledLogo = styled.img`
   width: 400px;
   height: auto;
+  object-fit: contain;
 `;
 
 export default function Logo() {
