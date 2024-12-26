@@ -4,6 +4,7 @@ import HomeSection from '../../Components/HomeSection';
 import HomeCards from '../../Components/HomeCards';
 import { cardsContent } from './home_content';
 import MissionBanner from '../../Components/MissionBanner';
+import Reviews from '../../Components/Reviews';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <HomeCards cardsContent={cardsContent} />
       <HomeSection />
       <MissionBanner />
+      <Reviews />
     </div>
   );
 }

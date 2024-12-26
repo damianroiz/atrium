@@ -1,21 +1,21 @@
-import { useState, useEffect } from "react";
-import styles from "./HomeCarousel.module.css";
+import { useState, useEffect } from 'react';
+import styles from './HomeCarousel.module.css';
 
 const photos = [
   {
     id: 0,
-    title: "Physiotherapy photo one",
-    url: "https://atriumphysiotherapy.com/wp-content/uploads/2023/11/f-physiotherapy.jpg",
+    title: 'Physiotherapy photo one',
+    url: 'https://atriumphysiotherapy.com/wp-content/uploads/2023/11/f-physiotherapy.jpg',
   },
   {
     id: 1,
-    title: "physiotherapy photo two",
-    url: "https://atriumphysiotherapy.com/wp-content/uploads/2023/11/Untitled-3.jpg",
+    title: 'physiotherapy photo two',
+    url: 'https://atriumphysiotherapy.com/wp-content/uploads/2023/11/Untitled-3.jpg',
   },
   {
     id: 2,
-    title: "physiotherapy photo three",
-    url: "https://atriumphysiotherapy.com/wp-content/uploads/2023/11/Exercises-1.jpg",
+    title: 'physiotherapy photo three',
+    url: 'https://atriumphysiotherapy.com/wp-content/uploads/2023/11/Exercises-1.jpg',
   },
 ];
 
@@ -35,7 +35,7 @@ export default function HomeCarousel() {
   }
 
   function handleNext() {
-    setCurrentIndex(currentIndex === 2 ? 0 : currentIndex + 1);
+    setCurrentIndex(currentIndex === photos.length ? 0 : currentIndex + 1);
   }
 
   return (
@@ -84,7 +84,9 @@ function Dots({ currentIndex, setCurrentIndex }) {
         <span
           key={photo.id}
           className={
-            photos[currentIndex].id === photo.id ? `${styles.dot} active` : styles.dot
+            photos[currentIndex].id === photo.id
+              ? `${styles.dot} active`
+              : styles.dot
           }
           onClick={() => setCurrentIndex(photos.indexOf(photo))}
         ></span>
