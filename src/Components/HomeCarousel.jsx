@@ -1,5 +1,5 @@
 import styles from './HomeCarousel.module.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, memo } from 'react';
 
 const photos = [
   {
@@ -19,7 +19,7 @@ const photos = [
   },
 ];
 
-export default function Carousel() {
+function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // useEffect(() => {
@@ -32,7 +32,7 @@ export default function Carousel() {
 
   function handlePrevious() {
     setCurrentIndex(currentIndex === 0 ? photos.length - 1 : currentIndex - 1);
-    console.log('button clicked')
+    console.log('button clicked');
   }
 
   function handleNext() {
@@ -42,12 +42,16 @@ export default function Carousel() {
   return (
     <div className={styles.carouselContainer}>
       <Photos currentIndex={currentIndex} />
-      <CarouselButton className={styles.backBtn} onClick={handlePrevious}>
-        &lt;
-      </CarouselButton>
-      <CarouselButton className={styles.nextBtn} onClick={handleNext}>
-        &gt;
-      </CarouselButton>
+      <CarouselButton
+        className={styles.backBtn}
+        arrow={'<'}
+        onClick={handlePrevious}
+      />
+      <CarouselButton
+        className={styles.nextBtn}
+        arrow={'>'}
+        onClick={handleNext}
+      />
       <Dots currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
     </div>
   );
@@ -56,10 +60,10 @@ export default function Carousel() {
 function Photos({ currentIndex }) {
   return (
     <>
-      {photos.map((photo) => (
+      {photos.map((photo, index) => (
         <div
           className={
-            photos[currentIndex].id === photo.id ? styles.show : styles.hide
+            photos[currentIndex].id === index ? styles.show : styles.hide
           }
           key={photo.id}
         >
@@ -70,10 +74,10 @@ function Photos({ currentIndex }) {
   );
 }
 
-function CarouselButton({ children, className, onClick }) {
+function CarouselButton({ arrow, className, onClick }) {
   return (
     <button className={className} onClick={onClick}>
-      {children}
+      {arrow}
     </button>
   );
 }
@@ -81,14 +85,19 @@ function CarouselButton({ children, className, onClick }) {
 function Dots({ currentIndex, setCurrentIndex }) {
   return (
     <div className={styles.dotsContainer}>
-      {photos.map((photo) => (
+      {photos.map((photo, index) => (
         <span
           key={photo.id}
           className={
-            photos[currentIndex].id === photo.id ? `${styles.dot} ${styles.active}` : styles.dot}
-          onClick={() => setCurrentIndex(photos.indexOf(photo))}
+            photos[currentIndex].id === index
+              ? `${styles.dot} ${styles.active}`
+              : styles.dot
+          }
+          onClick={() => setCurrentIndex(photos.index)}
         ></span>
       ))}
     </div>
   );
 }
+
+export default memo(Carousel);

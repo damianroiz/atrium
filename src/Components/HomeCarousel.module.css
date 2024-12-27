@@ -1,7 +1,7 @@
 .carouselContainer {
   position: relative;
   margin-bottom: 4rem;
-  width: 100vw;
+  width: 100dvw;
 }
 .show {
   animation-name: fade;
