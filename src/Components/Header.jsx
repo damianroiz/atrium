@@ -9,9 +9,12 @@ const StyledHeader = styled.section`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 3.5rem 2rem;
+  padding: 1rem;
   gap: 4rem;
   flex-wrap: wrap;
+  @media screen and (max-width: 1200px) {
+    padding-bottom: 3rem;
+  }
 `;
 
 const Header = () => {
