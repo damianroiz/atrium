@@ -5,7 +5,7 @@ import ContactButtons from './ContactButtons';
 import AppointmentBtn from './AppointmentBtn';
 
 const StyledHeader = styled.section`
-  background: var(--c-bg-blue);
+  background: var(--c-background);
   display: flex;
   justify-content: space-around;
   align-items: center;

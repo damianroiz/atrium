@@ -11,7 +11,7 @@
 */
 
 .main-menu {
-  background-color: var(--c-white);
+  background-color: var(--c-white-50);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -60,7 +60,7 @@
       height: 4px;
       width: 100%;
       border-radius: 10px;
-      background: var(--c-bg-btn-blue);
+      background-color: var(--c-background);
       &:first-child {
         transform-origin: top left;
         transition: transform var(--timing) ease-in-out;
@@ -95,7 +95,7 @@
     transition: font-size 200ms ease;
     &:hover {
       font-size: 1.5em;
-      color: var(--c-blue-hover);
+      color: var(--c-blue-400);
     }
   }
   @media screen and (width < 580px) {
@@ -105,7 +105,7 @@
     flex-direction: column;
     transtion: transform var(--timing) ease-in-out;
     a {
-      color: var(--c-white);
+      color: var(--c-white-50);
     }
   }
 }
@@ -162,8 +162,8 @@
   height: inherit;
   width: inherit;
   gap: 20px;
-  background-color: var(--c-bg-footnote);
-  color: var(--c-white);
+  background-color: var(--c-brand-900);
+  color: var(--c-white-50);
 }
 
 .staff-card-info > :first-child {
@@ -257,7 +257,7 @@ https://codepen.io/alvarotrigo/pen/wvrzPWL
       color: var(--c-light-grey);
       text-align: center;
       border-radius: 50%;
-      background: var(--c-bg-btn-blue);
+      background: var(--c-background);
       box-shadow: inset 0 1px 6px rgba(#000, 0.5), 0 1px 0 #fff;
       text-shadow: 0 1px 0 rgba(#000, 0.75);
     }
@@ -309,7 +309,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--c-white);
+  color: var(--c-white-50);
   border-radius: 10px;
   box-shadow: var(--box-shadow);
 }
@@ -324,7 +324,7 @@ form h3 {
   outline: none;
   padding-bottom: 10px;
   border-bottom: 2.5px solid;
-  color: var(--c-white);
+  color: var(--c-white-50);
 }
 
 .contact-form div > textarea {
@@ -363,10 +363,10 @@ form div {
 //////////////////////
 */
 
-footer,
-footer a {
-  color: var(--c-white);
+footer {
+  color: var(--c-white-50);
   font: var(--ff-text-body);
+  background: var(--c-background);
 }
 
 .back-to-top {
@@ -378,13 +378,13 @@ footer a {
 .fa-circle-chevron-up {
   font-size: 60px;
   z-index: 99;
-  color: var(--c-bg-btn-blue);
+  color: var(--c-blue-900);
 }
 
 .footer-sections {
   position: relative;
   padding: 50px 30px;
-  background: var(--c-bg-blue);
+  /* background: var(--c-background); */
   display: grid;
   grid: auto-flow / repeat(3, minmax(290px, 1fr));
   justify-items: center;
@@ -483,7 +483,7 @@ footer li {
   flex-direction: column;
   align-items: center;
   padding-block: 30px 10px;
-  background: var(--c-bg-footnote);
+  background: var(--c-black-600);
   letter-spacing: 1.07px;
   font-size: 14px;
 }
@@ -502,7 +502,7 @@ footer li {
 
 .terms .footnote-link {
   font: var(--fs-14) / 10px var(--ff-link);
-  color: var(--c-white);
+  color: var(--c-white-50);
   padding: 0 10px 0 10px;
   letter-spacing: 1.6px;
   text-decoration: solid underline;
@@ -516,7 +516,7 @@ footer li {
     grid-template-columns: minmax(320px, 1fr);
     grid-template-rows: repeat(auto-fill, minmax(320px, 1fr));
     row-gap: 20px;
-    background-color: var(--c-white);
+    background-color: var(--c-white-50);
   }
 
   .contact-list li {

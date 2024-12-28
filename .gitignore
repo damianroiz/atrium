@@ -25,3 +25,4 @@ apikey.js
 *.sw?
 *.git
 .env
+GlobalStyles.js

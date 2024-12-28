@@ -6,8 +6,8 @@ const StyledAppointmentBtn = styled.button`
   border: none;
   border-radius: 10px;
   padding: 1rem;
-  color: var(--c-white);
-  background: var(--c-btn-green);
+  color: var(--c-white-50);
+  background: var(--c-green-500);
   box-shadow: 0 3px 15px rgba(9, 9, 9, 0.2);
   transition: transform 200ms ease-in;
   cursor: pointer;

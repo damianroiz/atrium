@@ -3,7 +3,7 @@
 }
 
 .mainMenu {
-  background-color: var(--c-white);
+  background-color: var(--c-white-50);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -86,7 +86,7 @@
     transition: font-size 200ms ease;
     &:hover {
       font-size: 1.5em;
-      color: var(--c-blue-hover);
+      color: var(--c-blue-400);
     }
   }
   @media screen and (width < 580px) {

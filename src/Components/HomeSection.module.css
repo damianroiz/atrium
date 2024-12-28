@@ -38,7 +38,7 @@
 
   ul li .checkmark {
     margin-inline-end: 0.5rem;
-    color: var(--c-btn-green);
+    color: var(--c-green-500);
     font-size: 2rem;
     width: 30px;
     height: 30px;

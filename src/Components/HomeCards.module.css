@@ -13,7 +13,7 @@
   width: 230px;
   height: 400px;
   padding: 2rem 1rem;
-  color: var(--c-white);
+  color: var(--c-white-50);
   box-shadow: var(--box-shadow);
   transition: transform 500ms ease;
   &:first-child {
@@ -34,7 +34,7 @@
   h3 {
     display: inline-block;
     height: 5rem;
-    color: var(--c-white);
+    color: var(--c-white-50);
   }
   span {
     font: var(--fs-16) var(--ff-text-body);
