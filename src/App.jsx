@@ -15,14 +15,14 @@ import Appointment from './Pages/Appointment/Appointment';
 // import Posts from './Pages/Dashboard/Posts';
 // import Users from './Pages/Dashboard/Users';
 // import Settings from './Pages/Dashboard/Settings';
-import DashboardRoutes from './Routes/DashboardRoutes'; 
+import DashboardRoutes from './Routes/DashboardRoutes';
 
 export default function App() {
   return (
     <BrowserRouter>
-      <DashboardRoutes />
       <Routes>
-        <Route element={<AppLayout />}>
+        <Route path="/" element={<AppLayout />}>
+          {/* navigate to home page if no path is provided */}
           <Route index element={<Navigate replace to="home" />} />
           <Route path="home" element={<Home />} />
           <Route path="about" element={<About />} />
@@ -31,6 +31,7 @@ export default function App() {
           <Route path="faqs" element={<Faqs />} />
           <Route path="appointment" element={<Appointment />} />
         </Route>
+        <Route path="/*" element={<DashboardRoutes />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,10 +1,15 @@
+import Heading from './ui/Heading';
+import Row from './ui/Row';
 import { Outlet } from 'react-router-dom';
 
-export default function Dashboard() {
+function Dashboard() {
   return (
-    <>
-    <h1>Dashboard</h1>
+    <Row type="horizontal">
+      <Heading as="h1">This is the dashboard</Heading>
+      <p>And this is a test</p>
       <Outlet />
-    </>
+    </Row>
   );
 }
+
+export default Dashboard;

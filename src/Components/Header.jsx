@@ -20,7 +20,7 @@ const StyledHeader = styled.section`
 const Header = () => {
   return (
     <StyledHeader>
-      <Logo />
+      <Logo type={'header'} />
       <ContactButtons />
       <AppointmentBtn />
     </StyledHeader>

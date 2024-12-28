@@ -12,7 +12,7 @@ const Footer = () => {
       </a>
       <div className={styles.footer__container}>
         <div className={styles.contact__info}>
-          <Logo />
+          <Logo type={"footer"} />
           <ul className={styles.contact__list}>
             <li>
               <i className="fa fa-map-marker-alt" aria-hidden="true"></i>
