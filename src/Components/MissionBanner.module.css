@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background: var(--c-bg-blue);
+  background: var(--c-background);
 }
 
 .text {

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,600;1,600&family=Fira+Sans:wght@500;600&family=Oxygen:wght@300&family=Poppins:ital,wght@0,300;0,400;1,300;1,400&family=Ubuntu:wght@400;500&display=swap');
+
+
 :root {
   /* FONT SIZES */
   --fs-10: 0.625rem;
@@ -16,7 +19,7 @@
   --ff-nav: 'Ubuntu', 'Helvetica', sans-serif;
   --ff-heading: 'Crimson Text', 'Georgia', 'Cambria', serif;
   --ff-subheading: 'Fira Sans', 'Droid Sans', 'Century Gothic', sans-serif;
-  --ff-text-body: 'Poppins', 'Roboto', 'Arial Narrow', sans-serif;
+  --ff-text: 'Poppins', 'Roboto', 'Arial Narrow', sans-serif;
   --ff-btn: 'Ubuntu', 'Helvetica Neue', sans-serif;
   --ff-link: 'Oxygen', 'Arial', sans-serif;
 
@@ -231,7 +234,6 @@ h4,
 h5,
 h6 {
   letter-spacing: 1.3px;
-  overflow-wrap: break-word;
   hyphens: auto;
 }
 
@@ -253,7 +255,7 @@ h4 {
 
 p,
 span {
-  font: 400 var(--fs-16) / 1.5em var(--ff-text-body);
+  font: 400 var(--fs-16) / 1.5em var(--ff-text);
 }
 
 a {

@@ -1,0 +1,60 @@
+/*
+//////////////////////
+//////////////////////////APPOINTMENT FORM
+//////////////////////
+*/
+
+form {
+  padding: 40px;
+  width: 550px;
+  background: var(--c-bg-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--c-white-50);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+form h3 {
+  padding-block: 20px;
+}
+
+.contact-form div > input[type='text'] {
+  background: none;
+  border: none;
+  outline: none;
+  padding-bottom: 10px;
+  border-bottom: 2.5px solid;
+  color: var(--c-white-50);
+}
+
+.contact-form div > textarea {
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+}
+
+.errorMsg {
+  max-width: 350px;
+  color: #f21e08;
+  padding: 2px 0;
+  margin-top: 2px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+form div label {
+  padding: 0 20px 5px 0;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: calc(100% - 100px);
+}
+
+.contact-form p {
+  font: var(--fs-16) var(--ff-text-body);
+}

@@ -35,9 +35,10 @@
     display: inline-block;
     height: 5rem;
     color: var(--c-white-50);
+    margin-bottom: 1rem;
   }
   span {
-    font: var(--fs-16) var(--ff-text-body);
+    font: var(--fs-16) var(--ff-text);
   }
 }
 

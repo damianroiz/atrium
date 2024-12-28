@@ -2,17 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from './Logo';
 import SocialIcons from './SocialIcons';
+import styles from './Footer.module.css';
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="footer-sections">
-        <a href="#root" className="back-to-top">
-          <i className="fa fa-circle-chevron-up" aria-hidden="true"></i>
-        </a>
-        <div className="contact-info">
+    <footer className={styles.footer}>
+      <a href="#root" className={styles.back__to__top}>
+        <i className="fa fa-circle-chevron-up" aria-hidden="true"></i>
+      </a>
+      <div className={styles.footer__container}>
+        <div className={styles.contact__info}>
           <Logo />
-          <ul className="contact-list">
+          <ul className={styles.contact__list}>
             <li>
               <i className="fa fa-map-marker-alt" aria-hidden="true"></i>
               <p>
@@ -20,47 +21,22 @@ const Footer = () => {
               </p>
             </li>
             <li>
-              <i className="fa fa-envelope" aria-hidden="true"></i>
-              admin@atriumphysiotherapy.com
+                <i className="fa fa-envelope" aria-hidden="true"></i>
+                <p>admin@atriumphysiotherapy.com</p>
             </li>
             <li>
-              <i className="fa fa-phone-alt" aria-hidden="true"></i>+1(403)-255
-              4461
+              <i className="fa fa-phone-alt" aria-hidden="true"></i>
+              <p>+1(403)-255 4461</p>
             </li>
             <li>
-              <i className="fa fa-fax" aria-hidden="true"></i>+1(403)-259 8776
+              <i className="fa fa-fax" aria-hidden="true"></i>
+              <p>+1(403)-259 8776</p>
             </li>
           </ul>
-          {/* <div className="social-media">
-            <a
-              href="https://www.facebook.com/Atriumphysio/"
-              target="_blank"
-              rel="noopener"
-            >
-              <i className="fa-brands fa-facebook"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/atriumphysiotherapy/"
-              target="_blank"
-              rel="noopener"
-            >
-              <i className="fa-brands fa-instagram"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/hala-basily-05872829/"
-              target="_blank"
-              rel="noopener"
-            >
-              <i className="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://twitter.com/" target="_blank" rel="noopener">
-              <i className="fa-brands fa-twitter"></i>
-            </a>
-          </div> */}
           <SocialIcons />
         </div>
 
-        <div className="links">
+        <div className={styles.page__links}>
           <p>Links</p>
           <ul>
             <li>
@@ -73,12 +49,15 @@ const Footer = () => {
               <a href="/blog">Blog</a>
             </li>
             <li>
-              <a href="">Covid-19 Alert</a>
+              <a href="">Appointment</a>
+            </li>
+            <li>
+              <a href="">Faqs</a>
             </li>
           </ul>
         </div>
 
-        <div className="hours-section">
+        <div className={styles.hours}>
           <p>Operating Hours</p>
           <ul>
             <li>
@@ -109,17 +88,17 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="footnote">
-        <div className="terms">
-          <Link className="footnote-link" to="#">
+      <div className={styles.footnote}>
+        <div className={styles.terms}>
+          <Link className={styles.footnote__link} to="#">
             Terms and Conditions
           </Link>{' '}
           |{' '}
-          <Link className="footnote-link" to="#">
+          <Link className={styles.footnote__link} to="#">
             Privacy Policy
           </Link>
         </div>
-        <small className="copyright">
+        <small className={styles.copyright}>
           Copyright ©2022 - All rights reserved.
         </small>
       </div>
