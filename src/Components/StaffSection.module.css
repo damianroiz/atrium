@@ -1,0 +1,75 @@
+/*
+//////////////////////// STAFF CARDS //////////
+*/
+
+.cards-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-block: 10px;
+}
+
+.cards-section h2 {
+  display: block;
+  flex: 1 0 auto;
+  margin-bottom: 50px;
+}
+
+.cards-container {
+  max-width: 1200px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  gap: 50px;
+}
+
+.staff-card {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: auto;
+  margin-top: auto;
+  box-shadow: var(--box-shadow);
+}
+
+.staff-card img {
+  display: block;
+  border: none;
+  border-radius: 12px 12px 0 0;
+  width: 480px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.staff-card-info {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  height: inherit;
+  width: inherit;
+  gap: 20px;
+  background-color: var(--c-brand-900);
+  color: var(--c-white-50);
+}
+
+.staff-card-info > :first-child {
+  width: 100%;
+  font: var(--fs-18) var(--ff-subheading);
+  letter-spacing: 1.08px;
+  padding-block: 15px;
+  background-color: #f8f8ff25;
+}
+
+.staff-card-info > :last-child {
+  font: var(--fs-16) var(--ff-text-body);
+  letter-spacing: 1.05px;
+  padding: 0 15px 25px 15px;
+}
+
+/*
+  https://codepen.io/alvarotrigo/pen/wvrzPWL
+  */
+
+

@@ -7,10 +7,9 @@ https://codepen.io/alvarotrigo/pen/wvrzPWL
     position: relative;
     display: block;
     margin: 3rem auto;
-    width:40rem;
-    font-family: "Open sans", sans-serif;
-    background: var(--c-light-grey);
-    box-shadow: 0 1px 8px rgba(#000, 0.25);
+    width: 40rem;
+    background: var(--c-grey-100);
+    box-shadow: var(--box-shadow);
     &:before {
       content: "";
       position: absolute;
@@ -25,10 +24,9 @@ https://codepen.io/alvarotrigo/pen/wvrzPWL
     input[name="panel"] {
       display: none;
       &:checked + label {
-      color: var(--c-hightlight-color);
+      color: var(--c-blue-800);
         ~ .answer {
         max-height: fit-content;
-        height: -moz-max-content;
         text-wrap: pretty;
         line-height: 2em;
         }
@@ -38,6 +36,7 @@ https://codepen.io/alvarotrigo/pen/wvrzPWL
         }  
       }  
     }
+
   
     /*/////////////////////LABELS ////////////////////////*/
     .label {
@@ -52,9 +51,9 @@ https://codepen.io/alvarotrigo/pen/wvrzPWL
         rgba(226, 226, 226, 1) 100%
       );
       border-top: 1px solid var(--c-white-0);
-      border-bottom: 1px solid rgba(var(--c-black-900), 0.15);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
       font-size: 1.5em;
-      text-shadow: 0 1px 0 rgba(var(--c-white-0), 0.75);
+      text-shadow: 0 1px 0 rgba(250, 250, 250, 0.75);
       color: var(--med-grey);
       cursor: pointer;
       transition: all 200ms ease; 
@@ -65,17 +64,16 @@ https://codepen.io/alvarotrigo/pen/wvrzPWL
         width: 1em;
         height: 1em;
         line-height: 0.98em;
-        color: var(--c-white-50);
+        color: var(--c-white-100);
         text-align: center;
         border-radius: 50%;
         background: var(--c-background);
         box-shadow:
           inset 0 1px 6px rgba(#000, 0.5),
           0 1px 0 #fff;
-        text-shadow: 0 1px 0 rgba(#000, 0.75);
       }
       &:hover {
-        color: var(--c-highlight-color);
+        color: var(--c-blue-800);
       }
     }
   
@@ -87,14 +85,13 @@ https://codepen.io/alvarotrigo/pen/wvrzPWL
       box-shadow:
         inset 4px 0 0 0 var(--c-hightlight-color),
         inset 0 3px 6px rgba(#000, 0.75);
-      background: var(--c-dark-grey);
       background: linear-gradient(
         to bottom,
         rgba(68, 68, 68, 1) 0%,
         rgba(34, 34, 34, 1) 100%
       );
-      color: var(--c-white-50);
-      transition: all 200ms ease;
+      color: var(--c-white-100);
+      transition: var(--ease);
       &:not(:last-of-type) {
         box-shadow:
           inset 0 -2px 2px rgba(#000, 0.25),
@@ -102,9 +99,7 @@ https://codepen.io/alvarotrigo/pen/wvrzPWL
           inset 0 3px 6px rgba(#000, 0.75);
       }
       p {
-        font-size: 1.1rem;
-        line-height: 1.7em;
-        padding-block: 1.5em;
+        padding-block: 1.5rem;
         margin: 0;
         text-align: left;
       }
