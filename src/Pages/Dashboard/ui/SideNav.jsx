@@ -11,6 +11,7 @@ import {
 const NavList = styled.ul`
   display: flex;
   flex-direction: column;
+  background-color: var(--c-grey-300);
 `;
 
 const StyledNavLink = styled(NavLink)`
@@ -20,13 +21,17 @@ const StyledNavLink = styled(NavLink)`
     align-items: center;
     justify-content: flex-end;
     padding: 1.2rem;
+    margin: 1rem;
     gap: 1rem;
-
-    color: var(--c-grey-600);
+    color: var(--c-white-600);
     font-size: 1.6rem;
     font-weight: 500;
     padding: 1rem 1rem;
     transition: all 0.3s;
+  }
+
+  &:not(:first-child) {
+    margin-top: 1rem;
   }
 
   /* This works because react-router places the active class on the active NavLink */
@@ -34,23 +39,23 @@ const StyledNavLink = styled(NavLink)`
   &:active,
   &.active:link,
   &.active:visited {
-    color: var(--c-grey-800);
-    background-color: var(--c-grey-50);
+    color: var(--c-blue-600);
+    background-color: var(--c-blue-900);
     border-radius: var(--border-radius-sm);
   }
 
   & svg {
     width: 2.4rem;
     height: 2.4rem;
-    color: var(--color-grey-400);
-    transition: all 0.3s;
+    color: var(--c-white-600);
+    transition: all 0.2s;
   }
 
   &:hover svg,
   &:active svg,
   &.active:link svg,
   &.active:visited svg {
-    color: var(--color-brand-600);
+    color: var(--c-blue-700);
   }
 `;
 
@@ -65,19 +70,19 @@ function SideNav() {
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="/posts">
+          <StyledNavLink to="/dashboard/posts">
             <span>Posts</span>
             <HiFolderOpen />
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="/users">
+          <StyledNavLink to="dashboard/users">
             <span>Users</span>
             <HiOutlineUsers />
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="/settings">
+          <StyledNavLink to="dashboard/settings">
             <span>Settings</span>
             <HiOutlineCog6Tooth />
           </StyledNavLink>

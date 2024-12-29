@@ -11,10 +11,8 @@ import Layout from '../Pages/Dashboard/ui/Layout';
 export default function DashboardRoutes() {
   return (
     <Routes>
-      <Route  element={<Layout />}>
+      <Route element={<Layout />}>
         <Route path="dashboard" element={<Dashboard />}>
-          
-          <Route index element={<Navigate replace to="/dashboard" />} />
           <Route path="posts" element={<Posts />} />
           <Route path="users" element={<Users />} />
           <Route path="settings" element={<Settings />} />
