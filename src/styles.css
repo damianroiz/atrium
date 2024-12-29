@@ -70,20 +70,26 @@
     --c-white-800: #bebebe;
     --c-white-900: #b4b4b4;
 
+    --c-grey-100: #8a97ae;
     --c-grey-100: #7d8696;
     --c-grey-200: #555f74;
     --c-grey-300: #2e3a52;
     --c-grey-400: #232b3e;
+    --c-grey-500: #1a2130;
+    --c-grey-600: #121824;
+    --c-grey-700: #0b0f18;
+    --c-grey-800: #080c12;
+    --c-grey-900: #05080c;
 
-    --c-black-100: #1a2130;
-    --c-black-200: #121824;
-    --c-black-300: #0b0f18;
-    --c-black-400: #080c12;
-    --c-black-500: #05080c;
-    --c-black-600: #030506;
-    --c-black-700: #020304;
-    --c-black-800: #010202;
-    --c-black-900: #000101;
+    --c-black-100: #1a1a1a;
+    --c-black-200: #141414;
+    --c-black-300: #0e0e0e;
+    --c-black-400: #0a0a0a;
+    --c-black-500: #050505;
+    --c-black-600: #030303;
+    --c-black-700: #020202;
+    --c-black-800: #010101;
+    --c-black-900: #000000;
 
     --c-green-50: #ecfdf5;
     --c-green-100: #dcfce7;

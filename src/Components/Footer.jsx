@@ -12,7 +12,7 @@ const Footer = () => {
       </a>
       <div className={styles.footer__container}>
         <div className={styles.contact__info}>
-          <Logo type={"footer"} />
+          <Logo type={'small'} />
           <ul className={styles.contact__list}>
             <li>
               <i className="fa fa-map-marker-alt" aria-hidden="true"></i>
@@ -21,8 +21,8 @@ const Footer = () => {
               </p>
             </li>
             <li>
-                <i className="fa fa-envelope" aria-hidden="true"></i>
-                <p>admin@atriumphysiotherapy.com</p>
+              <i className="fa fa-envelope" aria-hidden="true"></i>
+              <p>admin@atriumphysiotherapy.com</p>
             </li>
             <li>
               <i className="fa fa-phone-alt" aria-hidden="true"></i>
