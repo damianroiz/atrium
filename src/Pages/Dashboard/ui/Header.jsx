@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import Logo from '../../../Components/Logo';
 
 const StyledHeader = styled.header`
-  background-color: var(--c-grey-200);
+  background-color: var(--c-grey-100);
   padding: 1.2rem 4.8rem;
   grid-column: 1 / -1;
-  border-bottom: 1px solid var(--c-grey-300);
+  border-bottom: 1px solid var(--c-grey-500);
 `;
 
 function Header() {

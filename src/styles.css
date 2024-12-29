@@ -52,6 +52,7 @@
     --c-blue-100: #b3d6ff;
     --c-blue-200: #7bb2fa;
     --c-blue-500: #4db8ff;
+    --c-blue-400: #49a4ff;
     --c-blue-600: #3399ff;
     --c-blue-700: #007acc;
     --c-blue-800: #191970;
@@ -136,7 +137,7 @@
     --border-radius-lg: 9px;
   }
 
-  &.dark-mode {
+  /* &.dark-mode {
     --image-grayscale: 0;
     --image-opacity: 100%;
     filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
@@ -176,7 +177,7 @@
 
     --image-grayscale: 10%;
     --image-opacity: 90%;
-  }
+  } */
 }
 
 /* Make images easier to work with */
@@ -199,12 +200,6 @@ img {
     --fs-32: calc(var(--fs-32) * 1.18);
     --fs-48: calc(var(--fs-48) * 1.2);
     --fs-64: calc(var(--fs-64) * 1.3);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
   }
 }
 
@@ -267,7 +262,7 @@ span {
 }
 
 a {
-  font: var(--fs-16) / 1.5em var(--ff-link);
+  font: 500 var(--fs-18) / 1.5em var(--ff-link);
   color: inherit;
   text-decoration: none;
 }
