@@ -6,6 +6,8 @@ import Services from './Pages/Services/Services';
 import Blog from './Pages/Blog/Blog';
 import Faqs from './Pages/Faqs/Faqs';
 import Appointment from './Pages/Appointment/Appointment';
+import './styles.css';
+import '../src/Components/components.css';
 
 // dashboard routes
 // import Dashboard from './Pages/Dashboard/Dashbaord';

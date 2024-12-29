@@ -7,13 +7,13 @@ const StyledLogo = styled.img`
   object-fit: contain;
 
   ${(props) =>
-    props.type === 'header' &&
+    props.type === 'large' &&
     css`
       width: 400px;
     `}
 
   ${(props) =>
-    props.type === 'footer' &&
+    props.type === 'small' &&
     css`
       width: 300px;
     `}

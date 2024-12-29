@@ -1,13 +1,16 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import Logo from '../../../Components/Logo';
 
 const StyledHeader = styled.header`
-  background-color: var(--color-grey-0);
+  background-color: var(--c-grey-100);
   padding: 1.2rem 4.8rem;
-  border-bottom: 1px solid var(--color-grey-100);
+  grid-column: 1 / -1;
+  border-bottom: 1px solid var(--c-grey-200);
 `;
 
 function Header() {
-  return <StyledHeader>HEADER</StyledHeader>;
+  return <StyledHeader>
+     <Logo type={'small'} /></StyledHeader>;
 }
 
 export default Header;
