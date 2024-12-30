@@ -1,11 +1,14 @@
 .card__container {
-  width: 100%;
+  width: 100vw;
   display: grid;
   grid-template-columns: repeat(4, minmax(250px, 1fr));
   grid-auto-flow: row;
-  align-items: center;
-  margin: 5rem;
-  max-width: clamp(600px, 80%, 1200px);
+  align-content: center;
+  justify-content: center;
+  margin: 5rem auto;
+  gap: 1rem;
+  max-width: clamp(1003px, 70%, 1200px);
+  min-width: fit-content;
 }
 
 .card {
