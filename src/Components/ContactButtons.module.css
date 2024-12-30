@@ -32,8 +32,7 @@
   text-align: center;
   line-height: 50px !important;
   border-radius: 50%;
-  box-shadow: -3px 3px 1px 0.8px rgba(0, 0, 0, 0.2),
-    3px -1px 5px 1px rgba(255, 255, 2555, 0.3);
+  box-shadow: 0 3px 15px rgba(9, 9, 9, 0.2);
   transition: all 700ms ease-in-out;
 }
 
@@ -45,8 +44,8 @@
   bottom: 0;
   overflow: hidden;
   text-align: start;
-  transition: height 0.5s ease-in-out;
 }
+
 .contact__buttons .button:hover > span {
   height: 50%;
   position: relative;

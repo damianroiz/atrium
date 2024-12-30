@@ -110,9 +110,9 @@
     grid-template-columns: minmax(400px, 1fr);
     margin-bottom: 3rem;
   }
-  .page__links,
-  .hours {
-    margin: 0;
+  .page__links p,
+  .hours p {
+    margin-top: 1rem;
   }
 }
 /*
