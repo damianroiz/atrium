@@ -58,7 +58,7 @@ function AccordionItem({ id, question, children }) {
     <div className={styles.question}>
       <input type="checkbox" name="panel" id={id}></input>
       <label className={styles.label} htmlFor={id}>
-        {question}
+        <span>{question}</span>
       </label>
       <div className={styles.answer}>
         <p>{children}</p>

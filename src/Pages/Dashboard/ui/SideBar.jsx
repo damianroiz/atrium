@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Logo from '../../../Components/Logo';
 import SideNav from './SideNav';
 
 const StyledSidebar = styled.aside`

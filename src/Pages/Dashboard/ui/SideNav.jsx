@@ -4,7 +4,6 @@ import {
   HiOutlineCog6Tooth,
   HiOutlineHome,
   HiFolderOpen,
-  HiOutlineHomeModern,
   HiOutlineUsers,
 } from 'react-icons/hi2';
 
