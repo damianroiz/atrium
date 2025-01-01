@@ -6,7 +6,8 @@ import { getPosts } from '../../services/apiPosts';
 function Posts() {
   useEffect(() => {
     getPosts().then((posts) => console.log(posts));
-  });
+  }, []);
+  
   return (
     <Row type="horizontal">
       <Heading as="h1">Posts</Heading>
