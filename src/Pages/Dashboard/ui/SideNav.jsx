@@ -75,13 +75,13 @@ function SideNav() {
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="dashboard/users">
+          <StyledNavLink to="/dashboard/users">
             <span>Users</span>
             <HiOutlineUsers />
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="dashboard/settings">
+          <StyledNavLink to="/dashboard/settings">
             <span>Settings</span>
             <HiOutlineCog6Tooth />
           </StyledNavLink>

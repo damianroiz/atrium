@@ -11,16 +11,15 @@ import Layout from '../Pages/Dashboard/ui/Layout';
 export default function DashboardRoutes() {
   return (
     <Routes>
-      <Route element={<Layout />}>
-        <Route path="dashboard" element={<Dashboard />}>
+      <Route path='/dashboard' element={<Layout />}>
+          <Route index element={<Navigate replace to="/dashboard" />} />
           <Route path="posts" element={<Posts />} />
           <Route path="users" element={<Users />} />
           <Route path="settings" element={<Settings />} />
           <Route path="account" element={<Account />} />
-        </Route>
+      </Route>
         <Route path="login" element={<Login />} />
         <Route path="*" element={<PageNotFound />} />
-      </Route>
     </Routes>
   );
 }
