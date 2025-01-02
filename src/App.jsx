@@ -12,14 +12,8 @@ import Appointment from './Pages/Appointment/Appointment';
 import './styles.css';
 import '../src/Components/components.css';
 
-// dashboard routes
-// import Dashboard from './Pages/Dashboard/Dashbaord';
-// import Account from './Pages/Dashboard/Account';
-// import Login from './Pages/Dashboard/Login';
-// import PageNotFound from './Pages/Dashboard/PageNotFound';
-// import Posts from './Pages/Dashboard/Posts';
-// import Users from './Pages/Dashboard/Users';
-// import Settings from './Pages/Dashboard/Settings';
+
+// import HomeRoutes from './Routes/HomeRoutes';
 import DashboardRoutes from './Routes/DashboardRoutes';
 
 const queryClient = new QueryClient({
@@ -36,9 +30,9 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={false} />
       <BrowserRouter>
+            {/* navigate to home page if no path is provided */}
         <Routes>
           <Route path="/" element={<AppLayout />}>
-            {/* navigate to home page if no path is provided */}
             <Route index element={<Navigate replace to="home" />} />
             <Route path="home" element={<Home />} />
             <Route path="about" element={<About />} />
@@ -47,6 +41,7 @@ export default function App() {
             <Route path="faqs" element={<Faqs />} />
             <Route path="appointment" element={<Appointment />} />
           </Route>
+          {/* <Route path="/" element={<HomeRoutes />} /> */}
           <Route path="/*" element={<DashboardRoutes />} />
         </Routes>
       </BrowserRouter>

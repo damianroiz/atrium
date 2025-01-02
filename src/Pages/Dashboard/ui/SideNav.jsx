@@ -69,8 +69,8 @@ function SideNav() {
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="/dashboard/posts">
-            <span>Posts</span>
+          <StyledNavLink to="/dashboard/blogs">
+            <span>Blogs</span>
             <HiFolderOpen />
           </StyledNavLink>
         </li>
