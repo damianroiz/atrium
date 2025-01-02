@@ -5,10 +5,9 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import AppLayout from './Components/AppLayout';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
-import Services from './Pages/Services/Services';
+import Treatments from './Pages/Treatments/Treatments';
 import Blog from './Pages/Blog/Blog';
 import Faqs from './Pages/Faqs/Faqs';
-import Appointment from './Pages/Appointment/Appointment';
 import './styles.css';
 import '../src/Components/components.css';
 
@@ -36,10 +35,9 @@ export default function App() {
             <Route index element={<Navigate replace to="home" />} />
             <Route path="home" element={<Home />} />
             <Route path="about" element={<About />} />
-            <Route path="services" element={<Services />} />
+            <Route path="treatments" element={<Treatments />} />
             <Route path="blog" element={<Blog />} />
             <Route path="faqs" element={<Faqs />} />
-            <Route path="appointment" element={<Appointment />} />
           </Route>
           {/* <Route path="/" element={<HomeRoutes />} /> */}
           <Route path="/*" element={<DashboardRoutes />} />

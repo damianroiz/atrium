@@ -1,4 +1,4 @@
-export const ServiceData = [
+export const treatmentsData = [
   {
     id: 1,
     title: "Physiotherapy",

@@ -19,13 +19,10 @@ export default function Navbar() {
             <NavLink to="about">About</NavLink>
           </li>
           <li>
-            <NavLink to="services">Services</NavLink>
+            <NavLink to="treatments">Treatments</NavLink>
           </li>
           <li>
             <NavLink to="blog">Blog</NavLink>
-          </li>
-          <li>
-            <NavLink to="Appointment">Appointment</NavLink>
           </li>
           <li>
             <NavLink to="faqs">FAQs</NavLink>

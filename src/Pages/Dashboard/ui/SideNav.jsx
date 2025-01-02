@@ -63,7 +63,7 @@ function SideNav() {
     <nav>
       <NavList>
         <li>
-          <StyledNavLink to="/dashboard">
+          <StyledNavLink to="/dashboard" end>
             <span>Home</span>
             <HiOutlineHome />
           </StyledNavLink>

@@ -1,10 +1,9 @@
+import { useState } from 'react';
 import styled from 'styled-components';
-// import { useState } from 'react';
 
 // import CreateCabinForm from "./CreateCabinForm";
-// import { useDeleteCabin } from "./useDeleteCabin";
-// import { formatCurrency } from "../../utils/helpers";
-// import { HiPencil, HiSquare2Stack, HiTrash } from "react-icons/hi2";
+import { useDeleteBlog } from './useBlogs';
+import { HiPencil, HiSquare2Stack, HiTrash } from 'react-icons/hi2';
 // import { useCreateCabin } from "./useCreateCabin";
 
 const TableRow = styled.div`
@@ -38,7 +37,7 @@ const Blog = styled.div`
 
 function BlogRow({ blog }) {
   //   const [showForm, setShowForm] = useState(false);
-  //   const { isDeleting, deleteCabin } = useDeleteCabin();
+  const { isDeleting, deleteBlog } = useDeleteBlog();
   //   const { isCreating, createCabin } = useCreateCabin();
 
   const { image, id: blogId, title, authorId, category } = blog;
@@ -63,17 +62,17 @@ function BlogRow({ blog }) {
         <div>{authorId}</div>
         <div>{category}</div>
 
-        {/* <div>
-          <button disabled={isCreating} onClick={handleDuplicate}>
+        <div>
+          {/* <button disabled={isCreating} onClick={handleDuplicate}>
             <HiSquare2Stack />
           </button>
           <button onClick={() => setShowForm((show) => !show)}>
             <HiPencil />
-          </button>
-          <button onClick={() => deleteCabin(cabinId)} disabled={isDeleting}>
+          </button> */}
+          <button onClick={() => deleteBlog(blogId)} disabled={isDeleting}>
             <HiTrash />
           </button>
-        </div> */}
+        </div>
       </TableRow>
       {/* {showForm && <CreateCabinForm cabinToEdit={cabin} />} */}
     </>
