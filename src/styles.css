@@ -227,7 +227,7 @@ html:focus-within {
 body {
   font-family: var(--ff-body);
   font-size: var(--fs-400);
-  color: var(--c-black-900);
+  color: var(--c-grey-900);
 }
 
 h1,
