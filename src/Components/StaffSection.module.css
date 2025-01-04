@@ -7,12 +7,11 @@
 }
 
 .cards__container {
-  max-width: 1200px;
   display: grid;
   grid-template-columns: repeat(3, minmax(300px, 1fr));
   gap: 2.5rem;
   grid-auto-flow: row;
-  margin: 0 auto;
+  width: clamp(300px, 80%, 1200px);
 }
 
 .staff__card {
@@ -23,7 +22,7 @@
 }
 
 .staff__card img {
-  aspect-ratio:  1 / 1;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border: none;
   border-radius: 12px 12px 0 0;

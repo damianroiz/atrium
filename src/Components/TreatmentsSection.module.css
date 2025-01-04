@@ -1,11 +1,14 @@
+.treatments__section {
+    width: clamp(600px, 80%, 1200px);
+}
+
 .treatment__cards {
   display: grid;
   justify-items: center;
-  margin: 0 auto;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-auto-flow: row;
   gap: 1.2rem;
-  width: clamp(300px, 80%, 1200px);
+  margin-bottom: 3rem;
 }
 
 .treatment__card {
@@ -47,8 +50,6 @@
   grid-template-rows: repeat(3, auto);
   grid-auto-flow: column;
   gap: 1.8rem;
-  margin: 3rem auto;
-  max-width: clamp(600px, 70%, 1200px);
 }
 
 .treatment__content h2 {
