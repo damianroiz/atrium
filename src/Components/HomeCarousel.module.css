@@ -1,7 +1,7 @@
 .carouselContainer {
   position: relative;
   margin-bottom: 4rem;
-  width: 100dvw;
+  width: 100%;
 }
 .show {
   animation-name: fade;
@@ -57,17 +57,17 @@ img {
   font-size: var(--fs-20);
   border-radius: 50%;
   border: none;
-  z-index: 100;
+  z-index: 1;
   cursor: pointer;
   transition: all 400ms ease;
 }
 
 .backBtn {
-  left: 2vw;
+  left: calc(5vw + 10px);
 }
 
 .nextBtn {
-  right: 2vw;
+  right: calc(5vw + 10px);
 }
 
 .backBtn:hover,

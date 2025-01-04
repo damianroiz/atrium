@@ -1,75 +1,56 @@
-/*
-//////////////////////// STAFF CARDS //////////
-*/
-
-.cards-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-block: 10px;
+.staff__section {
+  max-width: clamp(600px, 70%, 1200px);
+  h2 {
+    text-align: center;
+    padding-block: 1.8rem;
+  }
 }
 
-.cards-section h2 {
-  display: block;
-  flex: 1 0 auto;
-  margin-bottom: 50px;
-}
-
-.cards-container {
+.cards__container {
   max-width: 1200px;
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: space-evenly;
-  align-content: center;
-  gap: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 2.5rem;
+  grid-auto-flow: row;
+  margin: 0 auto;
 }
 
-.staff-card {
+.staff__card {
   display: flex;
   flex-direction: column;
   width: 280px;
-  height: auto;
-  margin-top: auto;
   box-shadow: var(--box-shadow);
 }
 
-.staff-card img {
-  display: block;
+.staff__card img {
+  aspect-ratio:  1 / 1;
+  object-fit: cover;
   border: none;
   border-radius: 12px 12px 0 0;
-  width: 480px;
-  height: 250px;
-  object-fit: cover;
+  border: 2px solid var(--c-blue-800);
 }
 
-.staff-card-info {
+.staff__card_info {
   display: flex;
   flex-direction: column;
-  align-self: flex-end;
-  height: inherit;
-  width: inherit;
-  gap: 20px;
-  background-color: var(--c-brand-900);
+  background-color: var(--c-blue-900);
   color: var(--c-white-50);
+  text-align: center;
+  > * {
+    padding-block: 1rem;
+  }
 }
 
-.staff-card-info > :first-child {
-  width: 100%;
+.staff__card_info h3 {
   font: var(--fs-18) var(--ff-subheading);
-  letter-spacing: 1.08px;
-  padding-block: 15px;
-  background-color: #f8f8ff25;
+  background-color: var(--c-blue-800);
 }
 
-.staff-card-info > :last-child {
+.staff__card_info p {
   font: var(--fs-16) var(--ff-text-body);
   letter-spacing: 1.05px;
-  padding: 0 15px 25px 15px;
 }
 
 /*
   https://codepen.io/alvarotrigo/pen/wvrzPWL
   */
-
-

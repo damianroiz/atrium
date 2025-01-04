@@ -6,7 +6,7 @@ https://codepen.io/alvarotrigo/pen/wvrzPWL
 .accordion {
     position: relative;
     display: block;
-    margin: 3rem auto;
+    margin-block: 3rem;
     width: 40rem;
     background: var(--c-grey-100);
     box-shadow: var(--box-shadow);
@@ -87,7 +87,7 @@ https://codepen.io/alvarotrigo/pen/wvrzPWL
       position: relative;
       padding: 0 1.5em;
       box-shadow:
-        inset 4px 0 0 0 var(--c-hightlight-color),
+        inset 4px 0 0 0 var(--c-grey-color),
         inset 0 3px 6px rgba(#000, 0.75);
       background: linear-gradient(
         to bottom,

@@ -93,7 +93,7 @@ function Dots({ currentIndex, setCurrentIndex }) {
               ? `${styles.dot} ${styles.active}`
               : styles.dot
           }
-          onClick={() => setCurrentIndex(photos.index)}
+          onClick={() => setCurrentIndex(index)}
         ></span>
       ))}
     </div>

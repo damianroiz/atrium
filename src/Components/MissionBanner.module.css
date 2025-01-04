@@ -1,7 +1,7 @@
 .banner__container {
   margin-bottom: 4rem;
   padding-block: 2.5rem;
-  width: 100dvw;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +21,7 @@
 }
 
 .button {
-  margin-right: 4rem;
+  padding-right: 4rem;
   align-self: flex-end;
 }
 
@@ -32,7 +32,6 @@
   }
   .text {
     align-items: center;
-    width: inherit;
     padding: 0 2rem;
     text-wrap: balance;
   }
