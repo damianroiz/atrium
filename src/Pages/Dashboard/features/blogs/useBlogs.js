@@ -24,7 +24,6 @@ export function useDeleteBlog() {
     mutationFn: deleteBlogApi,
     onSuccess: () => {
       toast.success('Blog successfully deleted');
-
       queryClient.invalidateQueries({
         queryKey: ['blogs'],
       });

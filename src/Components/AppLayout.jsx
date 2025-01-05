@@ -5,7 +5,6 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 
 const StyledBaseLayout = styled.div`
-  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -13,7 +12,7 @@ const StyledBaseLayout = styled.div`
 
 const Main = styled.main`
   display: grid;
-  grid-template-columns: minmax(1fr, 90rem);
+  grid-template-columns: minmax(1200px, 1fr);
   justify-items: center;
   gap: 2.4rem;
 `;

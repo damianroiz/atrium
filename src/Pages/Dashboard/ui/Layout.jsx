@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import Sidebar from './Sidebar';
+import SideBar from './SideBar';
 import Header from './Header';
 import styled from 'styled-components';
 
@@ -20,7 +20,7 @@ function Layout() {
   return (
     <StyledLayout>
       <Header />
-      <Sidebar />
+      <SideBar />
       <Main>
         <Outlet />
       </Main>

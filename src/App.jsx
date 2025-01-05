@@ -8,9 +8,9 @@ import About from './Pages/About/About';
 import Treatments from './Pages/Treatments/Treatments';
 import Blog from './Pages/Blog/Blog';
 import Faqs from './Pages/Faqs/Faqs';
+import { Toaster } from 'react-hot-toast';
 import './styles.css';
 import '../src/Components/components.css';
-
 
 // import HomeRoutes from './Routes/HomeRoutes';
 import DashboardRoutes from './Routes/DashboardRoutes';
@@ -29,7 +29,7 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={false} />
       <BrowserRouter>
-            {/* navigate to home page if no path is provided */}
+        {/* navigate to home page if no path is provided */}
         <Routes>
           <Route path="/" element={<AppLayout />}>
             <Route index element={<Navigate replace to="home" />} />
@@ -43,6 +43,28 @@ export default function App() {
           <Route path="/*" element={<DashboardRoutes />} />
         </Routes>
       </BrowserRouter>
+      <Toaster
+        position="top-center"
+        gutter={12}
+        containerStyle={{ margin: '8px' }}
+        toastOptions={{
+          success: {
+            duration: 3000,
+          },
+          error: {
+            duration: 5000,
+          },
+          style: {
+            fontSize: '1.1rem',
+            maxWidth: '500px',
+            padding: '16px 24px',
+            backgroundColor: 'var(--c-grey-700)',
+            color: 'var(--c-blue-100)',
+            FontFace: 'var(--ff-btn)',
+            letterSpacing: '0.2px',
+          },
+        }}
+      />
     </QueryClientProvider>
   );
 }

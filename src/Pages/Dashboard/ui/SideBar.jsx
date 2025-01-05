@@ -11,7 +11,7 @@ const StyledSidebar = styled.aside`
   gap: 3.2rem;
 `;
 
-function Sidebar() {
+function SideBar() {
   return (
     <StyledSidebar>
       <SideNav />
@@ -19,4 +19,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default SideBar;

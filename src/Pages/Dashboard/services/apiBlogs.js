@@ -5,7 +5,7 @@ export async function getBlogs() {
 
   if (error) {
     console.log(error);
-    throw new error('blogs could not be loaded');
+    throw new Error('blogs could not be loaded');
   }
 
   return data;
@@ -14,9 +14,10 @@ export async function getBlogs() {
 export async function deleteBlog(id) {
   const { data, error } = await supabase.from('blogs').delete().eq('id', id);
 
+
   if (error) {
     console.log(error);
-    throw new error('blog could not be deleted');
+    throw new Error('blog could not be deleted');
   }
 
   return data;
