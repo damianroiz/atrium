@@ -1,18 +1,22 @@
 .officeCarousel {
   padding: 50px 20px;
-  background: #f4f4f4;
-  margin: 50px;
-  max-width: 900px;
-  height: auto;
+  background: var(--c-white-200);
+  margin-top: 2rem;
+  max-width: 1200px;
+  border: 2px solid var(--c-white-500);
 }
 
 .featuredImg {
   display: flex;
   align-items: flex-end;
   gap: 20px;
-  > img {
-    width: 600px;
+  img {
+    width: 500px;
     min-width: 300px;
+    flex: 1 0 auto;
+  }
+  figcaption {
+    font: var(--fs-18) var(--ff-text);
   }
 }
 
@@ -34,24 +38,23 @@
   }
 }
 
-@media screen and (width < 700px) {
+@media screen and (max-width: 900px) {
   .officeCarousel {
-    min-width: 700px;
     overflow: scroll;
-    object-fit: contain;
+    object-fit: cover;
     padding-right: 0;
+    width: 100%;
   }
   .thumnailsContainer {
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     align-items: center;
-    align-content: center;
-    overflow: hidden;
+    border: 1px solid red;
   }
   .featuredImg {
     width: 100%;
-    overflow: hidden;
-    flex: 0 1 auto;
+    /* overflow: hidden; */
+    /* flex: 0 1 auto; */
   }
   .thumbnail img {
     height: 100px;

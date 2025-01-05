@@ -12,7 +12,7 @@ const StyledBaseLayout = styled.div`
 
 const Main = styled.main`
   display: grid;
-  grid-template-columns: minmax(1200px, 1fr);
+  grid-template-columns: minmax(1fr, 1500px);
   justify-items: center;
   gap: 2.4rem;
 `;

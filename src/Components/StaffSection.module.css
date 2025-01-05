@@ -19,6 +19,13 @@
   flex-direction: column;
   width: 280px;
   box-shadow: var(--box-shadow);
+  transition: transform 400ms ease;
+  cursor: pointer;
+}
+
+.staff__card:hover,
+.staff__card:focus-visible {
+  transform: translate(0, -25px);
 }
 
 .staff__card img {

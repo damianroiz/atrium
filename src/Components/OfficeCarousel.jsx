@@ -38,9 +38,13 @@ const FeaturedImg = ({ selectedPhoto }) => {
   return (
     <figure className={styles.featuredImg}>
       <img src={photos[selectedPhoto].src} alt="" />
-      {/* <figcaption>
-        Lorem ipsum dolor sit amet consectetur adipisicing elite
-      </figcaption> */}
+      <figcaption>
+        We embrace evidence-based techniques and state-of-the-art technologies
+        at our physiotherapy clinic to craft personalized treatment plans that
+        address your unique needs and aspirations. Your health is our mission,
+        and we are dedicated to helping you achieve your goals with compassion
+        and expertise.
+      </figcaption>
     </figure>
   );
 };
@@ -51,7 +55,7 @@ const Thumbnails = ({ setSelectedPhoto }) => {
       {photos.map((photo, index) => (
         <div
           className={styles.thumbnail}
-          key={photo.id}
+          key={index}
           onClick={() => setSelectedPhoto(index)}
         >
           <img src={photo.src} alt={photo.alt} />
