@@ -50,6 +50,11 @@ function TreatmentsSection({ treatmentsData }) {
 
   return (
     <section className={styles.treatments__section}>
+      <p>
+        Explore our comprehensive range of professional physiotherapy treatments
+        at Atrium Physiotherapy. The benefits of our services tailored to
+        enhance your well-being.
+      </p>
       <div className={styles.treatment__cards}>
         {treatmentsData.map((treatment) => (
           <TreatmentCard

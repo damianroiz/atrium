@@ -1,4 +1,5 @@
 import styles from './StaffSection.module.css';
+import { Link } from 'react-router-dom';
 
 const data = [
   {
@@ -52,9 +53,9 @@ const data = [
   },
 ];
 
-function StaffCard({ img, name, position }) {
+function StaffCard({ img, name, position, onClick }) {
   return (
-    <div className={styles.staff__card}>
+    <div className={styles.staff__card} onClick={onClick}>
       <img src={img} alt=""></img>
       <div className={styles.staff__card_info}>
         <h3>{name}</h3>
@@ -68,6 +69,17 @@ function StaffSection() {
   return (
     <section className={styles.staff__section}>
       <h2>Our Staff</h2>
+      <p>
+        Our team of highly skilled and licensed physiotherapists, specializing
+        in{' '}
+        <Link to="/treatments" className={styles.link}>
+          {'a broad range of treatments'}
+        </Link>
+        , brings a wealth of experience to ensure that you receive the highest
+        quality of care. Whether you’re seeking professional physiotherapy
+        services, physiotherapy closest to you, or advanced physical therapy
+        services, we are here to guide you on the right path to optimal health.
+      </p>
       <div className={styles.cards__container}>
         {data.map((staff) => (
           <StaffCard
@@ -75,7 +87,7 @@ function StaffSection() {
             img={staff.img}
             name={staff.name}
             position={staff.position}
-            info={staff.info}
+            onClick={() => <p>{staff.info}</p>}
           />
         ))}
       </div>

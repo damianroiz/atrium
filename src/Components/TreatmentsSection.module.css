@@ -1,5 +1,10 @@
 .treatments__section {
     width: clamp(600px, 80%, 1200px);
+    > p {
+      font-size: var(--fs-18);
+      max-width: 700px;
+      margin: 3rem auto;
+    }
 }
 
 .treatment__cards {

@@ -1,5 +1,11 @@
+.clinic {
+  display: grid;
+  justify-items: center;
+  margin-top: 3rem;
+}
+
 .officeCarousel {
-  padding: 50px 20px;
+  padding: 30px 50px;
   background: var(--c-white-200);
   margin-top: 2rem;
   max-width: 1200px;
@@ -21,42 +27,42 @@
 }
 
 .thumnailsContainer {
-  display: flex;
-  place-content: flex-end;
+  display: grid;
+  grid-template-rows: fit-content;
+  grid-auto-flow: column;
   gap: 20px;
   margin-block: 20px;
   img {
     margin-top: 20px;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
     &:hover,
     &:focus {
       cursor: pointer;
-      box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 0 0 3px var(--c-blue-600); /* using box-shadow instead of border toavoid image scaling */
     }
   }
 }
 
 @media screen and (max-width: 900px) {
   .officeCarousel {
-    overflow: scroll;
-    object-fit: cover;
-    padding-right: 0;
+    padding-top: 3rem;
     width: 100%;
   }
-  .thumnailsContainer {
+  .featuredImg {
     flex-direction: column;
-    flex-wrap: wrap-reverse;
-    align-items: center;
-    border: 1px solid red;
+    align-items: flex-start;
+    img {
+      width: 80%;
+    }
+    figcaption {
+      text-wrap: balance;
+    }
+  }
+  .thumnailsContainer {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2, 200px);
   }
   .featuredImg {
     width: 100%;
-    /* overflow: hidden; */
-    /* flex: 0 1 auto; */
-  }
-  .thumbnail img {
-    height: 100px;
   }
 }

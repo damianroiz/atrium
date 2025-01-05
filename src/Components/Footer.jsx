@@ -43,7 +43,7 @@ const Footer = () => {
               <a href="/about">About</a>
             </li>
             <li>
-              <a href="/Services">Services</a>
+              <a href="/Services">Treatments</a>
             </li>
             <li>
               <a href="/blog">Blog</a>
@@ -90,11 +90,11 @@ const Footer = () => {
 
       <div className={styles.footnote}>
         <div className={styles.terms}>
-          <Link className={styles.footnote__link} to="#">
+          <Link className={styles.footnote__link} to="/treatments">
             Terms and Conditions
           </Link>{' '}
           |{' '}
-          <Link className={styles.footnote__link} to="#">
+          <Link className={styles.footnote__link} to="/about">
             Privacy Policy
           </Link>
         </div>

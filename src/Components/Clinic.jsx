@@ -1,35 +1,25 @@
 import { useState } from 'react';
-import styles from './OfficeCarousel.module.css';
+import styles from './Clinic.module.css';
 
 const photos = [
   {
-    id: 1,
-    src: 'https://picsum.photos/id/1041/800/450',
+    src: './clinic1.webp',
     figCaption: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
   },
   {
-    id: 2,
-    src: 'https://picsum.photos/id/1043/800/450',
+    src: './clinic2.webp',
     figCaption: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
   },
   {
-    id: 3,
-    src: 'https://picsum.photos/id/1044/800/450',
+    src: './clinic4.webp',
     figCaption: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
   },
   {
-    id: 4,
-    src: 'https://picsum.photos/id/1045/800/450',
+    src: './clinic3.webp',
     figCaption: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
   },
   {
-    id: 5,
-    src: 'https://picsum.photos/id/1049/800/450',
-    figCaption: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-  },
-  {
-    id: 6,
-    src: 'https://picsum.photos/id/1052/800/450',
+    src: './clinic5.webp',
     figCaption: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
   },
 ];
@@ -65,12 +55,15 @@ const Thumbnails = ({ setSelectedPhoto }) => {
   );
 };
 
-export default function Carousel() {
+export default function Clinic() {
   const [selectedPhoto, setSelectedPhoto] = useState(0);
   return (
-    <section className={styles.officeCarousel}>
-      <FeaturedImg selectedPhoto={selectedPhoto} />
-      <Thumbnails setSelectedPhoto={setSelectedPhoto} />
+    <section className={styles.clinic}>
+      <h2>Our Clinic</h2>
+      <div className={styles.officeCarousel}>
+        <FeaturedImg selectedPhoto={selectedPhoto} />
+        <Thumbnails setSelectedPhoto={setSelectedPhoto} />
+      </div>
     </section>
   );
 }
