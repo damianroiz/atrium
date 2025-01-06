@@ -1,43 +1,31 @@
-function BlogCard() {
-    return (
-      <div className="post">
-        <img
-          className="postImg"
-          src={
-            "https://atriumphysiotherapy.com/wp-content/uploads/2024/02/Joint-Crack-1024x683.webp"
-          }
-          alt=""
-        />
-        <div className="postInfo">
-          <h2 className="postTitle">
-            <a href="/post/abc">
-              Unraveling the Truth About Joint Cracking: Insights from
-              Physiotherapy
-            </a>
-          </h2>
-          <div className="post__cats">
-            <a className="link" href="#">
-              Fitness
-            </a>
-            <a className="link" href="#">
-              Lifestyle
-            </a>
-          </div>
-          <span className="post__date">Publised on Dec 24 2024</span>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
-            officia architecto deserunt deleniti? Labore ipsum aspernatur magnam
-            fugiat, reprehenderit praesentium blanditiis quos cupiditate ratione
-            atque, exercitationem quibusdam, reiciendis odio laboriosam?
-            <span>
-              <a className="more" href="/abc">
-                read more...
-              </a>
-            </span>
-          </p>
-        </div>
-      </div>
-    );
-  }
+import styles from './BlogCard.module.css';
+import { HiArrowRightCircle } from 'react-icons/hi2';
+import { Link } from 'react-router-dom';
 
-  export default BlogCard;
+function BlogCard({ img, title, tags, date, content }) {
+  return (
+    <div className={styles.blogCard}>
+      <img src={img} alt={'blog image'} />
+      <div className={styles.blogCard__info}>
+        <h2 className={styles.blogCard__title}>
+          <Link to="#">{title}</Link>
+        </h2>
+        <div className={styles.blogCard__tags}>
+          {tags?.map((tagItem, index) => (
+            <span key={index}>{tagItem}</span>
+          ))}
+        </div>
+        <span className={styles.blogCard__date}>Published on {date}</span>
+        <p>
+          {content}
+          {'...'}
+        </p>
+        <Link className={styles.more} to="#">
+         <span>Read more</span><HiArrowRightCircle />
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+export default BlogCard;

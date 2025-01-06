@@ -14,7 +14,7 @@ const Main = styled.main`
   display: grid;
   grid-template-columns: minmax(1fr, 1500px);
   justify-items: center;
-  gap: 2.4rem;
+  gap: 4rem;
 `;
 
 function AppLayout() {

@@ -12,8 +12,19 @@ export default function Blog() {
   return (
     <>
       <PageHeader title="Blog" />
-      {/* <BlogCard /> */}
-      <StyledLink href="/dashboard">admin</StyledLink>
+      <BlogCard
+        img={
+          'https://tzxlnpsumiqvxelgwwlf.supabase.co/storage/v1/object/public/posts-images/band-stretching.jpg'
+        }
+        title={
+          'Unraveling the Truth About Joint Cracking: Insights from Physiotherapy'
+        }
+        tags={['Lifestyle', 'Fitness']}
+        date={'December 21, 2024'}
+        content={
+          'Joint cracking is a familiar sensation for many, often bringing about instant relief or a sense of release. But amidst the commonality of this experience, misconceptions abound. Let’s delve into'
+        }
+      />
       <Outlet />
     </>
   );
