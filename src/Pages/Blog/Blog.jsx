@@ -1,4 +1,3 @@
-import { Outlet } from 'react-router-dom';
 import PageHeader from '../../Components/PageHeader';
 import BlogCard from '../../Components/BlogCard';
 import styled from 'styled-components';
@@ -25,7 +24,17 @@ export default function Blog() {
           'Joint cracking is a familiar sensation for many, often bringing about instant relief or a sense of release. But amidst the commonality of this experience, misconceptions abound. Let’s delve into'
         }
       />
-      <Outlet />
+      <BlogCard
+        img={
+          'https://tzxlnpsumiqvxelgwwlf.supabase.co/storage/v1/object/public/posts-images/people-jogging.jpg'
+        }
+        title={'Understanding Heel Pain in Runners'}
+        tags={['Fitness', 'Running']}
+        date={'November 21, 2024'}
+        content={
+          'Heel pain is a common complaint among runners, often leading to discomfort and hindrance in their training routines. While plantar fasciitis is a well-known cause, it’s crucial to'
+        }
+      />
     </>
   );
 }
