@@ -40,7 +40,8 @@ function BlogRow({ blog }) {
   const { isDeleting, deleteBlog } = useDeleteBlog();
   //   const { isCreating, createCabin } = useCreateCabin();
 
-  const { image, id: blogId, title, authorId, category } = blog;
+  const { image, id: blogId, title, authorId, categories } = blog;
+
 
   //   function handleDuplicate() {
   //     createCabin({
@@ -60,7 +61,7 @@ function BlogRow({ blog }) {
         <Blog>{blogId}</Blog>
         <div>{title}</div>
         <div>{authorId}</div>
-        <div>{category}</div>
+        <div>{categories}</div>
 
         <div>
           {/* <button disabled={isCreating} onClick={handleDuplicate}>

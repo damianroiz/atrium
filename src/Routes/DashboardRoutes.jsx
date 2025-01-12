@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-// import Dashboard from '../Pages/Dashboard/Dashboard';
+import Dashboard from '../Pages/Dashboard/Dashboard';
 import Blogs from '../Pages/Dashboard/Blogs';
 import Users from '../Pages/Dashboard/Users';
 import Settings from '../Pages/Dashboard/Settings';
@@ -12,7 +12,7 @@ export default function DashboardRoutes() {
   return (
     <Routes>
       <Route path="/dashboard" element={<Layout />}>
-        <Route index element={<Navigate replace to="/dashboard" />} />
+        <Route index element={<Dashboard />} />
         <Route path="blogs" element={<Blogs />} />
         <Route path="users" element={<Users />} />
         <Route path="settings" element={<Settings />} />

@@ -11,9 +11,19 @@ export async function getBlogs() {
   return data;
 }
 
+export async function createBlog(newBlog) {
+  const { data, error } = await supabase.from('blogs').insert([newBlog]);
+
+  if (error) {
+    console.log(error);
+    throw new Error('blog could not be created');
+  }
+
+  return data;
+}
+
 export async function deleteBlog(id) {
   const { data, error } = await supabase.from('blogs').delete().eq('id', id);
-
 
   if (error) {
     console.log(error);
