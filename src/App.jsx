@@ -31,7 +31,7 @@ export default function App() {
       <BrowserRouter>
         {/* navigate to home page if no path is provided */}
         <Routes>
-          <Route path="/" element={<AppLayout />}>
+          <Route element={<AppLayout />}>
             <Route index element={<Navigate replace to="home" />} />
             <Route path="home" element={<Home />} />
             <Route path="about" element={<About />} />

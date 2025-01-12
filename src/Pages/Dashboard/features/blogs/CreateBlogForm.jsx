@@ -6,7 +6,7 @@ import Input from '../../ui/Input';
 import Form from '../../ui/Form';
 import Button from '../../ui/Button';
 import FileInput from '../../ui/FileInput';
-import TextArea from '../../ui/Textarea';
+import TextArea from '../../ui/TextArea';
 import FormRow from '../../ui/FormRow';
 
 import { useCreateBlog } from './useBlogs';
