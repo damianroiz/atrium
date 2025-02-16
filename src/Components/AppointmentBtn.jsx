@@ -17,5 +17,13 @@ const StyledAppointmentBtn = styled.button`
 `;
 
 export default function AppointmentBtn() {
-  return <StyledAppointmentBtn>Book Your Appoinment</StyledAppointmentBtn>;
+  return (
+    <a
+      href="https://app.practiceperfectemr.com/onlinebooking/576/#/landing/atriumphysiocalgary"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <StyledAppointmentBtn>Book Your Appoinment</StyledAppointmentBtn>
+    </a>
+  );
 }

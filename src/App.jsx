@@ -12,8 +12,6 @@ import { Toaster } from 'react-hot-toast';
 import './styles.css';
 import '../src/Components/components.css';
 
-// import HomeRoutes from './Routes/HomeRoutes';
-import DashboardRoutes from './Routes/DashboardRoutes';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -31,7 +29,7 @@ export default function App() {
       <BrowserRouter>
         {/* navigate to home page if no path is provided */}
         <Routes>
-          <Route element={<AppLayout />}>
+          <Route path="/" element={<AppLayout />}>
             <Route index element={<Navigate replace to="home" />} />
             <Route path="home" element={<Home />} />
             <Route path="about" element={<About />} />
@@ -39,8 +37,7 @@ export default function App() {
             <Route path="blog" element={<Blog />} />
             <Route path="faqs" element={<Faqs />} />
           </Route>
-          {/* <Route path="/" element={<HomeRoutes />} /> */}
-          <Route path="/*" element={<DashboardRoutes />} />
+          <Route path="*" element={<Navigate replace to="home" />} />
         </Routes>
       </BrowserRouter>
       <Toaster
