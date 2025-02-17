@@ -8,10 +8,10 @@ import About from './Pages/About/About';
 import Treatments from './Pages/Treatments/Treatments';
 import Blog from './Pages/Blog/Blog';
 import Faqs from './Pages/Faqs/Faqs';
+import Terms from './Pages/Terms/Terms';
 import { Toaster } from 'react-hot-toast';
 import './styles.css';
 import '../src/Components/components.css';
-
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -36,6 +36,7 @@ export default function App() {
             <Route path="treatments" element={<Treatments />} />
             <Route path="blog" element={<Blog />} />
             <Route path="faqs" element={<Faqs />} />
+            <Route path="terms" element={<Terms />} />
           </Route>
           <Route path="*" element={<Navigate replace to="home" />} />
         </Routes>

@@ -40,19 +40,25 @@ const Footer = () => {
           <p>Links</p>
           <ul>
             <li>
-              <a href="/about">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="/treatments">Treatments</a>
+              <Link to="/treatments">Treatments</Link>
             </li>
             <li>
-              <a href="/blog">Blog</a>
+              <Link to="/blog">Blog</Link>
             </li>
             <li>
-              <a href="#">Appointment</a>
+              <a
+                href="https://app.practiceperfectemr.com/onlinebooking/576/#/landing/atriumphysiocalgary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Appointment
+              </a>
             </li>
             <li>
-              <a href="/faqs">Faqs</a>
+              <Link to="/faqs">Faqs</Link>
             </li>
           </ul>
         </div>
@@ -90,11 +96,11 @@ const Footer = () => {
 
       <div className={styles.footnote}>
         <div className={styles.terms}>
-          <Link className={styles.footnote__link} to="/treatments">
+          <Link className={styles.footnote__link} to="/terms">
             Terms and Conditions
           </Link>{' '}
           |{' '}
-          <Link className={styles.footnote__link} to="/about">
+          <Link className={styles.footnote__link} to="/terms">
             Privacy Policy
           </Link>
         </div>
