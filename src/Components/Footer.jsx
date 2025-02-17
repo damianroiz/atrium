@@ -96,11 +96,11 @@ const Footer = () => {
 
       <div className={styles.footnote}>
         <div className={styles.terms}>
-          <Link className={styles.footnote__link} to="/terms#policy">
+          <Link className={styles.footnote__link} to="/terms">
             Terms and Conditions
           </Link>{' '}
           |{' '}
-          <Link className={styles.footnote__link} to="/terms#policy">
+          <Link className={styles.footnote__link} to="/terms">
             Privacy Policy
           </Link>
         </div>

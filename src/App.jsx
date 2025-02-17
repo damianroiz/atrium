@@ -10,6 +10,7 @@ import Blog from './Pages/Blog/Blog';
 import Faqs from './Pages/Faqs/Faqs';
 import Terms from './Pages/Terms/Terms';
 import { Toaster } from 'react-hot-toast';
+import ScrollToTop from './Components/ScrollToTop';
 import './styles.css';
 import '../src/Components/components.css';
 
@@ -27,6 +28,7 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={false} />
       <BrowserRouter>
+      <ScrollToTop />
         {/* navigate to home page if no path is provided */}
         <Routes>
           <Route path="/" element={<AppLayout />}>
