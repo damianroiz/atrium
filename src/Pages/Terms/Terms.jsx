@@ -3,7 +3,7 @@ import styles from './Terms.module.css';
 export default function Terms() {
   return (
     <article className={styles.article}>
-      <h1>Protection of Personal Information Policy</h1>
+      <h1 id="policy">Protection of Personal Information Policy</h1>
       <p>
         We respect the privacy of visitors to our website and are committed to
         protecting it to the extent possible, in accordance with applicable
