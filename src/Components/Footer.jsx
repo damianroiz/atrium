@@ -67,22 +67,22 @@ const Footer = () => {
           <p>Operating Hours</p>
           <ul>
             <li>
-              Monday:<span>8:00 am - 7:00 pm</span>
+              Monday:<span>7:00 am - 8:00 pm</span>
             </li>
             <li>
-              Tuesday:<span>8:00 am - 5:00 pm</span>
+              Tuesday:<span>7:00 am - 8:00 pm</span>
             </li>
             <li>
-              Tuesday:<span>8:00 am - 5:00 pm</span>
+              Tuesday:<span>7:00 am - 8:00 pm</span>
             </li>
             <li>
-              Wednesday:<span>8:00 am - 7:00 pm</span>
+              Wednesday:<span>7:00 am - 8:00 pm</span>
             </li>
             <li>
-              Thursday:<span>8:00 am - 3:00 pm</span>
+              Thursday:<span>7:00 am - 8:00 pm</span>
             </li>
             <li>
-              Friday:<span>8:00 am - 7:00 pm</span>
+              Friday:<span>7:00 am - 8:00 pm</span>
             </li>
             <li>
               Saturday:<span>Closed</span>
