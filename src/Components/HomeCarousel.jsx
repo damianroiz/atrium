@@ -4,18 +4,23 @@ import { useState, useEffect, memo } from 'react';
 const photos = [
   {
     id: 0,
-    title: 'Physiotherapy photo one',
-    url: 'https://atriumphysiotherapy.com/wp-content/uploads/2023/11/f-physiotherapy.jpg',
+    title: 'Carousel photo one',
+    url: '/atrium-home-1.webp',
   },
   {
     id: 1,
-    title: 'physiotherapy photo two',
-    url: 'https://atriumphysiotherapy.com/wp-content/uploads/2023/11/Untitled-3.jpg',
+    title: 'Carousel photo two',
+    url: '/atrium-home-2.webp',
   },
   {
     id: 2,
-    title: 'physiotherapy photo three',
-    url: 'https://atriumphysiotherapy.com/wp-content/uploads/2023/11/Exercises-1.jpg',
+    title: 'Carousel photo three',
+    url: '/atrium-home-3.jpg',
+  },
+  {
+    id: 3,
+    title: 'Carousel photo four',
+    url: '/atrium-home-4.webp',
   },
 ];
 
@@ -25,18 +30,16 @@ function Carousel() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setCurrentIndex((currentIndex + 1) % photos.length);
-      console.log(currentIndex)
     }, 5000);
     return () => clearTimeout(timer);
   }, [currentIndex])
 
   function handlePrevious() {
     setCurrentIndex(currentIndex === 0 ? photos.length - 1 : currentIndex - 1);
-    console.log('button clicked');
   }
 
   function handleNext() {
-    setCurrentIndex(currentIndex === 2 ? 0 : currentIndex + 1);
+    setCurrentIndex(currentIndex === photos.length - 1 ? 0 : currentIndex + 1);
   }
 
   return (
