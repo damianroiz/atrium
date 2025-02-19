@@ -22,13 +22,13 @@ const photos = [
 function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setCurrentIndex((currentIndex + 1) % photos.length);
-  //     console.log(currentIndex)
-  //   }, 5000);
-  //   return () => clearTimeout(timer);
-  // }, [currentIndex])
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setCurrentIndex((currentIndex + 1) % photos.length);
+      console.log(currentIndex)
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [currentIndex])
 
   function handlePrevious() {
     setCurrentIndex(currentIndex === 0 ? photos.length - 1 : currentIndex - 1);

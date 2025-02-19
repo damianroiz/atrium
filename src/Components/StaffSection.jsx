@@ -3,13 +3,6 @@ import { Link } from 'react-router-dom';
 
 const data = [
   {
-    id: 1,
-    img: 'carolynh.webp',
-    name: 'Carolyn Hackenberg',
-    position: 'Office Manager',
-    info: 'Carolyn started her career in the business world, attending university in both Nova Scotia and in California where she',
-  },
-  {
     id: 2,
     img: '/hala.webp',
     name: 'Hala Basily',
@@ -36,20 +29,6 @@ const data = [
     name: 'Marry Carroll',
     position: 'Medical Office Assitant',
     info: 'Mary is medical office assistant, she was born and raised in the Philippines and came to Canada in 2009.',
-  },
-  {
-    id: 6,
-    img: '/vinci.jpg',
-    name: 'Vinci Gomez',
-    position: 'Kinesiologist',
-    info: 'Vinci has over 20 years of experience in Musculoskeletal physiotherapy and Neuro- rehabilitation',
-  },
-  {
-    id: 7,
-    img: '/enzo.webp',
-    name: 'Enzo',
-    position: 'The Best Office Pet',
-    info: 'He loves welcoming patients in the waiting area',
   },
 ];
 
@@ -81,9 +60,9 @@ function StaffSection() {
         services, we are here to guide you on the right path to optimal health.
       </p>
       <div className={styles.cards__container}>
-        {data.map((staff) => (
+        {data.map((staff, i) => (
           <StaffCard
-            key={staff.id}
+            key={i}
             img={staff.img}
             name={staff.name}
             position={staff.position}

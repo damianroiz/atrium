@@ -26,9 +26,9 @@
 
 .cards__container {
   display: grid;
-  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, minmax(300px, 1fr));
   gap: 2.5rem;
-  grid-auto-flow: row;
+  grid-auto-flow: dense;
   width: clamp(300px, 80%, 1200px);
 }
 
