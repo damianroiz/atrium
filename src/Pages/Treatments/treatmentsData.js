@@ -166,6 +166,6 @@ export const treatmentsData = [
       'https://tzxlnpsumiqvxelgwwlf.supabase.co/storage/v1/object/public/web-images//pelvic-floor-therapy.png',
     description: [
       "Pelvic floor physiotherapy help women rehabilitate their pelvic floor muscles. These muscles can be weakened by childbirth, surgery, heavy lifting, being overweight, constipation or menopause. The pelvic floor muscles support the womb (uterus), bladder and bowel (colon), forming a 'sling' from the pubic bone at the front to the tailbone at the back. If the muscles are weak, this can affect bladder and bowel control, resulting in incontinence (leakage) or prolapse.",
-    ]
+    ],
   },
 ];

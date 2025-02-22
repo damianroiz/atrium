@@ -6,7 +6,7 @@ https://codepen.io/alvarotrigo/pen/wvrzPWL
 .accordion {
     position: relative;
     display: block;
-    margin-block: 3rem;
+    margin-bottom: 3rem;
     width: 40rem;
     background: var(--c-grey-100);
     box-shadow: var(--box-shadow);

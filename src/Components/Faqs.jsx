@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styles from './FaqsMenu.module.css';
 
 export default function FaqsMenu() {
