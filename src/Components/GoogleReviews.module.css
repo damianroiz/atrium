@@ -1,0 +1,134 @@
+.slider {
+  max-width: 65rem;
+  height: 36rem;
+  border-top: 5px solid var(--c-green-600);
+  border-radius: 5px;
+  margin: 0 auto;
+  position: relative;
+  background-color: var(--c-white-300);
+  /* IN THE END */
+  overflow: hidden;
+}
+
+.google_link {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  margin: 20px auto;
+  background-color: var(--c-white-300);
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 3;
+  
+}
+
+.google_link img {
+  object-fit: contain;
+  width: 220px;
+  z-index: inherit;
+}
+
+.slide {
+  position: absolute;
+  width: auto;
+  top: 0;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* THIS creates the animation! */
+  transition: transform 1s;
+}
+
+.slider__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  border: none;
+  background: var(--c-blue-600);
+  color: var(--c-white);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  font-size: var(--fs-24);
+  color: var(--c-white-50);
+  cursor: pointer;
+}
+
+.slider__btn--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+.slider__btn--right {
+  right: 6%;
+  transform: translate(50%, -50%);
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dots__dot {
+  border: none;
+  background-color: var(--c-grey-100);
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  /* Only necessary when overlying images */
+  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.active {
+  /* background-color: #fff; */
+  background-color: var(--c-blue-600);
+  opacity: 1;
+}
+
+/* TESTIMONIALS */
+.testimonial {
+  max-width: 65%;
+  display: grid;
+}
+
+/* .testimonial::before {
+    content: "\201C";
+    position: absolute;
+    top: -5.7rem;
+    left: -6.8rem;
+    line-height: 1;
+    font-size: 20rem;
+    font-family: inherit;
+    color: var(--color-primary);
+    z-index: -1;
+  } */
+
+.testimonial__text {
+  font-size: var(--fs-18);
+  color: var(--c-grey-200);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.testimonial__author {
+  justify-self: end;
+  color: var(--c-grey-300);
+  /* display: grid;
+    grid-template-columns: 6.5rem 1fr; */
+}
