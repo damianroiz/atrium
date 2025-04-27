@@ -72,18 +72,6 @@ function CarouselButton({ arrow, direction, onClick }) {
   );
 }
 
-// function Dots() {
-//   return (
-//     <div className={styles.dots}>
-//       {reviews.map((_, index) => (
-//         <span
-//           key={index}
-//           className={`${styles.dots__dot} ${index === 0 ? styles.active : ''}`}
-//         ></span>
-//       ))}
-//     </div>
-//   );
-// }
 
 function Dots({ curIndex, setCurIndex }) {
   return (
